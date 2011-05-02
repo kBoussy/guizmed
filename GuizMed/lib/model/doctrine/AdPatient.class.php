@@ -12,5 +12,11 @@
  */
 class AdPatient extends BaseAdPatient
 {
-
+  public function getPrescriptions($id)
+  {
+    $q = Doctrine_Query::create()
+    ->from('AdPrescription p')
+    ->where('p.user_patient_id = ?', $id);
+return $q->execute();
+  }
 }

@@ -1,17 +1,16 @@
 {
-    “medicine" : [
+    "medicine" : [
         {
-            "med form" : "<?php echo $med_form->getMedFormId() ?>",
-            "med base": "<?php echo $med_form->getMedBaseId() ?>",
-            "med magister form":"<?php echo $med_form->getMedMagisterFormId() ?>",
+            "med_form" : "<?php echo $med_form->getMedFormId() ?>",
+            "med_base": "<?php $medId = $med_form->getBaseId($med_form->getMedFormId()); echo $medId[0]->getSpeciality(); ?>",
+            "med_magister form":"<?php echo $med_form->getMedMagisterFormId() ?>",
             "dose":"<?php echo $med_form->getDose() ?>",
             "Bioavailability" : "<?php echo $med_form->getBioavailability() ?>",
             "Proteine binding": "<?php echo $med_form->getProteineBinding() ?>",
-            "T max h":"<?php echo $med_form->getTMaxH() ?>",
+            "T_max_h":"<?php echo $med_form->getTMaxH() ?>",
             "Hlf":"<?php echo $med_form->getHlf() ?>",
             "Ddd":"<?php echo $med_form->getDdd() ?>",
-
-            <?php echo $med_form->getDose() ?>
+            "Dose":"<?php echo $med_form->getDose() ?>"
         }
     ]
 }

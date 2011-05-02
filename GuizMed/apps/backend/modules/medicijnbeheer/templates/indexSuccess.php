@@ -8,7 +8,7 @@
     <?php $bol=false ?>
     {
             "id" : "<?php echo $med_form->getMedFormId() ?>",
-            "name": "<?php echo $med_form->getMedBaseId() ?>"
+            "name": "<?php $medId = $med_form->getBaseId($med_form->getMedFormId()); echo $medId[0]->getSpeciality(); ?>"
         }
 
     <?php endforeach; ?>
