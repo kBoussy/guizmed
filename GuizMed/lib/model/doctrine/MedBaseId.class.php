@@ -12,5 +12,7 @@
  */
 class MedBaseId extends BaseMedBaseId
 {
-
+    public function  __toString() {
+        return $this->getSpeciality();
+    }
 }
