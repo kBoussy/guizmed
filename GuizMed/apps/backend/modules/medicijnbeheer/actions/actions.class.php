@@ -15,11 +15,17 @@ class medicijnbeheerActions extends sfActions
     $this->med_forms = Doctrine_Core::getTable('medForm')
       ->createQuery('a')
       ->execute();
+
+    $this->medicaties = Doctrine_Core::getTable('medBaseId')->createQuery('a')->execute();
   }
 
   public function executeShow(sfWebRequest $request)
   {
     $this->med_form = Doctrine_Core::getTable('medForm')->find(array($request->getParameter('med_form_id')));
+    $q = Doctrine_Query::create()->from('medForm m')->where('m.med_form_id = ?', $request->getParameter('med_form_id'));
+    $this->med_form = $q->execute();
+    $this->med_form = $this->med_form[0];
+
     $this->forward404Unless($this->med_form);
   }
 
