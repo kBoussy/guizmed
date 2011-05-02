@@ -1,0 +1,35 @@
+# data/fixtures/int_enzym.yml
+IntEnzym:
+  int_enzym1:
+     int_enzym_id: 1
+     name: 1A2
+  int_enzym2:
+     int_enzym_id: 2
+     name: 2D6
+  int_enzym3:
+     int_enzym_id: 3
+     name: 3A4
+  int_enzym4:
+     int_enzym_id: 4
+     name: 2C9
+  int_enzym5:
+     int_enzym_id: 5
+     name: 2C1
+  int_enzym6:
+     int_enzym_id: 6
+     name: 2E1
+  int_enzym7:
+     int_enzym_id: 7
+     name: 2B6
+  int_enzym8:
+     int_enzym_id: 8
+     name: NAT2
+  int_enzym9:
+     int_enzym_id: 9
+     name: 2C19
+  int_enzym10:
+     int_enzym_id: 10
+     name: 3A5
+  int_enzym11:
+     int_enzym_id: 11
+     name: 3A7
