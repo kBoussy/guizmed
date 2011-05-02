@@ -12,5 +12,13 @@
  */
 class MedForm extends BaseMedForm
 {
+      public function getBaseId($id)
+  {
+    $q = Doctrine_Query::create()
+    ->from('medBaseId b')
+    ->where('b.med_base_id = ?', $id);
+return $q->execute();
+  }
+
 
 }
