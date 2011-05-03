@@ -19,6 +19,10 @@ class MedForm extends BaseMedForm
     ->where('b.med_base_id = ?', $id);
 return $q->execute();
   }
-
+  public function getMetMagisterName($id){
+      $q = Doctrine_Query::create()->from('MedMagisterForm mf')->where('mf.med_magister_form_id = ?',$id);
+      $magister = $q->execute();
+      return $magister[0]->getNaam();
+  }
 
 }

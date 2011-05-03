@@ -12,5 +12,4 @@
  */
 class MedMagisterForm extends BaseMedMagisterForm
 {
-
 }
