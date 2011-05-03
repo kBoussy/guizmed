@@ -15,6 +15,11 @@ class patientenActions extends sfActions
     $this->ad_patients = Doctrine_Core::getTable('adPatient')
       ->createQuery('a')
       ->execute();
+    $log = new AdLog();
+    $log->setAction('Er is gekeken naar de patienten.');
+    $log->setAdUserPatientId(1);
+    $log->setDate(date('y-m-d H:m:s'));
+    $log->save();
   }
 
   public function executeShow(sfWebRequest $request)
