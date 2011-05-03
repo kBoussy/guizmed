@@ -2,34 +2,46 @@
 IntEnzym:
   int_enzym1:
      int_enzym_id: 1
-     name: 1A2
+     name: CYPD1A2
   int_enzym2:
      int_enzym_id: 2
-     name: 2D6
+     name: CYPD2D6
   int_enzym3:
      int_enzym_id: 3
-     name: 3A4
+     name: P-gp
   int_enzym4:
      int_enzym_id: 4
-     name: 2C9
+     name: ?
   int_enzym5:
      int_enzym_id: 5
-     name: 2C1
+     name: CYPD3A4
   int_enzym6:
      int_enzym_id: 6
-     name: 2E1
+     name: CYPD2C9
   int_enzym7:
      int_enzym_id: 7
-     name: 2B6
+     name: CYPD2C1
   int_enzym8:
      int_enzym_id: 8
-     name: NAT2
+     name: CYPD2E1
   int_enzym9:
      int_enzym_id: 9
-     name: 2C19
+     name: FMO
   int_enzym10:
      int_enzym_id: 10
-     name: 3A5
+     name: UGT1A4
   int_enzym11:
      int_enzym_id: 11
-     name: 3A7
+     name: CYPD2C19
+  int_enzym12:
+     int_enzym_id: 12
+     name: CYPD2B6
+  int_enzym13:
+     int_enzym_id: 13
+     name: CYPDNAT2
+  int_enzym14:
+     int_enzym_id: 14
+     name: CYPD3A5
+  int_enzym15:
+     int_enzym_id: 15
+     name: CYPD3A7

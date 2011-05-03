@@ -12,272 +12,327 @@ IntMetabolism:
      interaction_type: metabolism
   IntMetabolism3:
      int_metabolism_id: 3
-     med_form_id: 4
-     enzym_group_id: 2
+     med_form_id: 3
+     enzym_group_id: 3
      interaction_type: metabolism
   IntMetabolism4:
      int_metabolism_id: 4
-     med_form_id: 5
+     med_form_id: 4
      enzym_group_id: 2
      interaction_type: metabolism
   IntMetabolism5:
      int_metabolism_id: 5
-     med_form_id: 6
+     med_form_id: 5
      enzym_group_id: 2
      interaction_type: metabolism
   IntMetabolism6:
      int_metabolism_id: 6
-     med_form_id: 7
-     enzym_group_id: 1
+     med_form_id: 6
+     enzym_group_id: 2
      interaction_type: metabolism
   IntMetabolism7:
      int_metabolism_id: 7
      med_form_id: 7
-     enzym_group_id: 2
+     enzym_group_id: 1
      interaction_type: metabolism
   IntMetabolism8:
      int_metabolism_id: 8
-     med_form_id: 8
+     med_form_id: 7
      enzym_group_id: 2
      interaction_type: metabolism
   IntMetabolism9:
      int_metabolism_id: 9
-     med_form_id: 9
-     enzym_group_id: 2
+     med_form_id: 7
+     enzym_group_id: 3
      interaction_type: metabolism
   IntMetabolism10:
      int_metabolism_id: 10
-     med_form_id: 25
-     enzym_group_id: 1
+     med_form_id: 8
+     enzym_group_id: 2
      interaction_type: metabolism
   IntMetabolism11:
      int_metabolism_id: 11
-     med_form_id: 25
-     enzym_group_id: 3
+     med_form_id: 9
+     enzym_group_id: 2
      interaction_type: metabolism
   IntMetabolism12:
      int_metabolism_id: 12
-     med_form_id: 31
-     enzym_group_id: 2
+     med_form_id: 10
+     enzym_group_id: 4
      interaction_type: metabolism
   IntMetabolism13:
      int_metabolism_id: 13
-     med_form_id: 31
-     enzym_group_id: 3
+     med_form_id: 11
+     enzym_group_id: 4
      interaction_type: metabolism
   IntMetabolism14:
      int_metabolism_id: 14
-     med_form_id: 32
+     med_form_id: 25
      enzym_group_id: 1
      interaction_type: metabolism
   IntMetabolism15:
      int_metabolism_id: 15
-     med_form_id: 32
-     enzym_group_id: 2
+     med_form_id: 25
+     enzym_group_id: 5
      interaction_type: metabolism
   IntMetabolism16:
      int_metabolism_id: 16
-     med_form_id: 32
-     enzym_group_id: 3
+     med_form_id: 31
+     enzym_group_id: 2
      interaction_type: metabolism
   IntMetabolism17:
      int_metabolism_id: 17
-     med_form_id: 32
-     enzym_group_id: 4
+     med_form_id: 31
+     enzym_group_id: 5
      interaction_type: metabolism
   IntMetabolism18:
      int_metabolism_id: 18
      med_form_id: 32
-     enzym_group_id: 5
+     enzym_group_id: 1
      interaction_type: metabolism
   IntMetabolism19:
      int_metabolism_id: 19
      med_form_id: 32
-     enzym_group_id: 6
+     enzym_group_id: 2
      interaction_type: metabolism
   IntMetabolism20:
      int_metabolism_id: 20
-     med_form_id: 33
-     enzym_group_id: 1
+     med_form_id: 32
+     enzym_group_id: 5
      interaction_type: metabolism
   IntMetabolism21:
      int_metabolism_id: 21
-     med_form_id: 33
-     enzym_group_id: 2
+     med_form_id: 32
+     enzym_group_id: 6
      interaction_type: metabolism
   IntMetabolism22:
      int_metabolism_id: 22
-     med_form_id: 34
-     enzym_group_id: 3
+     med_form_id: 32
+     enzym_group_id: 7
      interaction_type: metabolism
   IntMetabolism23:
      int_metabolism_id: 23
-     med_form_id: 34
-     enzym_group_id: 2
+     med_form_id: 32
+     enzym_group_id: 8
      interaction_type: metabolism
   IntMetabolism24:
      int_metabolism_id: 24
-     med_form_id: 35
-     enzym_group_id: 2
+     med_form_id: 33
+     enzym_group_id: 1
      interaction_type: metabolism
   IntMetabolism25:
      int_metabolism_id: 25
-     med_form_id: 35
-     enzym_group_id: 3
+     med_form_id: 33
+     enzym_group_id: 2
      interaction_type: metabolism
   IntMetabolism26:
      int_metabolism_id: 26
-     med_form_id: 37
-     enzym_group_id: 2
+     med_form_id: 33
+     enzym_group_id: 9
      interaction_type: metabolism
   IntMetabolism27:
      int_metabolism_id: 27
-     med_form_id: 37
-     enzym_group_id: 3
+     med_form_id: 33
+     enzym_group_id: 10
      interaction_type: metabolism
   IntMetabolism28:
      int_metabolism_id: 28
-     med_form_id: 3
-     enzym_group_id: 2
-     interaction_type: inhibitor
+     med_form_id: 34
+     enzym_group_id: 5
+     interaction_type: metabolism
   IntMetabolism29:
      int_metabolism_id: 29
-     med_form_id: 4
+     med_form_id: 34
      enzym_group_id: 2
-     interaction_type: inhibitor
+     interaction_type: metabolism
   IntMetabolism30:
      int_metabolism_id: 30
-     med_form_id: 5
-     enzym_group_id: 2
-     interaction_type: inhibitor
+     med_form_id: 34
+     enzym_group_id: 3
+     interaction_type: metabolism
   IntMetabolism31:
      int_metabolism_id: 31
-     med_form_id: 6
+     med_form_id: 35
      enzym_group_id: 2
-     interaction_type: inhibitor
+     interaction_type: metabolism
   IntMetabolism32:
      int_metabolism_id: 32
-     med_form_id: 7
-     enzym_group_id: 2
-     interaction_type: inhibitor
+     med_form_id: 35
+     enzym_group_id: 5
+     interaction_type: metabolism
   IntMetabolism33:
      int_metabolism_id: 33
-     med_form_id: 8
-     enzym_group_id: 2
-     interaction_type: inhibitor
+     med_form_id: 35
+     enzym_group_id: 3
+     interaction_type: metabolism
   IntMetabolism34:
      int_metabolism_id: 34
-     med_form_id: 9
+     med_form_id: 37
      enzym_group_id: 2
-     interaction_type: inhibitor
+     interaction_type: metabolism
   IntMetabolism35:
      int_metabolism_id: 35
-     med_form_id: 10
-     enzym_group_id: 2
-     interaction_type: inhibitor
+     med_form_id: 37
+     enzym_group_id: 5
+     interaction_type: metabolism
   IntMetabolism36:
      int_metabolism_id: 36
-     med_form_id: 11
+     med_form_id: 3
      enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism37:
      int_metabolism_id: 37
-     med_form_id: 25
-     enzym_group_id: 2
+     med_form_id: 3
+     enzym_group_id: 3
      interaction_type: inhibitor
   IntMetabolism38:
      int_metabolism_id: 38
-     med_form_id: 25
-     enzym_group_id: 3
+     med_form_id: 4
+     enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism39:
      int_metabolism_id: 39
-     med_form_id: 32
-     enzym_group_id: 1
+     med_form_id: 5
+     enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism40:
      int_metabolism_id: 40
-     med_form_id: 32
+     med_form_id: 6
      enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism41:
      int_metabolism_id: 41
-     med_form_id: 32
-     enzym_group_id: 3
+     med_form_id: 7
+     enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism42:
      int_metabolism_id: 42
-     med_form_id: 32
-     enzym_group_id: 4
+     med_form_id: 7
+     enzym_group_id: 3
      interaction_type: inhibitor
   IntMetabolism43:
      int_metabolism_id: 43
-     med_form_id: 32
-     enzym_group_id: 5
+     med_form_id: 8
+     enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism44:
      int_metabolism_id: 44
-     med_form_id: 32
-     enzym_group_id: 6
+     med_form_id: 9
+     enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism45:
      int_metabolism_id: 45
-     med_form_id: 33
-     enzym_group_id: 1
+     med_form_id: 10
+     enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism46:
      int_metabolism_id: 46
-     med_form_id: 33
+     med_form_id: 11
      enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism47:
      int_metabolism_id: 47
-     med_form_id: 33
-     enzym_group_id: 3
+     med_form_id: 25
+     enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism48:
      int_metabolism_id: 48
-     med_form_id: 33
-     enzym_group_id: 4
+     med_form_id: 25
+     enzym_group_id: 5
      interaction_type: inhibitor
   IntMetabolism49:
      int_metabolism_id: 49
-     med_form_id: 33
-     enzym_group_id: 4
+     med_form_id: 25
+     enzym_group_id: 3
      interaction_type: inhibitor
   IntMetabolism50:
      int_metabolism_id: 50
-     med_form_id: 34
+     med_form_id: 32
      enzym_group_id: 1
      interaction_type: inhibitor
   IntMetabolism51:
      int_metabolism_id: 51
-     med_form_id: 34
+     med_form_id: 32
      enzym_group_id: 2
      interaction_type: inhibitor
   IntMetabolism52:
      int_metabolism_id: 52
-     med_form_id: 34
-     enzym_group_id: 3
+     med_form_id: 32
+     enzym_group_id: 5
      interaction_type: inhibitor
   IntMetabolism53:
      int_metabolism_id: 53
-     med_form_id: 34
-     enzym_group_id: 4
+     med_form_id: 32
+     enzym_group_id: 6
      interaction_type: inhibitor
   IntMetabolism54:
      int_metabolism_id: 54
-     med_form_id: 34
-     enzym_group_id: 5
+     med_form_id: 32
+     enzym_group_id: 11
      interaction_type: inhibitor
   IntMetabolism55:
      int_metabolism_id: 55
-     med_form_id: 35
-     enzym_group_id: 2
+     med_form_id: 32
+     enzym_group_id: 8
      interaction_type: inhibitor
   IntMetabolism56:
      int_metabolism_id: 56
+     med_form_id: 33
+     enzym_group_id: 1
+     interaction_type: inhibitor
+  IntMetabolism57:
+     int_metabolism_id: 57
+     med_form_id: 33
+     enzym_group_id: 2
+     interaction_type: inhibitor
+  IntMetabolism58:
+     int_metabolism_id: 58
+     med_form_id: 33
+     enzym_group_id: 5
+     interaction_type: inhibitor
+  IntMetabolism59:
+     int_metabolism_id: 59
+     med_form_id: 33
+     enzym_group_id: 6
+     interaction_type: inhibitor
+  IntMetabolism60:
+     int_metabolism_id: 60
+     med_form_id: 33
+     enzym_group_id: 6
+     interaction_type: inhibitor
+  IntMetabolism61:
+     int_metabolism_id: 61
+     med_form_id: 34
+     enzym_group_id: 1
+     interaction_type: inhibitor
+  IntMetabolism62:
+     int_metabolism_id: 62
+     med_form_id: 34
+     enzym_group_id: 2
+     interaction_type: inhibitor
+  IntMetabolism63:
+     int_metabolism_id: 63
+     med_form_id: 34
+     enzym_group_id: 5
+     interaction_type: inhibitor
+  IntMetabolism64:
+     int_metabolism_id: 64
+     med_form_id: 34
+     enzym_group_id: 6
+     interaction_type: inhibitor
+  IntMetabolism65:
+     int_metabolism_id: 65
+     med_form_id: 34
+     enzym_group_id: 7
+     interaction_type: inhibitor
+  IntMetabolism66:
+     int_metabolism_id: 66
      med_form_id: 35
-     enzym_group_id: 3
+     enzym_group_id: 2
+     interaction_type: inhibitor
+  IntMetabolism67:
+     int_metabolism_id: 67
+     med_form_id: 35
+     enzym_group_id: 5
      interaction_type: inhibitor
 
