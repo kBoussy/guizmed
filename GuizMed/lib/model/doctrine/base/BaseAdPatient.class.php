@@ -88,15 +88,15 @@ abstract class BaseAdPatient extends sfDoctrineRecord
              'type' => 'enum',
              'fixed' => 0,
              'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => 1,
              'values' => 
              array(
               0 => 'M',
               1 => 'F',
              ),
-             'primary' => false,
-             'notnull' => true,
-             'autoincrement' => false,
-             'length' => 1,
              ));
     }
 

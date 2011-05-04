@@ -1,0 +1,71 @@
+# data/fixtures/int_enzym_subgroup.yml
+IntEnzymSubgroup:
+  IntEnzymSubgroup1:
+     int_subgroup_id: 1
+     name: Psychotropics
+  IntEnzymSubgroup2:
+     int_subgroup_id: 2
+     name: Asthma
+  IntEnzymSubgroup3:
+     int_subgroup_id: 3
+     name: Medication
+  IntEnzymSubgroup4:
+     int_subgroup_id: 4
+     name: NSAIDS
+  IntEnzymSubgroup5:
+     int_subgroup_id: 5
+     name: Calcium Channel
+  IntEnzymSubgroup6:
+     int_subgroup_id: 6
+     name: Blockers
+  IntEnzymSubgroup7:
+     int_subgroup_id: 7
+     name: Hormones/chemo
+  IntEnzymSubgroup8:
+     int_subgroup_id: 8
+     name: Anticonvulsants
+  IntEnzymSubgroup9:
+     int_subgroup_id: 9
+     name: therapeutics
+  IntEnzymSubgroup10:
+     int_subgroup_id: 10
+     name: Proton Pump
+  IntEnzymSubgroup11:
+     int_subgroup_id: 11
+     name: Inhibitors
+  IntEnzymSubgroup12:
+     int_subgroup_id: 12
+     name: Hypoglycemics
+  IntEnzymSubgroup13:
+     int_subgroup_id: 13
+     name: Other
+  IntEnzymSubgroup14:
+     int_subgroup_id: 14
+     name: Others
+  IntEnzymSubgroup15:
+     int_subgroup_id: 15
+     name: Antihistamines
+  IntEnzymSubgroup16:
+     int_subgroup_id: 16
+     name: Drugs of
+  IntEnzymSubgroup17:
+     int_subgroup_id: 17
+     name: abuse/treatment
+  IntEnzymSubgroup18:
+     int_subgroup_id: 18
+     name: Beta Blockers
+  IntEnzymSubgroup19:
+     int_subgroup_id: 19
+     name: Cough
+  IntEnzymSubgroup20:
+     int_subgroup_id: 20
+     name: Medicines
+  IntEnzymSubgroup21:
+     int_subgroup_id: 21
+     name: Opiates
+  IntEnzymSubgroup22:
+     int_subgroup_id: 22
+     name: Antibiotics/
+  IntEnzymSubgroup23:
+     int_subgroup_id: 23
+     name: Antifungals

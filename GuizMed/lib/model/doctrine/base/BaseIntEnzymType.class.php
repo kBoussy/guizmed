@@ -9,14 +9,11 @@ Doctrine_Manager::getInstance()->bindComponent('IntEnzymType', 'doctrine');
  * 
  * @property integer $med_enzym_types_id
  * @property string $name
- * @property Doctrine_Collection $IntEnzym
  * 
- * @method integer             getMedEnzymTypesId()    Returns the current record's "med_enzym_types_id" value
- * @method string              getName()               Returns the current record's "name" value
- * @method Doctrine_Collection getIntEnzym()           Returns the current record's "IntEnzym" collection
- * @method IntEnzymType        setMedEnzymTypesId()    Sets the current record's "med_enzym_types_id" value
- * @method IntEnzymType        setName()               Sets the current record's "name" value
- * @method IntEnzymType        setIntEnzym()           Sets the current record's "IntEnzym" collection
+ * @method integer      getMedEnzymTypesId()    Returns the current record's "med_enzym_types_id" value
+ * @method string       getName()               Returns the current record's "name" value
+ * @method IntEnzymType setMedEnzymTypesId()    Sets the current record's "med_enzym_types_id" value
+ * @method IntEnzymType setName()               Sets the current record's "name" value
  * 
  * @package    GuizMed
  * @subpackage model
@@ -50,8 +47,6 @@ abstract class BaseIntEnzymType extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('IntEnzym', array(
-             'local' => 'med_enzym_types_id',
-             'foreign' => 'int_enzym_type_id'));
+        
     }
 }

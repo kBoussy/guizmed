@@ -19,8 +19,8 @@ Doctrine_Manager::getInstance()->bindComponent('IntDrug', 'doctrine');
  * @property integer $int_enzym_id
  * @property integer $enzym_subgroup_id
  * @property IntEnzymBrand $IntEnzymBrand
- * @property IntEnzym $IntEnzym
  * @property IntEnzymSubgroup $IntEnzymSubgroup
+ * @property IntEnzym $IntEnzym
  * 
  * @method integer          getIntDrugId()         Returns the current record's "int_drug_id" value
  * @method string           getName()              Returns the current record's "name" value
@@ -34,8 +34,8 @@ Doctrine_Manager::getInstance()->bindComponent('IntDrug', 'doctrine');
  * @method integer          getIntEnzymId()        Returns the current record's "int_enzym_id" value
  * @method integer          getEnzymSubgroupId()   Returns the current record's "enzym_subgroup_id" value
  * @method IntEnzymBrand    getIntEnzymBrand()     Returns the current record's "IntEnzymBrand" value
- * @method IntEnzym         getIntEnzym()          Returns the current record's "IntEnzym" value
  * @method IntEnzymSubgroup getIntEnzymSubgroup()  Returns the current record's "IntEnzymSubgroup" value
+ * @method IntEnzym         getIntEnzym()          Returns the current record's "IntEnzym" value
  * @method IntDrug          setIntDrugId()         Sets the current record's "int_drug_id" value
  * @method IntDrug          setName()              Sets the current record's "name" value
  * @method IntDrug          setMinorLessPotent()   Sets the current record's "minor_less_potent" value
@@ -48,8 +48,8 @@ Doctrine_Manager::getInstance()->bindComponent('IntDrug', 'doctrine');
  * @method IntDrug          setIntEnzymId()        Sets the current record's "int_enzym_id" value
  * @method IntDrug          setEnzymSubgroupId()   Sets the current record's "enzym_subgroup_id" value
  * @method IntDrug          setIntEnzymBrand()     Sets the current record's "IntEnzymBrand" value
- * @method IntDrug          setIntEnzym()          Sets the current record's "IntEnzym" value
  * @method IntDrug          setIntEnzymSubgroup()  Sets the current record's "IntEnzymSubgroup" value
+ * @method IntDrug          setIntEnzym()          Sets the current record's "IntEnzym" value
  * 
  * @package    GuizMed
  * @subpackage model
@@ -168,12 +168,12 @@ abstract class BaseIntDrug extends sfDoctrineRecord
              'local' => 'brand_id',
              'foreign' => 'int_brand_id'));
 
-        $this->hasOne('IntEnzym', array(
-             'local' => 'int_enzym_id',
-             'foreign' => 'int_enzym_id'));
-
         $this->hasOne('IntEnzymSubgroup', array(
              'local' => 'enzym_subgroup_id',
              'foreign' => 'int_subgroup_id'));
+
+        $this->hasOne('IntEnzym', array(
+             'local' => 'int_enzym_id',
+             'foreign' => 'int_enzym_id'));
     }
 }

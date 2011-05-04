@@ -1,0 +1,146 @@
+# data/fixtures/int_enzym_brand.yml
+IntEnzymBrand:
+  IntEnzymBrand1:
+     int_brand_id: 1
+     name: Flovent
+  IntEnzymBrand2:
+     int_brand_id: 2
+     name: Sustiva
+  IntEnzymBrand3:
+     int_brand_id: 3
+     name: Zyflo
+  IntEnzymBrand4:
+     int_brand_id: 4
+     name: Lunesta
+  IntEnzymBrand5:
+     int_brand_id: 5
+     name: Rozerem
+  IntEnzymBrand6:
+     int_brand_id: 6
+     name: OCs
+  IntEnzymBrand7:
+     int_brand_id: 7
+     name: Glucotrol
+  IntEnzymBrand8:
+     int_brand_id: 8
+     name: Amaryl
+  IntEnzymBrand9:
+     int_brand_id: 9
+     name: Sonata
+  IntEnzymBrand10:
+     int_brand_id: 10
+     name: Emend
+  IntEnzymBrand11:
+     int_brand_id: 11
+     name: Flexeril
+  IntEnzymBrand12:
+     int_brand_id: 12
+     name: Soma
+  IntEnzymBrand13:
+     int_brand_id: 13
+     name: DiaBeta
+  IntEnzymBrand14:
+     int_brand_id: 14
+     name: Ambien
+  IntEnzymBrand15:
+     int_brand_id: 15
+     name: Starlix
+  IntEnzymBrand16:
+     int_brand_id: 16
+     name: Atarax
+  IntEnzymBrand17:
+     int_brand_id: 17
+     name: Avandia
+  IntEnzymBrand18:
+     int_brand_id: 18
+     name: Orinase
+  IntEnzymBrand19:
+     int_brand_id: 19
+     name: Actos
+  IntEnzymBrand20:
+     int_brand_id: 20
+     name: Malarone
+  IntEnzymBrand21:
+     int_brand_id: 21
+     name: Atacand
+  IntEnzymBrand22:
+     int_brand_id: 22
+     name: PCP
+  IntEnzymBrand23:
+     int_brand_id: 23
+     name: Lescol
+  IntEnzymBrand24:
+     int_brand_id: 24
+     name: Rilutek
+  IntEnzymBrand25:
+     int_brand_id: 25
+     name: Detrol
+  IntEnzymBrand26:
+     int_brand_id: 26
+     name: Cozaar
+  IntEnzymBrand27:
+     int_brand_id: 27
+     name: Naropin
+  IntEnzymBrand28:
+     int_brand_id: 28
+     name: Cognex
+  IntEnzymBrand29:
+     int_brand_id: 29
+     name: Ketek
+  IntEnzymBrand30:
+     int_brand_id: 30
+     name: Zanaflex
+  IntEnzymBrand31:
+     int_brand_id: 31
+     name: Zomig
+  IntEnzymBrand32:
+     int_brand_id: 32
+     name: Tomide
+  IntEnzymBrand33:
+     int_brand_id: 33
+     name: Reglan
+  IntEnzymBrand34:
+     int_brand_id: 34
+     name: Gabitril
+  IntEnzymBrand35:
+     int_brand_id: 35
+     name: Rythmol
+  IntEnzymBrand36:
+     int_brand_id: 36
+     name: Zonegran
+  IntEnzymBrand37:
+     int_brand_id: 37
+     name: Clarinex
+  IntEnzymBrand38:
+     int_brand_id: 38
+     name: Allegra
+  IntEnzymBrand39:
+     int_brand_id: 39
+     name: Claritin
+  IntEnzymBrand40:
+     int_brand_id: 40
+     name: Plavix
+  IntEnzymBrand41:
+     int_brand_id: 41
+     name: Reyataz
+  IntEnzymBrand42:
+     int_brand_id: 42
+     name: Tricor
+  IntEnzymBrand43:
+     int_brand_id: 43
+     name: Provigil
+  IntEnzymBrand44:
+     int_brand_id: 44
+     name: Ticlid
+  IntEnzymBrand45:
+     int_brand_id: 45
+     name: Prilosec
+  IntEnzymBrand46:
+     int_brand_id: 46
+     name: Mexitil
+  IntEnzymBrand47:
+     int_brand_id: 47
+     name: Vfend
+  IntEnzymBrand48:
+     int_brand_id: 48
+     name: Accolate
