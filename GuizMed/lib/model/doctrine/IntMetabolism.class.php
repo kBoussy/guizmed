@@ -12,5 +12,8 @@
  */
 class IntMetabolism extends BaseIntMetabolism
 {
-
+    function getDrugs(){
+        $q = Doctrine_Query::create()->from('intDrug id')->where('id.int_enzym_id = ?', $this->getEnzymGroupId());
+        return $q->execute();
+    }
 }

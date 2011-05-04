@@ -24,5 +24,8 @@ return $q->execute();
       $magister = $q->execute();
       return $magister[0]->getNaam();
   }
-
+  public function getAllMetabolism(){
+      $q = Doctrine_Query::create()->from('IntMetabolism im')->where('im.med_form_id = ? ', $this->getMedFormId());
+      return $q->execute();
+  }
 }
