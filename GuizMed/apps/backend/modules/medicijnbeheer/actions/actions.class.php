@@ -21,11 +21,9 @@ class medicijnbeheerActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
-//    $this->med_form = Doctrine_Core::getTable('medForm')->find(array($request->getParameter('med_form_id')));
     $q = Doctrine_Query::create()->from('medForm m')->where('m.med_base_id = ?', $request->getParameter('med_form_id'));
     $this->med_forms = $q->execute();
-//    $this->med_forms = $this->med_form[0];
-
+    $this->med_base_id = Doctrine_Core::getTable('medBaseId')->find(array($request->getParameter('med_form_id')));
     $this->forward404Unless($this->med_forms);
   }
 
