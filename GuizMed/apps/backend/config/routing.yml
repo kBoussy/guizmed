@@ -6,6 +6,14 @@ homepage:
   url:   /
   param: { module: default, action: index }
 
+inlog:
+  url:   /login/uName/:uName/pWord/:pWord
+  param: { module: inlog, action: inlog }
+
+show_patient:
+  url:   /patienten/show/patient_id/:patient_id
+  param: { module: patienten, action: show }
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
@@ -14,3 +22,4 @@ default_index:
 
 default:
   url:   /:module/:action/*
+
