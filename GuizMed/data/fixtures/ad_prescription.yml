@@ -1,0 +1,52 @@
+# data/fixtures/ad_prescription.yml
+AdPrescription:
+   AdPrescription1:
+     ad_presc_id: 1
+     start_date: 2011-04-25
+     end_date: 2011-03-22
+     presc_date: 2011-04-25
+     dose: 5
+     frequency: 10
+     user_patient_id: 1
+     med_form_id: 4
+     comment: Check-up every other week
+   AdPrescription2:
+     ad_presc_id: 2
+     start_date: 2010-03-24
+     end_date: 2010-02-21
+     presc_date: 2010-03-24
+     dose: 20
+     frequency: 200
+     user_patient_id: 3
+     med_form_id: 10
+     comment: 
+   AdPrescription3:
+     ad_presc_id: 3
+     start_date: 2011-03-24
+     end_date: 2012-02-21
+     presc_date: 2011-03-24
+     dose: 200
+     frequency: 5
+     user_patient_id: 2
+     med_form_id: 20
+     comment:
+   AdPrescription4:
+     ad_presc_id: 4
+     start_date: 2011-03-24
+     end_date: 2012-02-21
+     presc_date: 2011-03-24
+     dose: 20
+     frequency: 3
+     user_patient_id: 1
+     med_form_id: 20
+     comment: This medication shouldn't be combined with alcohol
+   AdPrescription5:
+     ad_presc_id: 5
+     start_date: 2001-03-24
+     end_date: 2011-02-21
+     presc_date: 2001-03-24
+     dose: 22
+     frequency: 8
+     user_patient_id: 4
+     med_form_id: 20
+     comment: Patient shouldn't do heavy lifting
