@@ -12,5 +12,33 @@
  */
 class AdUser extends BaseAdUser
 {
+    function inlog($uName,$pWord)
+    {
+       $users = Doctrine_Query::create()->from('AdUser au')->where('au.uname = ?', $uName)->execute();
+       if($users[0]->getPassw()==$pWord){
+            return $this->createToken($users[0]->getUserId());
+            //return "goed";
+       }else{
+           return "vals!";
+       }
+    }
+      function createToken($id)
+    {
+        $users = Doctrine_Query::create()->from('AdUser au')->where('au.user_id = ?',$id)->execute();
+        $user = $users[0];
+        $token = $user->getFname().$user->getLname();
+        $user->setToken($token);
+        $user->save();
+
+        return $token;
+    }
+    function isAllowed($token){
+        $users = Doctrine_Query::create()->from('AdUser au')->where('au.token = ? ', $token)->execute();
+        if($users->count()>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }
