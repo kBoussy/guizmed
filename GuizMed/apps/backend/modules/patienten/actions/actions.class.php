@@ -36,13 +36,20 @@ class patientenActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
-
-    $this->form = new adPatientForm();
-
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('new');
+      if(isset($_POST['fName'])){
+        $patient = new AdPatient();
+        $patient->setFname($_POST['fName']);
+        $patient->setLname($_POST['lName']);
+        $patient->setBdate($_POST['bDate']);
+        $patient->setSex($_POST['sex']);
+        $patient->save();
+      }else{
+         $this->forward404('ge moet fName invullen dumbo');
+      }
+#    $this->forward404Unless($request->isMethod(sfRequest::POST));
+#    $this->form = new adPatientForm();
+#    $this->processForm($request, $this->form);
+#    $this->setTemplate('new');
   }
 
   public function executeEdit(sfWebRequest $request)
