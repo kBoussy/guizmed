@@ -45,3 +45,6 @@ IntEnzym:
   int_enzym15:
      int_enzym_id: 15
      name: CYPD3A7
+  int_enzym16:
+     int_enzym_id: 16
+     name: CYPD3A4,5,7

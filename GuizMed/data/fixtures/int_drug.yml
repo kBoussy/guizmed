@@ -1,0 +1,6050 @@
+# data/fixtures/int_drug.yml
+IntDrug:
+  IntDrug1:
+     int_drug_id: 1
+     name: acyclovir
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug2:
+     int_drug_id: 2
+     name: clopidogrel
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug3:
+     int_drug_id: 3
+     name: acetaminophen
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug4:
+     int_drug_id: 4
+     name: artemisinin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug5:
+     int_drug_id: 5
+     name: amiodarone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug6:
+     int_drug_id: 6
+     name: amiodarone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug7:
+     int_drug_id: 7
+     name: amiodarone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug8:
+     int_drug_id: 8
+     name: amiodarone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 40
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug9:
+     int_drug_id: 9
+     name: Plavix
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug10:
+     int_drug_id: 10
+     name: chloramphenicol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug11:
+     int_drug_id: 11
+     name: anastrazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug12:
+     int_drug_id: 12
+     name: amitriptyline
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug13:
+     int_drug_id: 13
+     name: amprenavir
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug14:
+     int_drug_id: 14
+     name: caffeine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug15:
+     int_drug_id: 15
+     name: efavirenz
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug16:
+     int_drug_id: 16
+     name: delavirdine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug17:
+     int_drug_id: 17
+     name: cimetidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug18:
+     int_drug_id: 18
+     name: bupropion
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug19:
+     int_drug_id: 19
+     name: aprepitant -initially
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug20:
+     int_drug_id: 20
+     name: cimetidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug21:
+     int_drug_id: 21
+     name: fluoxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug22:
+     int_drug_id: 22
+     name: efavirenz
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug23:
+     int_drug_id: 23
+     name: delavirdine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug24:
+     int_drug_id: 24
+     name: celecoxib
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug25:
+     int_drug_id: 25
+     name: atazanavir
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug26:
+     int_drug_id: 26
+     name: ciprofloxacin
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug27:
+     int_drug_id: 27
+     name: fluvoxamine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug28:
+     int_drug_id: 28
+     name: esomeprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug29:
+     int_drug_id: 29
+     name: efavirenz
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug30:
+     int_drug_id: 30
+     name: chlorpheniramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 41
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug31:
+     int_drug_id: 31
+     name: Reyataz
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug32:
+     int_drug_id: 32
+     name: enoxacin
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug33:
+     int_drug_id: 33
+     name: ketoconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug34:
+     int_drug_id: 34
+     name: felbamate
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug35:
+     int_drug_id: 35
+     name: fenofibrate
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug36:
+     int_drug_id: 36
+     name: chlorpromazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug37:
+     int_drug_id: 37
+     name: cimetidine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug38:
+     int_drug_id: 38
+     name: echinacea
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug39:
+     int_drug_id: 39
+     name: memantine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug40:
+     int_drug_id: 40
+     name: fluconazole
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 42
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug41:
+     int_drug_id: 41
+     name: Tricor
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug42:
+     int_drug_id: 42
+     name: cimetidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug43:
+     int_drug_id: 43
+     name: ciprofloxacin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug44:
+     int_drug_id: 44
+     name: enoxacin
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug45:
+     int_drug_id: 45
+     name: nelfinavir
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug46:
+     int_drug_id: 46
+     name: fluoxetine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug47:
+     int_drug_id: 47
+     name: fluconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug48:
+     int_drug_id: 48
+     name: cinacalcet
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug49:
+     int_drug_id: 49
+     name: clarithromycin
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug50:
+     int_drug_id: 50
+     name: famotidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug51:
+     int_drug_id: 51
+     name: oral contraceptives
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug52:
+     int_drug_id: 52
+     name: fluvoxamine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug53:
+     int_drug_id: 53
+     name: fluoxetine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug54:
+     int_drug_id: 54
+     name: citalopram
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug55:
+     int_drug_id: 55
+     name: delavirdine
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug56:
+     int_drug_id: 56
+     name: flutamide
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug57:
+     int_drug_id: 57
+     name: paroxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug58:
+     int_drug_id: 58
+     name: indomethacin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug59:
+     int_drug_id: 59
+     name: fluvoxamine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug60:
+     int_drug_id: 60
+     name: chlorpheniramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug61:
+     int_drug_id: 61
+     name: diltiazem
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug62:
+     int_drug_id: 62
+     name: fluvoxamine
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug63:
+     int_drug_id: 63
+     name: ritonavir
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug64:
+     int_drug_id: 64
+     name: inh
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug65:
+     int_drug_id: 65
+     name: fluvastatin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug66:
+     int_drug_id: 66
+     name: clomipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug67:
+     int_drug_id: 67
+     name: doxycycline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug68:
+     int_drug_id: 68
+     name: grapefruit juice
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug69:
+     int_drug_id: 69
+     name: thiotepa
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug70:
+     int_drug_id: 70
+     name: modafinil
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug71:
+     int_drug_id: 71
+     name: isoniazid
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug72:
+     int_drug_id: 72
+     name: desipramine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug73:
+     int_drug_id: 73
+     name: echinacea
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug74:
+     int_drug_id: 74
+     name: lidocaine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug75:
+     int_drug_id: 75
+     name: ticlopidine
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug76:
+     int_drug_id: 76
+     name: Provigil
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug77:
+     int_drug_id: 77
+     name: ketoconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug78:
+     int_drug_id: 78
+     name: diphenhydramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug79:
+     int_drug_id: 79
+     name: enoxacin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug80:
+     int_drug_id: 80
+     name: lomefloxacin
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 44
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug81:
+     int_drug_id: 81
+     name: Ticlid
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug82:
+     int_drug_id: 82
+     name: omeprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug83:
+     int_drug_id: 83
+     name: leflunomide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug84:
+     int_drug_id: 84
+     name: doxepin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug85:
+     int_drug_id: 85
+     name: erythromycin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug86:
+     int_drug_id: 86
+     name: mexiletine
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug87:
+     int_drug_id: 87
+     name: Prilosec
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug88:
+     int_drug_id: 88
+     name: modafiinil
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug89:
+     int_drug_id: 89
+     name: duloxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug90:
+     int_drug_id: 90
+     name: fluconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug91:
+     int_drug_id: 91
+     name: Mexitil
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug92:
+     int_drug_id: 92
+     name: oral contraceptives
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug93:
+     int_drug_id: 93
+     name: phenylbutazone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug94:
+     int_drug_id: 94
+     name: fluvoxamine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug95:
+     int_drug_id: 95
+     name: fluvoxamine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug96:
+     int_drug_id: 96
+     name: moclobemide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug97:
+     int_drug_id: 97
+     name: oxcarbazepine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug98:
+     int_drug_id: 98
+     name: sertraline
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug99:
+     int_drug_id: 99
+     name: fluoxetine
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug100:
+     int_drug_id: 100
+     name: grapefruit juice
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug101:
+     int_drug_id: 101
+     name: norfloxacin
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug102:
+     int_drug_id: 102
+     name: ticlopidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug103:
+     int_drug_id: 103
+     name: sulfamethoxazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug104:
+     int_drug_id: 104
+     name: goldenseal
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug105:
+     int_drug_id: 105
+     name: imatinib
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug106:
+     int_drug_id: 106
+     name: ofloxacin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug107:
+     int_drug_id: 107
+     name: topiramate
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug108:
+     int_drug_id: 108
+     name: sulfaphenazole
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug109:
+     int_drug_id: 109
+     name: halofantrine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug110:
+     int_drug_id: 110
+     name: indinavir
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug111:
+     int_drug_id: 111
+     name: oral contraceptives
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug112:
+     int_drug_id: 112
+     name: voriconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug113:
+     int_drug_id: 113
+     name: tamoxifen
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug114:
+     int_drug_id: 114
+     name: haloperidol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug115:
+     int_drug_id: 115
+     name: itraconazole
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug116:
+     int_drug_id: 116
+     name: perphenazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug117:
+     int_drug_id: 117
+     name: teniposide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug118:
+     int_drug_id: 118
+     name: hydroxyzine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug119:
+     int_drug_id: 119
+     name: ketoconazole
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug120:
+     int_drug_id: 120
+     name: phenacetin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug121:
+     int_drug_id: 121
+     name: valproic acid
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug122:
+     int_drug_id: 122
+     name: imipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug123:
+     int_drug_id: 123
+     name: miconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug124:
+     int_drug_id: 124
+     name: propafenone
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug125:
+     int_drug_id: 125
+     name: voriconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug126:
+     int_drug_id: 126
+     name: methadone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug127:
+     int_drug_id: 127
+     name: nefazodone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug128:
+     int_drug_id: 128
+     name: ropinirole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug129:
+     int_drug_id: 129
+     name: Vfend
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug130:
+     int_drug_id: 130
+     name: metoclopramide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug131:
+     int_drug_id: 131
+     name: nelfinavir
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug132:
+     int_drug_id: 132
+     name: tacrine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug133:
+     int_drug_id: 133
+     name: zafirlukast,
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug134:
+     int_drug_id: 134
+     name: moclobemide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug135:
+     int_drug_id: 135
+     name: ritonavir and
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug136:
+     int_drug_id: 136
+     name: ticlopidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug137:
+     int_drug_id: 137
+     name: Accolate
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug138:
+     int_drug_id: 138
+     name: paroxetine
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug139:
+     int_drug_id: 139
+     name: boosted PIs
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug140:
+     int_drug_id: 140
+     name: tocainide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug141:
+     int_drug_id: 141
+     name: 5-fluorouracil
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug142:
+     int_drug_id: 142
+     name: pimozide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug143:
+     int_drug_id: 143
+     name: saquinavir
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug144:
+     int_drug_id: 144
+     name: verapamil
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug145:
+     int_drug_id: 145
+     name: propafenone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug146:
+     int_drug_id: 146
+     name: telithromycin
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug147:
+     int_drug_id: 147
+     name: zileuton
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug148:
+     int_drug_id: 148
+     name: quinidine/quinine
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug149:
+     int_drug_id: 149
+     name: verapamil
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug150:
+     int_drug_id: 150
+     name: Zyflo
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug151:
+     int_drug_id: 151
+     name: ritonavir
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug152:
+     int_drug_id: 152
+     name: voriconazole
+     minor_less_potent: False
+     potent: True
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug153:
+     int_drug_id: 153
+     name: sertraline
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug154:
+     int_drug_id: 154
+     name: terbinafine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug155:
+     int_drug_id: 155
+     name: thioridazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug156:
+     int_drug_id: 156
+     name: ticlopidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: True
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug157:
+     int_drug_id: 157
+     name: carbamazepine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug158:
+     int_drug_id: 158
+     name: lopinavir/ritonavir
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug159:
+     int_drug_id: 159
+     name: retinoic acid
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug160:
+     int_drug_id: 160
+     name: ginko biloba
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug161:
+     int_drug_id: 161
+     name: aprepitant-long term
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug162:
+     int_drug_id: 162
+     name: ?rifampin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 
+  IntDrug163:
+     int_drug_id: 163
+     name: aprepitant -long term
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug164:
+     int_drug_id: 164
+     name: charbroiled meat
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug165:
+     int_drug_id: 165
+     name: phenobarbital
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug166:
+     int_drug_id: 166
+     name: rifampin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug167:
+     int_drug_id: 167
+     name: barbituates
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug168:
+     int_drug_id: 168
+     name: barbituates
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug169:
+     int_drug_id: 169
+     name: cigarette smoke
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug170:
+     int_drug_id: 170
+     name: phenytoin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug171:
+     int_drug_id: 171
+     name: St John’s Wort
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 
+  IntDrug172:
+     int_drug_id: 172
+     name: bosentan
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug173:
+     int_drug_id: 173
+     name: bosanten
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug174:
+     int_drug_id: 174
+     name: cruciferous veggies
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug175:
+     int_drug_id: 175
+     name: rifampin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug176:
+     int_drug_id: 176
+     name: carbamazepine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug177:
+     int_drug_id: 177
+     name: carbamazepine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug178:
+     int_drug_id: 178
+     name: esomeprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug179:
+     int_drug_id: 179
+     name: rifampin-chronic
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug180:
+     int_drug_id: 180
+     name: efavirenz
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug181:
+     int_drug_id: 181
+     name: griseofulvin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug182:
+     int_drug_id: 182
+     name: ritonavir and boosted
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug183:
+     int_drug_id: 183
+     name: felbamate
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug184:
+     int_drug_id: 184
+     name: insulin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug185:
+     int_drug_id: 185
+     name: Pis
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug186:
+     int_drug_id: 186
+     name: glucocorticoids
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug187:
+     int_drug_id: 187
+     name: lansprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug188:
+     int_drug_id: 188
+     name: St John’s Wort-long
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug189:
+     int_drug_id: 189
+     name: modafinil
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug190:
+     int_drug_id: 190
+     name: marijuana smoke
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug191:
+     int_drug_id: 191
+     name: term
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 
+  IntDrug192:
+     int_drug_id: 192
+     name: nafcillin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug193:
+     int_drug_id: 193
+     name: moricizine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug194:
+     int_drug_id: 194
+     name: nevirapine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug195:
+     int_drug_id: 195
+     name: omeprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug196:
+     int_drug_id: 196
+     name: oxcarbazepine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug197:
+     int_drug_id: 197
+     name: rifampin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug198:
+     int_drug_id: 198
+     name: phenytoin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug199:
+     int_drug_id: 199
+     name: ritonavir
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 
+  IntDrug200:
+     int_drug_id: 200
+     name: primidone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug201:
+     int_drug_id: 201
+     name: rifampins
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug202:
+     int_drug_id: 202
+     name: St John’s Wort
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug203:
+     int_drug_id: 203
+     name: pioglitazone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug204:
+     int_drug_id: 204
+     name: Actos
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug205:
+     int_drug_id: 205
+     name: topiramate at >200
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug206:
+     int_drug_id: 206
+     name: mg/d
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: False
+     inhibitor: False
+     inducer: True
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 
+  IntDrug207:
+     int_drug_id: 207
+     name: amitriptyline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug208:
+     int_drug_id: 208
+     name: bupropion
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug209:
+     int_drug_id: 209
+     name: caspofungin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug210:
+     int_drug_id: 210
+     name: amitriptyline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug211:
+     int_drug_id: 211
+     name: fluoxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 1
+  IntDrug212:
+     int_drug_id: 212
+     name: amphetamines
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug213:
+     int_drug_id: 213
+     name: alprazolam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug214:
+     int_drug_id: 214
+     name: fluticasone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 2
+  IntDrug215:
+     int_drug_id: 215
+     name: anagrelide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug216:
+     int_drug_id: 216
+     name: mephenytoin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 4
+  IntDrug217:
+     int_drug_id: 217
+     name: esomeprazole
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 5
+  IntDrug218:
+     int_drug_id: 218
+     name: carisoprodol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug219:
+     int_drug_id: 219
+     name: aceclofenac
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug220:
+     int_drug_id: 220
+     name: chlorpropamide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug221:
+     int_drug_id: 221
+     name: bosentan
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug222:
+     int_drug_id: 222
+     name: chlorpheniramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 10
+  IntDrug223:
+     int_drug_id: 223
+     name: carveodilol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 11
+  IntDrug224:
+     int_drug_id: 224
+     name: codeine(p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 12
+  IntDrug225:
+     int_drug_id: 225
+     name: dolesetron(p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug226:
+     int_drug_id: 226
+     name: buprenorphine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 13
+  IntDrug227:
+     int_drug_id: 227
+     name: macrolides (not
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 14
+  IntDrug228:
+     int_drug_id: 228
+     name: carbamazepine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 4
+  IntDrug229:
+     int_drug_id: 229
+     name: Desloratadine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 10
+  IntDrug230:
+     int_drug_id: 230
+     name: cortisols
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 15
+  IntDrug231:
+     int_drug_id: 231
+     name: aprepitant
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug232:
+     int_drug_id: 232
+     name: chlorpromazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug233:
+     int_drug_id: 233
+     name: cyclophosphamide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug234:
+     int_drug_id: 234
+     name: hydralazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug235:
+     int_drug_id: 235
+     name: citalopram
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug236:
+     int_drug_id: 236
+     name: sertraline
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 1
+  IntDrug237:
+     int_drug_id: 237
+     name: amitriptyline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug238:
+     int_drug_id: 238
+     name: amitriptyline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 1
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug239:
+     int_drug_id: 239
+     name: Flovent
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 2
+  IntDrug240:
+     int_drug_id: 240
+     name: caffeine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug241:
+     int_drug_id: 241
+     name: phenytoin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 4
+  IntDrug242:
+     int_drug_id: 242
+     name: lansoprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 2
+     int_enzym_id: 11
+     enzym_subgroup_id: 5
+  IntDrug243:
+     int_drug_id: 243
+     name: Soma
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug244:
+     int_drug_id: 244
+     name: celecoxib
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug245:
+     int_drug_id: 245
+     name: glipizide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug246:
+     int_drug_id: 246
+     name: candesartan
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug247:
+     int_drug_id: 247
+     name: diphenhydramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 10
+  IntDrug248:
+     int_drug_id: 248
+     name: metoprolol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 11
+  IntDrug249:
+     int_drug_id: 249
+     name: hydrocodone (p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 12
+  IntDrug250:
+     int_drug_id: 250
+     name: doxorubicin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug251:
+     int_drug_id: 251
+     name: cocaine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 13
+  IntDrug252:
+     int_drug_id: 252
+     name: azithromycin)
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 14
+  IntDrug253:
+     int_drug_id: 253
+     name: ethosuximide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 3
+     int_enzym_id: 16
+     enzym_subgroup_id: 4
+  IntDrug254:
+     int_drug_id: 254
+     name: Clarinex
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 10
+  IntDrug255:
+     int_drug_id: 255
+     name: desogestrel (p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 4
+     int_enzym_id: 16
+     enzym_subgroup_id: 15
+  IntDrug256:
+     int_drug_id: 256
+     name: Emend
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug257:
+     int_drug_id: 257
+     name: clomipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug258:
+     int_drug_id: 258
+     name: (p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug259:
+     int_drug_id: 259
+     name: isoniazid
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug260:
+     int_drug_id: 260
+     name: clomipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug261:
+     int_drug_id: 261
+     name: valproic acid
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 1
+  IntDrug262:
+     int_drug_id: 262
+     name: aripiprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug263:
+     int_drug_id: 263
+     name: aripiprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug264:
+     int_drug_id: 264
+     name: salmeterol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 2
+  IntDrug265:
+     int_drug_id: 265
+     name: cinacalcet
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug266:
+     int_drug_id: 266
+     name: omeprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 5
+  IntDrug267:
+     int_drug_id: 267
+     name: cilostazol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug268:
+     int_drug_id: 268
+     name: diclofenac
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 5
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug269:
+     int_drug_id: 269
+     name: Glucotrol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 6
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug270:
+     int_drug_id: 270
+     name: Atacand
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug271:
+     int_drug_id: 271
+     name: hydroxyzine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 10
+  IntDrug272:
+     int_drug_id: 272
+     name: propranolol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 11
+  IntDrug273:
+     int_drug_id: 273
+     name: oxycodone
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 12
+  IntDrug274:
+     int_drug_id: 274
+     name: encainide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug275:
+     int_drug_id: 275
+     name: fentanyl
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 13
+  IntDrug276:
+     int_drug_id: 276
+     name: itraconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 14
+  IntDrug277:
+     int_drug_id: 277
+     name: felbamate
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 4
+  IntDrug278:
+     int_drug_id: 278
+     name: fexofenadine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 10
+  IntDrug279:
+     int_drug_id: 279
+     name: ethinyl estradiol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 15
+  IntDrug280:
+     int_drug_id: 280
+     name: cinacalcet
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug281:
+     int_drug_id: 281
+     name: clozapine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug282:
+     int_drug_id: 282
+     name: efavrinez
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug283:
+     int_drug_id: 283
+     name: procainamide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug284:
+     int_drug_id: 284
+     name: diazepam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug285:
+     int_drug_id: 285
+     name: atomoxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug286:
+     int_drug_id: 286
+     name: buspirone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug287:
+     int_drug_id: 287
+     name: Serevent
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 2
+  IntDrug288:
+     int_drug_id: 288
+     name: cyclobenzaprine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug289:
+     int_drug_id: 289
+     name: pantoprazole
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 5
+  IntDrug290:
+     int_drug_id: 290
+     name: clopidogrel
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug291:
+     int_drug_id: 291
+     name: flurbiprofen
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug292:
+     int_drug_id: 292
+     name: Glimepiride
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug293:
+     int_drug_id: 293
+     name: fluvastatin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 7
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug294:
+     int_drug_id: 294
+     name: Atarax
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 10
+  IntDrug295:
+     int_drug_id: 295
+     name: timolol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 11
+  IntDrug296:
+     int_drug_id: 296
+     name: tramadol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 12
+  IntDrug297:
+     int_drug_id: 297
+     name: MDMA  (ecstasy)
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug298:
+     int_drug_id: 298
+     name: ketamine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 13
+  IntDrug299:
+     int_drug_id: 299
+     name: ketoconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 14
+  IntDrug300:
+     int_drug_id: 300
+     name: tiagabine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 8
+     int_enzym_id: 16
+     enzym_subgroup_id: 4
+  IntDrug301:
+     int_drug_id: 301
+     name: Allegra
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 9
+     int_enzym_id: 16
+     enzym_subgroup_id: 10
+  IntDrug302:
+     int_drug_id: 302
+     name: OCs
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 15
+  IntDrug303:
+     int_drug_id: 303
+     name: esomeprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug304:
+     int_drug_id: 304
+     name: duloxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 10
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug305:
+     int_drug_id: 305
+     name: Sustiva
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug306:
+     int_drug_id: 306
+     name: retigabine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug307:
+     int_drug_id: 307
+     name: escitalopram
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug308:
+     int_drug_id: 308
+     name: benztropine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug309:
+     int_drug_id: 309
+     name: carbamazepine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug310:
+     int_drug_id: 310
+     name: zileuton
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 11
+     int_enzym_id: 16
+     enzym_subgroup_id: 2
+  IntDrug311:
+     int_drug_id: 311
+     name: Flexeril
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug312:
+     int_drug_id: 312
+     name: cyclophosphopha
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug313:
+     int_drug_id: 313
+     name: ibuprofen
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 12
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug314:
+     int_drug_id: 314
+     name: Amaryl
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 13
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug315:
+     int_drug_id: 315
+     name: Lescol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug316:
+     int_drug_id: 316
+     name: loratadine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 10
+  IntDrug317:
+     int_drug_id: 317
+     name: metoclopramide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug318:
+     int_drug_id: 318
+     name: methadone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 13
+  IntDrug319:
+     int_drug_id: 319
+     name: telithromycin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 14
+     int_enzym_id: 16
+     enzym_subgroup_id: 14
+  IntDrug320:
+     int_drug_id: 320
+     name: Gabitril
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 4
+  IntDrug321:
+     int_drug_id: 321
+     name: progestins
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 15
+  IntDrug322:
+     int_drug_id: 322
+     name: granisetron
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug323:
+     int_drug_id: 323
+     name: fluphenazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug324:
+     int_drug_id: 324
+     name: ifosphamide (p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug325:
+     int_drug_id: 325
+     name: zonisamide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug326:
+     int_drug_id: 326
+     name: flunitrazapam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug327:
+     int_drug_id: 327
+     name: chlorpromazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug328:
+     int_drug_id: 328
+     name: citalopram
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 15
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug329:
+     int_drug_id: 329
+     name: Zyflo
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 2
+  IntDrug330:
+     int_drug_id: 330
+     name: dacarbazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug331:
+     int_drug_id: 331
+     name: mide (p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug332:
+     int_drug_id: 332
+     name: indomethacin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug333:
+     int_drug_id: 333
+     name: glyburide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug334:
+     int_drug_id: 334
+     name: irbesartan
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 16
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug335:
+     int_drug_id: 335
+     name: Claritin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 10
+  IntDrug336:
+     int_drug_id: 336
+     name: Reglan
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug337:
+     int_drug_id: 337
+     name: oxycodone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 18
+     int_enzym_id: 16
+     enzym_subgroup_id: 13
+  IntDrug338:
+     int_drug_id: 338
+     name: Ketek
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 14
+  IntDrug339:
+     int_drug_id: 339
+     name: Zonisamide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 4
+  IntDrug340:
+     int_drug_id: 340
+     name: /progesterone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 15
+  IntDrug341:
+     int_drug_id: 341
+     name: nateglinide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug342:
+     int_drug_id: 342
+     name: fluvoxamine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug343:
+     int_drug_id: 343
+     name: ketamine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug344:
+     int_drug_id: 344
+     name: Sulfonamides:
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug345:
+     int_drug_id: 345
+     name: fluoxetine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug346:
+     int_drug_id: 346
+     name: citalopram
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug347:
+     int_drug_id: 347
+     name: clomipramine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug348:
+     int_drug_id: 348
+     name: erlotinib
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug349:
+     int_drug_id: 349
+     name: ifosphosphamide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug350:
+     int_drug_id: 350
+     name: lornoxicam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 19
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug351:
+     int_drug_id: 351
+     name: DiaBeta
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug352:
+     int_drug_id: 352
+     name: losartan
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug353:
+     int_drug_id: 353
+     name: mexiletine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug354:
+     int_drug_id: 354
+     name: phencyclidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 13
+  IntDrug355:
+     int_drug_id: 355
+     name: Zonegran
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 4
+  IntDrug356:
+     int_drug_id: 356
+     name: vincristine and
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 21
+     int_enzym_id: 16
+     enzym_subgroup_id: 15
+  IntDrug357:
+     int_drug_id: 357
+     name: Starlix
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug358:
+     int_drug_id: 358
+     name: imipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug359:
+     int_drug_id: 359
+     name: meperidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug360:
+     int_drug_id: 360
+     name: sulfapyridine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug361:
+     int_drug_id: 361
+     name: imipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug362:
+     int_drug_id: 362
+     name: clomipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug363:
+     int_drug_id: 363
+     name: clozapine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug364:
+     int_drug_id: 364
+     name: flutamide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug365:
+     int_drug_id: 365
+     name: (p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug366:
+     int_drug_id: 366
+     name: meloxicam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug367:
+     int_drug_id: 367
+     name: nateglinide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug368:
+     int_drug_id: 368
+     name: Cozaar (p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug369:
+     int_drug_id: 369
+     name: phenacetin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 23
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug370:
+     int_drug_id: 370
+     name: PCP
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 13
+  IntDrug371:
+     int_drug_id: 371
+     name: others
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 15
+  IntDrug372:
+     int_drug_id: 372
+     name: omeprazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug373:
+     int_drug_id: 373
+     name: melatonin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug374:
+     int_drug_id: 374
+     name: methadone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug375:
+     int_drug_id: 375
+     name: sulfamethazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug376:
+     int_drug_id: 376
+     name: moclobemide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug377:
+     int_drug_id: 377
+     name: desipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug378:
+     int_drug_id: 378
+     name: diazepam
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug379:
+     int_drug_id: 379
+     name: frovatriptin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug380:
+     int_drug_id: 380
+     name: nelfinavir
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug381:
+     int_drug_id: 381
+     name: naproxen
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 21
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug382:
+     int_drug_id: 382
+     name: Starlix
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug383:
+     int_drug_id: 383
+     name: phenobarbital
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug384:
+     int_drug_id: 384
+     name: proprafenone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug385:
+     int_drug_id: 385
+     name: pioglitazone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug386:
+     int_drug_id: 386
+     name: mirtazapine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug387:
+     int_drug_id: 387
+     name: nicotine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug388:
+     int_drug_id: 388
+     name: sulfadiazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug389:
+     int_drug_id: 389
+     name: sertraline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug390:
+     int_drug_id: 390
+     name: doxepin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug391:
+     int_drug_id: 391
+     name: estazolam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug392:
+     int_drug_id: 392
+     name: lidocaine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug393:
+     int_drug_id: 393
+     name: proguanil (p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug394:
+     int_drug_id: 394
+     name: piroxicam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug395:
+     int_drug_id: 395
+     name: rosiglitazone
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug396:
+     int_drug_id: 396
+     name: phenytoin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug397:
+     int_drug_id: 397
+     name: Rythmol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug398:
+     int_drug_id: 398
+     name: Actos
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug399:
+     int_drug_id: 399
+     name: olanzapine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug400:
+     int_drug_id: 400
+     name: propofol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug401:
+     int_drug_id: 401
+     name: sulfasalazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug402:
+     int_drug_id: 402
+     name: trimipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 1
+  IntDrug403:
+     int_drug_id: 403
+     name: duloxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug404:
+     int_drug_id: 404
+     name: eszopiclone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug405:
+     int_drug_id: 405
+     name: mexiletine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug406:
+     int_drug_id: 406
+     name: Malarone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug407:
+     int_drug_id: 407
+     name: suprofen
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 27
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug408:
+     int_drug_id: 408
+     name: Avandia
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug409:
+     int_drug_id: 409
+     name: sulfa drugs
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug410:
+     int_drug_id: 410
+     name: ranitidine
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug411:
+     int_drug_id: 411
+     name: quinidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug412:
+     int_drug_id: 412
+     name: perphenazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug413:
+     int_drug_id: 413
+     name: sertraline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug414:
+     int_drug_id: 414
+     name: carcinogenic
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug415:
+     int_drug_id: 415
+     name: fluoxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 28
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug416:
+     int_drug_id: 416
+     name: Lunesta
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug417:
+     int_drug_id: 417
+     name: naproxen
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug418:
+     int_drug_id: 418
+     name: propranolol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug419:
+     int_drug_id: 419
+     name: tenoxicam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 7
+  IntDrug420:
+     int_drug_id: 420
+     name: tolbutamide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug421:
+     int_drug_id: 421
+     name: tamoxifen
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug422:
+     int_drug_id: 422
+     name: Zantac
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug423:
+     int_drug_id: 423
+     name: sildenafil
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug424:
+     int_drug_id: 424
+     name: propafenone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug425:
+     int_drug_id: 425
+     name: selegiline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug426:
+     int_drug_id: 426
+     name: aromatic and
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug427:
+     int_drug_id: 427
+     name: fluvoxamine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug428:
+     int_drug_id: 428
+     name: fluoxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug429:
+     int_drug_id: 429
+     name: ondansetron
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug430:
+     int_drug_id: 430
+     name: R-warfarin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug431:
+     int_drug_id: 431
+     name: Orinase
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 8
+  IntDrug432:
+     int_drug_id: 432
+     name: S-warfarin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug433:
+     int_drug_id: 433
+     name: tamoxifen(p)
+     minor_less_potent: False
+     potent: False
+     pro_drug: True
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug434:
+     int_drug_id: 434
+     name: Statins
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug435:
+     int_drug_id: 435
+     name: propranolol
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug436:
+     int_drug_id: 436
+     name: tamoxifen
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug437:
+     int_drug_id: 437
+     name: heterocyclic
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug438:
+     int_drug_id: 438
+     name: haloperidol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug439:
+     int_drug_id: 439
+     name: haloperidol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug440:
+     int_drug_id: 440
+     name: phenacetin
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug441:
+     int_drug_id: 441
+     name: tolbutamide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug442:
+     int_drug_id: 442
+     name: tetrahydro-
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug443:
+     int_drug_id: 443
+     name: tolterodine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug444:
+     int_drug_id: 444
+     name: (atorvastatin,
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug445:
+     int_drug_id: 445
+     name: ramelteon
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug446:
+     int_drug_id: 446
+     name: testosterone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 12
+     enzym_subgroup_id: 
+  IntDrug447:
+     int_drug_id: 447
+     name: amines
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug448:
+     int_drug_id: 448
+     name: imipramine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug449:
+     int_drug_id: 449
+     name: midazolam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug450:
+     int_drug_id: 450
+     name: R-warfarin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug451:
+     int_drug_id: 451
+     name: voriconazole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 11
+     enzym_subgroup_id: 6
+  IntDrug452:
+     int_drug_id: 452
+     name: cannabinol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug453:
+     int_drug_id: 453
+     name: Detrol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug454:
+     int_drug_id: 454
+     name: lovastatin,
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug455:
+     int_drug_id: 455
+     name: Rozerem
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug456:
+     int_drug_id: 456
+     name: benzidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug457:
+     int_drug_id: 457
+     name: mirtazapine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug458:
+     int_drug_id: 458
+     name: nefazodone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug459:
+     int_drug_id: 459
+     name: propranolol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug460:
+     int_drug_id: 460
+     name: (marijauna)
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug461:
+     int_drug_id: 461
+     name: tropisetron
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 9
+  IntDrug462:
+     int_drug_id: 462
+     name: simvastatin)
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug463:
+     int_drug_id: 463
+     name: thioridazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug464:
+     int_drug_id: 464
+     name: beta-
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug465:
+     int_drug_id: 465
+     name: nortripyline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug466:
+     int_drug_id: 466
+     name: pimozide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug467:
+     int_drug_id: 467
+     name: R-warfarin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug468:
+     int_drug_id: 468
+     name: torsemide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug469:
+     int_drug_id: 469
+     name: tolterodine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug470:
+     int_drug_id: 470
+     name: thiothixene
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug471:
+     int_drug_id: 471
+     name: naphthylamine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 13
+     enzym_subgroup_id: 
+  IntDrug472:
+     int_drug_id: 472
+     name: paroxetine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug473:
+     int_drug_id: 473
+     name: quetiapine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug474:
+     int_drug_id: 474
+     name: riluzole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug475:
+     int_drug_id: 475
+     name: Tomide
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 6
+     enzym_subgroup_id: 9
+  IntDrug476:
+     int_drug_id: 476
+     name: Detrol
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 16
+  IntDrug477:
+     int_drug_id: 477
+     name: trifluoperazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 1
+  IntDrug478:
+     int_drug_id: 478
+     name: perphenazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug479:
+     int_drug_id: 479
+     name: risperidone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug480:
+     int_drug_id: 480
+     name: Rilutek
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug481:
+     int_drug_id: 481
+     name: risperidone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug482:
+     int_drug_id: 482
+     name: sertraline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug483:
+     int_drug_id: 483
+     name: ropinirole
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug484:
+     int_drug_id: 484
+     name: sertraline
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug485:
+     int_drug_id: 485
+     name: trazodone
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug486:
+     int_drug_id: 486
+     name: ropivaciane
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug487:
+     int_drug_id: 487
+     name: thioridazine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug488:
+     int_drug_id: 488
+     name: triazolam
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug489:
+     int_drug_id: 489
+     name: Naropin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug490:
+     int_drug_id: 490
+     name: venlafaxine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 2
+     enzym_subgroup_id: 1
+  IntDrug491:
+     int_drug_id: 491
+     name: zaleplon
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug492:
+     int_drug_id: 492
+     name: tacrine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug493:
+     int_drug_id: 493
+     name: Sonata
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug494:
+     int_drug_id: 494
+     name: Cognex
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug495:
+     int_drug_id: 495
+     name: ziprasidone
+     minor_less_potent: True
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug496:
+     int_drug_id: 496
+     name: theophylline
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug497:
+     int_drug_id: 497
+     name: zolpidem
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug498:
+     int_drug_id: 498
+     name: tizanidine
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug499:
+     int_drug_id: 499
+     name: Ambien
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 16
+     enzym_subgroup_id: 1
+  IntDrug500:
+     int_drug_id: 500
+     name: Zanaflex
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug501:
+     int_drug_id: 501
+     name: zileutin
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug502:
+     int_drug_id: 502
+     name: Zyflo
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug503:
+     int_drug_id: 503
+     name: zolmitriptan
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3
+  IntDrug504:
+     int_drug_id: 504
+     name: Zomig
+     minor_less_potent: False
+     potent: False
+     pro_drug: False
+     substrate: True
+     inhibitor: False
+     inducer: False
+     brand_id: 
+     int_enzym_id: 1
+     enzym_subgroup_id: 3

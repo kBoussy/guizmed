@@ -5,67 +5,46 @@ IntEnzymSubgroup:
      name: Psychotropics
   IntEnzymSubgroup2:
      int_subgroup_id: 2
-     name: Asthma
+     name: Asthma Medication
   IntEnzymSubgroup3:
      int_subgroup_id: 3
-     name: Medication
+     name: Other
   IntEnzymSubgroup4:
      int_subgroup_id: 4
-     name: NSAIDS
+     name: Anticonvulsants
   IntEnzymSubgroup5:
      int_subgroup_id: 5
-     name: Calcium Channel
+     name: Proton Pump Inhibitors
   IntEnzymSubgroup6:
      int_subgroup_id: 6
-     name: Blockers
+     name: Proton Pump Others
   IntEnzymSubgroup7:
      int_subgroup_id: 7
-     name: Hormones/chemo
+     name: NSAIDS
   IntEnzymSubgroup8:
      int_subgroup_id: 8
-     name: Anticonvulsants
+     name: Hypoglycemics
   IntEnzymSubgroup9:
      int_subgroup_id: 9
-     name: therapeutics
+     name: Others
   IntEnzymSubgroup10:
      int_subgroup_id: 10
-     name: Proton Pump
+     name: Antihistamines
   IntEnzymSubgroup11:
      int_subgroup_id: 11
-     name: Inhibitors
+     name: Beta Blockers
   IntEnzymSubgroup12:
      int_subgroup_id: 12
-     name: Hypoglycemics
+     name: Opiates
   IntEnzymSubgroup13:
      int_subgroup_id: 13
-     name: Other
+     name: Drugs of abuse/treatment
   IntEnzymSubgroup14:
      int_subgroup_id: 14
-     name: Others
+     name: Antibiotics/Antifungals
   IntEnzymSubgroup15:
      int_subgroup_id: 15
-     name: Antihistamines
+     name: Hormones/chemo therapeutics
   IntEnzymSubgroup16:
      int_subgroup_id: 16
-     name: Drugs of
-  IntEnzymSubgroup17:
-     int_subgroup_id: 17
-     name: abuse/treatment
-  IntEnzymSubgroup18:
-     int_subgroup_id: 18
-     name: Beta Blockers
-  IntEnzymSubgroup19:
-     int_subgroup_id: 19
-     name: Cough
-  IntEnzymSubgroup20:
-     int_subgroup_id: 20
-     name: Medicines
-  IntEnzymSubgroup21:
-     int_subgroup_id: 21
-     name: Opiates
-  IntEnzymSubgroup22:
-     int_subgroup_id: 22
-     name: Antibiotics/
-  IntEnzymSubgroup23:
-     int_subgroup_id: 23
-     name: Antifungals
+     name: Hormones/chemo Others
