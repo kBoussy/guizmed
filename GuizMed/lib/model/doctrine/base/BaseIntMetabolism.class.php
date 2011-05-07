@@ -10,14 +10,14 @@ Doctrine_Manager::getInstance()->bindComponent('IntMetabolism', 'doctrine');
  * @property integer $int_metabolism_id
  * @property integer $med_form_id
  * @property integer $enzym_group_id
- * @property enum $interaction_type
+ * @property string $interaction_type
  * @property IntEnzym $IntEnzym
  * @property MedForm $MedForm
  * 
  * @method integer       getIntMetabolismId()   Returns the current record's "int_metabolism_id" value
  * @method integer       getMedFormId()         Returns the current record's "med_form_id" value
  * @method integer       getEnzymGroupId()      Returns the current record's "enzym_group_id" value
- * @method enum          getInteractionType()   Returns the current record's "interaction_type" value
+ * @method string        getInteractionType()   Returns the current record's "interaction_type" value
  * @method IntEnzym      getIntEnzym()          Returns the current record's "IntEnzym" value
  * @method MedForm       getMedForm()           Returns the current record's "MedForm" value
  * @method IntMetabolism setIntMetabolismId()   Sets the current record's "int_metabolism_id" value
@@ -63,20 +63,14 @@ abstract class BaseIntMetabolism extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 4,
              ));
-        $this->hasColumn('interaction_type', 'enum', 10, array(
-             'type' => 'enum',
+        $this->hasColumn('interaction_type', 'string', 10, array(
+             'type' => 'string',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
              'autoincrement' => false,
              'length' => 10,
-             'values' => 
-             array(
-              0 => 'metabolism',
-              1 => 'inhibitor',
-              2 => 'inducer',
-             ),
              ));
     }
 
