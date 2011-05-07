@@ -15,13 +15,13 @@ abstract class BaseIntMetabolismFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'med_form_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('MedForm'), 'add_empty' => true)),
       'enzym_group_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzym'), 'add_empty' => true)),
-      'interaction_type'  => new sfWidgetFormFilterInput(),
+      'interaction_type'  => new sfWidgetFormChoice(array('choices' => array('' => '', 'metabolism' => 'metabolism', 'inhibitor' => 'inhibitor', 'inducer' => 'inducer'))),
     ));
 
     $this->setValidators(array(
       'med_form_id'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('MedForm'), 'column' => 'med_form_id')),
       'enzym_group_id'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzym'), 'column' => 'int_enzym_id')),
-      'interaction_type'  => new sfValidatorPass(array('required' => false)),
+      'interaction_type'  => new sfValidatorChoice(array('required' => false, 'choices' => array('metabolism' => 'metabolism', 'inhibitor' => 'inhibitor', 'inducer' => 'inducer'))),
     ));
 
     $this->widgetSchema->setNameFormat('int_metabolism_filters[%s]');
@@ -44,7 +44,7 @@ abstract class BaseIntMetabolismFormFilter extends BaseFormFilterDoctrine
       'int_metabolism_id' => 'Number',
       'med_form_id'       => 'ForeignKey',
       'enzym_group_id'    => 'ForeignKey',
-      'interaction_type'  => 'Text',
+      'interaction_type'  => 'Enum',
     );
   }
 }
