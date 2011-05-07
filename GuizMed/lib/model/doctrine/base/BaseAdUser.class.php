@@ -177,10 +177,10 @@ abstract class BaseAdUser extends sfDoctrineRecord
 
         $this->hasMany('AdUserPatient', array(
              'local' => 'user_id',
-             'foreign' => 'user_id'));
+             'foreign' => 'prev_user_id'));
 
         $this->hasMany('AdUserPatient as AdUserPatient_3', array(
              'local' => 'user_id',
-             'foreign' => 'prev_user_id'));
+             'foreign' => 'user_id'));
     }
 }

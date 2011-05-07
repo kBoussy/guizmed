@@ -194,3 +194,10 @@ Mar 29 09:37:14 symfony [info] {sfWebDebugLogger} Action "Patient/show" 137.56 m
 Mar 29 09:37:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (2)
 Mar 29 09:37:14 symfony [info] {sfWebDebugLogger} View "Success" for "Patient/show" 64.01 ms (1)
 Mar 29 09:37:14 symfony [info] {sfWebResponse} Send content (33414 o)
+May 06 11:39:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+May 06 11:39:20 symfony [info] {sfFrontWebController} Action "patienten/index" does not exist
+May 06 11:39:20 symfony [err] {sfError404Exception} Action "patienten/index" does not exist.
+May 06 11:39:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+May 06 11:39:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 06 11:39:20 symfony [info] {sfWebDebugLogger} Configuration 306.86 ms (6)
+May 06 11:39:20 symfony [info] {sfWebDebugLogger} Factories 99.90 ms (1)
