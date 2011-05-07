@@ -12,5 +12,10 @@
  */
 class AdPrescription extends BaseAdPrescription
 {
-
+    function getName($id){
+        $medForm = Doctrine_Query::create()->from('medForm amf')->where('amf.med_form_id = ?', $id)->execute();
+//        $medBaseId = Doctrine_Query::create()->from('medBaseId mbi')->where('mbi.med_base_id = ?', $medForm[0]->getMedBaseId())->execute();
+        return $medForm[0]->getMedBaseId();
+        //return $medBaseId->count().'haha';
+    }
 }
