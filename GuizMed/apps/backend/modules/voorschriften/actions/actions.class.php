@@ -30,13 +30,29 @@ class voorschriftenActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
+      if(isset($_POST['startDate'])){
+        $prescription = new AdPrescription();
+        $prescription->setStartDate($_POST['startDate']);
+        $prescription->setPrescDate($_POST['prescDate']);
+        $prescription->setDose($_POST['dose']);
+        $prescription->setFrequency($_POST['frequency']);
+        $prescription->setMedFormId($_POST['medFormId']);
+        $prescription->setUserPatientId($_POST['userPatientId']);
+        $prescription->setComment($_POST['comment']);
+        $prescription->save();
+        $this->redirect('show_prescription',array('ad_presc_id'=>$prescription->getAdPrescId()));
+      }else{
+         $this->forward404('ge moet startDate invullen dumbo');
+      }
+
+      
+/*    $this->forward404Unless($request->isMethod(sfRequest::POST));
 
     $this->form = new adPrescriptionForm();
 
     $this->processForm($request, $this->form);
 
-    $this->setTemplate('new');
+    $this->setTemplate('new');*/
   }
 
   public function executeEdit(sfWebRequest $request)

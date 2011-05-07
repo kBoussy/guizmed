@@ -30,13 +30,24 @@ class usersActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
-
-    $this->form = new adUserForm();
-
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('new');
+      if(isset($_POST['fName'])){
+        $user = new AdUser();
+        $user->setFname($_POST['fName']);
+        $user->setLname($_POST['lName']);
+        $user->setEmail($_POST['eMail']);
+        $user->setUname($user->getFname().$user->getLname());
+        $user->setPassw($_POST['pass']);
+        $user->setPhone($_POST['phone']);
+        $user->save();
+        $this->redirect('show_user',array('user_id'=>$user->getUserId()));
+      }else{
+        $this->redirect('show_user',array('user_id'=>'1'));
+         $this->forward404('ge moet fName invullen dumbo');
+      }
+//    $this->forward404Unless($request->isMethod(sfRequest::POST));
+//    $this->form = new adUserForm();
+//    $this->processForm($request, $this->form);
+//    $this->setTemplate('new');
   }
 
   public function executeEdit(sfWebRequest $request)
@@ -58,7 +69,7 @@ class usersActions extends sfActions
 
   public function executeDelete(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
+//    $request->checkCSRFProtection();
 
     $this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
     $ad_user->delete();
