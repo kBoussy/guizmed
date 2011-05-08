@@ -63,14 +63,14 @@ abstract class BaseMedBnfMedicine extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 4,
              ));
-        $this->hasColumn('value', 'float', null, array(
+        $this->hasColumn('value', 'float', 18, array(
              'type' => 'float',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
-             'length' => '',
+             'length' => 18,
              ));
     }
 

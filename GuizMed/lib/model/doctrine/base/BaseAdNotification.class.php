@@ -131,7 +131,7 @@ abstract class BaseAdNotification extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasOne('AdUser', array(
-             'local' => 'prev_user_id',
+             'local' => 'new_user_id',
              'foreign' => 'user_id'));
 
         $this->hasOne('AdPatient', array(
@@ -139,7 +139,7 @@ abstract class BaseAdNotification extends sfDoctrineRecord
              'foreign' => 'patient_id'));
 
         $this->hasOne('AdUser as AdUser_3', array(
-             'local' => 'new_user_id',
+             'local' => 'prev_user_id',
              'foreign' => 'user_id'));
     }
 }

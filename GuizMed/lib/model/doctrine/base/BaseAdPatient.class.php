@@ -12,7 +12,7 @@ Doctrine_Manager::getInstance()->bindComponent('AdPatient', 'doctrine');
  * @property string $lname
  * @property date $bdate
  * @property timestamp $patient_since
- * @property enum $sex
+ * @property string $sex
  * @property Doctrine_Collection $AdNotification
  * @property Doctrine_Collection $AdUserPatient
  * 
@@ -21,7 +21,7 @@ Doctrine_Manager::getInstance()->bindComponent('AdPatient', 'doctrine');
  * @method string              getLname()          Returns the current record's "lname" value
  * @method date                getBdate()          Returns the current record's "bdate" value
  * @method timestamp           getPatientSince()   Returns the current record's "patient_since" value
- * @method enum                getSex()            Returns the current record's "sex" value
+ * @method string              getSex()            Returns the current record's "sex" value
  * @method Doctrine_Collection getAdNotification() Returns the current record's "AdNotification" collection
  * @method Doctrine_Collection getAdUserPatient()  Returns the current record's "AdUserPatient" collection
  * @method AdPatient           setPatientId()      Sets the current record's "patient_id" value
@@ -87,19 +87,14 @@ abstract class BaseAdPatient extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 25,
              ));
-        $this->hasColumn('sex', 'enum', 1, array(
-             'type' => 'enum',
+        $this->hasColumn('sex', 'string', 1, array(
+             'type' => 'string',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
              'length' => 1,
-             'values' => 
-             array(
-              0 => 'M',
-              1 => 'F',
-             ),
              ));
     }
 
