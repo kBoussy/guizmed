@@ -11,21 +11,21 @@ Doctrine_Manager::getInstance()->bindComponent('IntMetabolism', 'doctrine');
  * @property integer $med_form_id
  * @property integer $enzym_group_id
  * @property string $interaction_type
- * @property IntEnzym $IntEnzym
  * @property MedForm $MedForm
+ * @property IntEnzym $IntEnzym
  * 
  * @method integer       getIntMetabolismId()   Returns the current record's "int_metabolism_id" value
  * @method integer       getMedFormId()         Returns the current record's "med_form_id" value
  * @method integer       getEnzymGroupId()      Returns the current record's "enzym_group_id" value
  * @method string        getInteractionType()   Returns the current record's "interaction_type" value
- * @method IntEnzym      getIntEnzym()          Returns the current record's "IntEnzym" value
  * @method MedForm       getMedForm()           Returns the current record's "MedForm" value
+ * @method IntEnzym      getIntEnzym()          Returns the current record's "IntEnzym" value
  * @method IntMetabolism setIntMetabolismId()   Sets the current record's "int_metabolism_id" value
  * @method IntMetabolism setMedFormId()         Sets the current record's "med_form_id" value
  * @method IntMetabolism setEnzymGroupId()      Sets the current record's "enzym_group_id" value
  * @method IntMetabolism setInteractionType()   Sets the current record's "interaction_type" value
- * @method IntMetabolism setIntEnzym()          Sets the current record's "IntEnzym" value
  * @method IntMetabolism setMedForm()           Sets the current record's "MedForm" value
+ * @method IntMetabolism setIntEnzym()          Sets the current record's "IntEnzym" value
  * 
  * @package    GuizMed
  * @subpackage model
@@ -42,7 +42,7 @@ abstract class BaseIntMetabolism extends sfDoctrineRecord
              'fixed' => 0,
              'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
+             'autoincrement' => true,
              'length' => 4,
              ));
         $this->hasColumn('med_form_id', 'integer', 4, array(
@@ -77,12 +77,12 @@ abstract class BaseIntMetabolism extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('IntEnzym', array(
-             'local' => 'enzym_group_id',
-             'foreign' => 'int_enzym_id'));
-
         $this->hasOne('MedForm', array(
              'local' => 'med_form_id',
              'foreign' => 'med_form_id'));
+
+        $this->hasOne('IntEnzym', array(
+             'local' => 'enzym_group_id',
+             'foreign' => 'int_enzym_id'));
     }
 }

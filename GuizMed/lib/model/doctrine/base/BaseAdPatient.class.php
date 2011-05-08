@@ -13,22 +13,25 @@ Doctrine_Manager::getInstance()->bindComponent('AdPatient', 'doctrine');
  * @property date $bdate
  * @property timestamp $patient_since
  * @property string $sex
+ * @property Doctrine_Collection $AdNotification
  * @property Doctrine_Collection $AdUserPatient
  * 
- * @method integer             getPatientId()     Returns the current record's "patient_id" value
- * @method string              getFname()         Returns the current record's "fname" value
- * @method string              getLname()         Returns the current record's "lname" value
- * @method date                getBdate()         Returns the current record's "bdate" value
- * @method timestamp           getPatientSince()  Returns the current record's "patient_since" value
- * @method string              getSex()           Returns the current record's "sex" value
- * @method Doctrine_Collection getAdUserPatient() Returns the current record's "AdUserPatient" collection
- * @method AdPatient           setPatientId()     Sets the current record's "patient_id" value
- * @method AdPatient           setFname()         Sets the current record's "fname" value
- * @method AdPatient           setLname()         Sets the current record's "lname" value
- * @method AdPatient           setBdate()         Sets the current record's "bdate" value
- * @method AdPatient           setPatientSince()  Sets the current record's "patient_since" value
- * @method AdPatient           setSex()           Sets the current record's "sex" value
- * @method AdPatient           setAdUserPatient() Sets the current record's "AdUserPatient" collection
+ * @method integer             getPatientId()      Returns the current record's "patient_id" value
+ * @method string              getFname()          Returns the current record's "fname" value
+ * @method string              getLname()          Returns the current record's "lname" value
+ * @method date                getBdate()          Returns the current record's "bdate" value
+ * @method timestamp           getPatientSince()   Returns the current record's "patient_since" value
+ * @method string              getSex()            Returns the current record's "sex" value
+ * @method Doctrine_Collection getAdNotification() Returns the current record's "AdNotification" collection
+ * @method Doctrine_Collection getAdUserPatient()  Returns the current record's "AdUserPatient" collection
+ * @method AdPatient           setPatientId()      Sets the current record's "patient_id" value
+ * @method AdPatient           setFname()          Sets the current record's "fname" value
+ * @method AdPatient           setLname()          Sets the current record's "lname" value
+ * @method AdPatient           setBdate()          Sets the current record's "bdate" value
+ * @method AdPatient           setPatientSince()   Sets the current record's "patient_since" value
+ * @method AdPatient           setSex()            Sets the current record's "sex" value
+ * @method AdPatient           setAdNotification() Sets the current record's "AdNotification" collection
+ * @method AdPatient           setAdUserPatient()  Sets the current record's "AdUserPatient" collection
  * 
  * @package    GuizMed
  * @subpackage model
@@ -98,6 +101,10 @@ abstract class BaseAdPatient extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasMany('AdNotification', array(
+             'local' => 'patient_id',
+             'foreign' => 'patient_id'));
+
         $this->hasMany('AdUserPatient', array(
              'local' => 'patient_id',
              'foreign' => 'patient_id'));

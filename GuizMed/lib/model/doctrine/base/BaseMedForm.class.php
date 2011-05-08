@@ -19,7 +19,6 @@ Doctrine_Manager::getInstance()->bindComponent('MedForm', 'doctrine');
  * @property MedBaseId $MedBaseId
  * @property MedMagisterForm $MedMagisterForm
  * @property Doctrine_Collection $AdPrescription
- * @property Doctrine_Collection $IntInteraction
  * @property Doctrine_Collection $IntMetabolism
  * @property Doctrine_Collection $MedBnfMedicine
  * @property Doctrine_Collection $MedFormBonding
@@ -36,7 +35,6 @@ Doctrine_Manager::getInstance()->bindComponent('MedForm', 'doctrine');
  * @method MedBaseId           getMedBaseId()            Returns the current record's "MedBaseId" value
  * @method MedMagisterForm     getMedMagisterForm()      Returns the current record's "MedMagisterForm" value
  * @method Doctrine_Collection getAdPrescription()       Returns the current record's "AdPrescription" collection
- * @method Doctrine_Collection getIntInteraction()       Returns the current record's "IntInteraction" collection
  * @method Doctrine_Collection getIntMetabolism()        Returns the current record's "IntMetabolism" collection
  * @method Doctrine_Collection getMedBnfMedicine()       Returns the current record's "MedBnfMedicine" collection
  * @method Doctrine_Collection getMedFormBonding()       Returns the current record's "MedFormBonding" collection
@@ -52,7 +50,6 @@ Doctrine_Manager::getInstance()->bindComponent('MedForm', 'doctrine');
  * @method MedForm             setMedBaseId()            Sets the current record's "MedBaseId" value
  * @method MedForm             setMedMagisterForm()      Sets the current record's "MedMagisterForm" value
  * @method MedForm             setAdPrescription()       Sets the current record's "AdPrescription" collection
- * @method MedForm             setIntInteraction()       Sets the current record's "IntInteraction" collection
  * @method MedForm             setIntMetabolism()        Sets the current record's "IntMetabolism" collection
  * @method MedForm             setMedBnfMedicine()       Sets the current record's "MedBnfMedicine" collection
  * @method MedForm             setMedFormBonding()       Sets the current record's "MedFormBonding" collection
@@ -161,10 +158,6 @@ abstract class BaseMedForm extends sfDoctrineRecord
              'foreign' => 'med_magister_form_id'));
 
         $this->hasMany('AdPrescription', array(
-             'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
-
-        $this->hasMany('IntInteraction', array(
              'local' => 'med_form_id',
              'foreign' => 'med_form_id'));
 
