@@ -18,6 +18,10 @@ stopMed:
   url:   /voorschriften/stop/ad_presc_id/:ad_presc_id
   param: { module: voorschriften, action: stop }
 
+stopNonPsycho:
+  url:   /nonPsycho/stop
+  param: { module: nonPsycho, action: stop }
+
 show_patient:
   url:   /patienten/show/patient_id/:patient_id
   param: { module: patienten, action: show }

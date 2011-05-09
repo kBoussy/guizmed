@@ -132,8 +132,8 @@ abstract class BaseAdUserPatient extends sfDoctrineRecord
              'foreign' => 'ad_user_patient_id'));
 
         $this->hasMany('AdNonPsychoPat', array(
-             'local' => 'user_patient_id',
-             'foreign' => 'user_patient_id'));
+             'local' => 'patient_id',
+             'foreign' => 'patient_id'));
 
         $this->hasMany('AdPrescription', array(
              'local' => 'user_patient_id',

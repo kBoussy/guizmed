@@ -23,12 +23,28 @@
       "end_date": "<?php echo $ad_prescription->getEndDate() ?>",
       "med":{
         "id":"<?php echo $ad_prescription->getMedForm()->getMedFormId(); ?>",
-        "name":"<?php echo $ad_prescription->getMedForm()->getMedBaseId()->getMainclass(); ?>"
+        "name":"<?php echo $ad_prescription->getMedForm()->getMedBaseId()->getSpeciality(); ?>"
       },
-      "stop_date": "<?php echo $ad_prescription->getStopDate() ?>",
+      "stop_date": "<?php echo $ad_prescription->getStopDate() ?>"
 }
     <?php endforeach; ?>
-            ]
+            ],
+            "non_psycho": [
+    <?php $bolNonPharma = true; ?>
+    <?php foreach($nonPsychos as $nonPsycho): ?>
+    <?php if($bolNonPharma==true){
+        $bolNonPharma = false;
+    }else{
+        echo ',';
+    } ?>
+	{
+		"id":"<?php echo $nonPsycho->getNonPsychoPatId() ?>",
+		"name":"<?php echo $nonPsycho->getAdNonPsycho()->getName() ?>",
+		"start_date":"<?php echo $nonPsycho->getStartDate() ?>",
+		"stop_date":"<?php echo $nonPsycho->getStopDate() ?>"
+	}
+   <?php endforeach; ?>
+]
         }
     ]
 }

@@ -39,7 +39,7 @@ abstract class BaseAdLog extends sfDoctrineRecord
              'fixed' => 0,
              'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
+             'autoincrement' => true,
              'length' => 4,
              ));
         $this->hasColumn('action', 'string', 150, array(
@@ -76,6 +76,7 @@ abstract class BaseAdLog extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('AdUserPatient', array(
              'local' => 'ad_user_patient_id',
-             'foreign' => 'user_patient_id'));
+             'foreign' => 'user_patient_id',
+             'onDelete' => 'cascade'));
     }
 }
