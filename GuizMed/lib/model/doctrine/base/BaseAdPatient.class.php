@@ -15,7 +15,6 @@ Doctrine_Manager::getInstance()->bindComponent('AdPatient', 'doctrine');
  * @property string $sex
  * @property Doctrine_Collection $AdNotification
  * @property Doctrine_Collection $AdUserPatient
- * @property Doctrine_Collection $AdNonPsychoPat
  * 
  * @method integer             getPatientId()      Returns the current record's "patient_id" value
  * @method string              getFname()          Returns the current record's "fname" value
@@ -25,7 +24,6 @@ Doctrine_Manager::getInstance()->bindComponent('AdPatient', 'doctrine');
  * @method string              getSex()            Returns the current record's "sex" value
  * @method Doctrine_Collection getAdNotification() Returns the current record's "AdNotification" collection
  * @method Doctrine_Collection getAdUserPatient()  Returns the current record's "AdUserPatient" collection
- * @method Doctrine_Collection getAdNonPsychoPat() Returns the current record's "AdNonPsychoPat" collection
  * @method AdPatient           setPatientId()      Sets the current record's "patient_id" value
  * @method AdPatient           setFname()          Sets the current record's "fname" value
  * @method AdPatient           setLname()          Sets the current record's "lname" value
@@ -34,7 +32,6 @@ Doctrine_Manager::getInstance()->bindComponent('AdPatient', 'doctrine');
  * @method AdPatient           setSex()            Sets the current record's "sex" value
  * @method AdPatient           setAdNotification() Sets the current record's "AdNotification" collection
  * @method AdPatient           setAdUserPatient()  Sets the current record's "AdUserPatient" collection
- * @method AdPatient           setAdNonPsychoPat() Sets the current record's "AdNonPsychoPat" collection
  * 
  * @package    GuizMed
  * @subpackage model
@@ -109,10 +106,6 @@ abstract class BaseAdPatient extends sfDoctrineRecord
              'foreign' => 'patient_id'));
 
         $this->hasMany('AdUserPatient', array(
-             'local' => 'patient_id',
-             'foreign' => 'patient_id'));
-
-        $this->hasMany('AdNonPsychoPat', array(
              'local' => 'patient_id',
              'foreign' => 'patient_id'));
     }

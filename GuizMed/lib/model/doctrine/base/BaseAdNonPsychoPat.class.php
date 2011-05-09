@@ -13,7 +13,6 @@ Doctrine_Manager::getInstance()->bindComponent('AdNonPsychoPat', 'doctrine');
  * @property timestamp $start_date
  * @property timestamp $stop_date
  * @property AdNonPsycho $AdNonPsycho
- * @property AdPatient $AdPatient
  * @property AdUserPatient $AdUserPatient
  * 
  * @method integer        getNonPsychoPatId()    Returns the current record's "non_psycho_pat_id" value
@@ -22,7 +21,6 @@ Doctrine_Manager::getInstance()->bindComponent('AdNonPsychoPat', 'doctrine');
  * @method timestamp      getStartDate()         Returns the current record's "start_date" value
  * @method timestamp      getStopDate()          Returns the current record's "stop_date" value
  * @method AdNonPsycho    getAdNonPsycho()       Returns the current record's "AdNonPsycho" value
- * @method AdPatient      getAdPatient()         Returns the current record's "AdPatient" value
  * @method AdUserPatient  getAdUserPatient()     Returns the current record's "AdUserPatient" value
  * @method AdNonPsychoPat setNonPsychoPatId()    Sets the current record's "non_psycho_pat_id" value
  * @method AdNonPsychoPat setPatientId()         Sets the current record's "patient_id" value
@@ -30,7 +28,6 @@ Doctrine_Manager::getInstance()->bindComponent('AdNonPsychoPat', 'doctrine');
  * @method AdNonPsychoPat setStartDate()         Sets the current record's "start_date" value
  * @method AdNonPsychoPat setStopDate()          Sets the current record's "stop_date" value
  * @method AdNonPsychoPat setAdNonPsycho()       Sets the current record's "AdNonPsycho" value
- * @method AdNonPsychoPat setAdPatient()         Sets the current record's "AdPatient" value
  * @method AdNonPsychoPat setAdUserPatient()     Sets the current record's "AdUserPatient" value
  * 
  * @package    GuizMed
@@ -95,10 +92,6 @@ abstract class BaseAdNonPsychoPat extends sfDoctrineRecord
         $this->hasOne('AdNonPsycho', array(
              'local' => 'non_psycho_id',
              'foreign' => 'ad_non_psycho_id'));
-
-        $this->hasOne('AdPatient', array(
-             'local' => 'patient_id',
-             'foreign' => 'patient_id'));
 
         $this->hasOne('AdUserPatient', array(
              'local' => 'patient_id',

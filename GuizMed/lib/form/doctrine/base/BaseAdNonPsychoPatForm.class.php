@@ -16,7 +16,7 @@ abstract class BaseAdNonPsychoPatForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'non_psycho_pat_id' => new sfWidgetFormInputHidden(),
-      'patient_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdPatient'), 'add_empty' => false)),
+      'patient_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUserPatient'), 'add_empty' => false)),
       'non_psycho_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdNonPsycho'), 'add_empty' => false)),
       'start_date'        => new sfWidgetFormDateTime(),
       'stop_date'         => new sfWidgetFormDateTime(),
@@ -24,7 +24,7 @@ abstract class BaseAdNonPsychoPatForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'non_psycho_pat_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('non_psycho_pat_id')), 'empty_value' => $this->getObject()->get('non_psycho_pat_id'), 'required' => false)),
-      'patient_id'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdPatient'))),
+      'patient_id'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUserPatient'))),
       'non_psycho_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdNonPsycho'))),
       'start_date'        => new sfValidatorDateTime(),
       'stop_date'         => new sfValidatorDateTime(array('required' => false)),
