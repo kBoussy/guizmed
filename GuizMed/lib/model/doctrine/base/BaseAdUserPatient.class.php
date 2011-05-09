@@ -120,11 +120,11 @@ abstract class BaseAdUserPatient extends sfDoctrineRecord
              'foreign' => 'patient_id'));
 
         $this->hasOne('AdUser', array(
-             'local' => 'prev_user_id',
+             'local' => 'user_id',
              'foreign' => 'user_id'));
 
         $this->hasOne('AdUser as AdUser_3', array(
-             'local' => 'user_id',
+             'local' => 'prev_user_id',
              'foreign' => 'user_id'));
 
         $this->hasMany('AdLog', array(
@@ -132,8 +132,8 @@ abstract class BaseAdUserPatient extends sfDoctrineRecord
              'foreign' => 'ad_user_patient_id'));
 
         $this->hasMany('AdNonPsychoPat', array(
-             'local' => 'user_patient_id',
-             'foreign' => 'user_patient_id'));
+             'local' => 'patient_id',
+             'foreign' => 'patient_id'));
 
         $this->hasMany('AdPrescription', array(
              'local' => 'user_patient_id',

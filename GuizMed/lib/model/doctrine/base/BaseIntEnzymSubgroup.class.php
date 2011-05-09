@@ -33,7 +33,7 @@ abstract class BaseIntEnzymSubgroup extends sfDoctrineRecord
              'fixed' => 0,
              'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
+             'autoincrement' => true,
              'length' => 4,
              ));
         $this->hasColumn('name', 'string', 45, array(

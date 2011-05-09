@@ -25,8 +25,9 @@ class patientenActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
     $this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($request->getParameter('patient_id')));
-    $this->prescriptions = $this->ad_patient->getPrescriptions(1);
+    $this->prescriptions = $this->ad_patient->getPrescriptions($this->ad_patient->getPatientId());
     $this->forward404Unless($this->ad_patient);
+    $this->nonPsychos = $this->ad_patient->getNonPsycho();
   }
 
   public function executeNew(sfWebRequest $request)

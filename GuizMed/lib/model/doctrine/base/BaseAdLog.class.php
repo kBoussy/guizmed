@@ -76,6 +76,7 @@ abstract class BaseAdLog extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('AdUserPatient', array(
              'local' => 'ad_user_patient_id',
-             'foreign' => 'user_patient_id'));
+             'foreign' => 'user_patient_id',
+             'onDelete' => 'cascade'));
     }
 }

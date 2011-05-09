@@ -16,8 +16,8 @@ abstract class BaseAdNotificationForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'notification_id' => new sfWidgetFormInputHidden(),
-      'prev_user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'), 'add_empty' => false)),
-      'new_user_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'), 'add_empty' => false)),
+      'prev_user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'), 'add_empty' => false)),
+      'new_user_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'), 'add_empty' => false)),
       'patient_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdPatient'), 'add_empty' => false)),
       'reason'          => new sfWidgetFormTextarea(),
       'accepted'        => new sfWidgetFormInputText(),
@@ -27,8 +27,8 @@ abstract class BaseAdNotificationForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'notification_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('notification_id')), 'empty_value' => $this->getObject()->get('notification_id'), 'required' => false)),
-      'prev_user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'))),
-      'new_user_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'))),
+      'prev_user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'))),
+      'new_user_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'))),
       'patient_id'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdPatient'))),
       'reason'          => new sfValidatorString(array('required' => false)),
       'accepted'        => new sfValidatorInteger(array('required' => false)),
