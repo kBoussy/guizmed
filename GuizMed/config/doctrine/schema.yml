@@ -53,7 +53,8 @@ AdLog:
       autoincrement: false
   relations:
     AdUserPatient:
-      onDelete: cascade
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: ad_user_patient_id
       foreign: user_patient_id
       type: one
@@ -129,7 +130,7 @@ AdNonPsychoPat:
       local: non_psycho_id
       foreign: ad_non_psycho_id
       type: one
-    AdPatient:
+    AdUserPatient:
       local: patient_id
       foreign: patient_id
       type: one
