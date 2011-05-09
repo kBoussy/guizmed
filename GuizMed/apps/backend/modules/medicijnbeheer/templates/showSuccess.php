@@ -4,7 +4,12 @@
     "mainclass" :  "<?php echo $med_base_id->getMainclass(); ?>",
     "gen_name" : "<?php echo $med_base_id->getGenName(); ?>",
     "med_base" : "<?php echo $med_base_id->getSpeciality(); ?>",
-    "type": "<?php echo $med_base_id->getMedTypeId(); ?>",
+    "type": [
+    {
+        "subtype1":"<?php echo $med_base_id->getMedType()->getMedSubtype1()->getName(); ?>",
+        "subtype2":"<?php echo $med_base_id->getMedType()->getMedSubtype1()->getName(); ?>"
+        }
+        ],
     "submeds":[
             <?php $bol = true?>
     <?php foreach ($med_forms as $med_form): ?>
@@ -17,7 +22,7 @@
             "med_magister_form":"<?php echo $med_form->getMetMagisterName($med_form->getMedMagisterFormId()) ?>",
             <?php 
             foreach ($med_form->getMedFormBonding() as $medFormBonding){
-                echo "\"".$medFormBonding->getMedChemBonding()."\" : \"".$medFormBonding->getMedKiVal()."\",";
+                echo "\"".preg_replace('/ /','_',$medFormBonding->getMedChemBonding())."\" : \"".$medFormBonding->getMedKiVal()."\",";
             }?>
 
             "Dose":"<?php echo $med_form->getDose() ?>",
@@ -28,7 +33,7 @@
             "Ddd":"<?php echo $med_form->getDdd() ?>"
     <?php foreach ($med_form->getAllMetabolism() as $metabolism): ?>
         ,<?php echo '"'.$metabolism->getInteractionType().'" : ['; ?>
-            {
+            
             <?php #echo '"'.$metabolism->getIntEnzym().'"'; ?>
             <?php $comma = true; ?>
             <?php foreach ($metabolism->getDrugs() as $drug): ?>
@@ -37,9 +42,9 @@
             }else{
                 echo ',';
             } ?>
-                "name": <?php echo '"'.$drug->getName().'"'; ?>
+                <?php echo '"'.$drug->getName().'"'; ?>
             <?php endforeach; ?>
-            }
+            
             ]
     <?php endforeach; ?>
             

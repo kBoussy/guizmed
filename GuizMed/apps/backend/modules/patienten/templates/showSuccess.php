@@ -4,9 +4,9 @@
                 "id" : "<?php echo $ad_patient->getPatientId() ?>",
                 "fName": "<?php echo $ad_patient->getFname() ?>",
                 "lName": "<?php echo $ad_patient->getLname() ?>",
-                "sex": "<?php echo $ad_patient->getSex() ?>",
-                "Bdate": "<?php echo $ad_patient->getBdate() ?>",
-                "patient_since": "<?php echo $ad_patient->getPatientSince() ?>"
+                "bDate": "<?php echo $ad_patient->getBdate() ?>",
+                "since": "<?php echo $ad_patient->getPatientSince() ?>",
+                "sex": "<?php echo $ad_patient->getSex() ?>"
             },
             "prescriptions" : [
 
@@ -19,19 +19,14 @@
 
  {
       "id" : "<?php echo $ad_prescription->getAdPrescId() ?>",
-      "startDate": "<?php echo $ad_prescription->getStartDate() ?>",
-      "endDate": "<?php echo $ad_prescription->getEndDate() ?>",
-      "prescDate": "<?php echo $ad_prescription->getPrescDate() ?>",
-      "dose": "<?php echo $ad_prescription->getDose() ?>",
-      "frequency": "<?php echo $ad_prescription->getFrequency() ?>",
-      "medFormId": "<?php echo $ad_prescription->getMedFormId() ?>",
-      "comment": "<?php echo $ad_prescription->getComment() ?>",
-      "stopDate": "<?php echo $ad_prescription->getStopDate() ?>",
-      "stopReason": "<?php echo $ad_prescription->getStopReason() ?>"
+      "start_date": "<?php echo $ad_prescription->getStartDate() ?>",
+      "end_date": "<?php echo $ad_prescription->getEndDate() ?>",
+      "med":{
+        "id":"<?php echo $ad_prescription->getMedForm()->getMedFormId(); ?>",
+        "name":"<?php echo $ad_prescription->getMedForm()->getMedBaseId()->getMainclass(); ?>"
+      },
+      "stop_date": "<?php echo $ad_prescription->getStopDate() ?>",
 }
-
-
-
     <?php endforeach; ?>
             ]
         }

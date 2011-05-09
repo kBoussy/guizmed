@@ -16,6 +16,12 @@ class usersActions extends sfActions
       ->createQuery('a')
       ->execute();
   }
+  public function executeIndex(sfWebRequest $request)
+  {
+      $message = $_POST['message'];
+      $title = $_POST['title'];
+      $type = $_POST['type'];
+  }
 
   public function executeShow(sfWebRequest $request)
   {

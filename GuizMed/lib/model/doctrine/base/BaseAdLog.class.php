@@ -39,7 +39,7 @@ abstract class BaseAdLog extends sfDoctrineRecord
              'fixed' => 0,
              'unsigned' => false,
              'primary' => true,
-             'autoincrement' => true,
+             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('action', 'string', 150, array(

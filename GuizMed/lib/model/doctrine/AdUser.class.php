@@ -39,6 +39,5 @@ class AdUser extends BaseAdUser
         }else{
             return false;
         }
-    }
-
+    }    
 }
