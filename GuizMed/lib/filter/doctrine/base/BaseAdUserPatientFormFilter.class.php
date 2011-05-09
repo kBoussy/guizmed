@@ -14,26 +14,16 @@ abstract class BaseAdUserPatientFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'patient_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdPatient'), 'add_empty' => true)),
-<<<<<<< HEAD
-      'user_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'), 'add_empty' => true)),
-      'prev_user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'), 'add_empty' => true)),
-=======
       'user_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'), 'add_empty' => true)),
       'prev_user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'), 'add_empty' => true)),
->>>>>>> oj/master
       'active'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'denied'          => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
       'patient_id'      => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('AdPatient'), 'column' => 'patient_id')),
-<<<<<<< HEAD
-      'user_id'         => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('AdUser'), 'column' => 'user_id')),
-      'prev_user_id'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('AdUser_3'), 'column' => 'user_id')),
-=======
       'user_id'         => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('AdUser_3'), 'column' => 'user_id')),
       'prev_user_id'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('AdUser'), 'column' => 'user_id')),
->>>>>>> oj/master
       'active'          => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'denied'          => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));

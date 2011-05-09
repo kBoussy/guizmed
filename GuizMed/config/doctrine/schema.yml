@@ -29,7 +29,7 @@ AdLog:
       fixed: false
       unsigned: false
       primary: true
-      autoincrement: false
+      autoincrement: true
     action:
       type: string(150)
       fixed: false
