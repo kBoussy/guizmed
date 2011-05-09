@@ -18,8 +18,11 @@ Doctrine_Manager::getInstance()->bindComponent('AdUser', 'doctrine');
  * @property integer $ad_function_id
  * @property string $unlock_code
  * @property string $token
- * @property AdFunction $AdFunction
  * @property AdRole $AdRole
+<<<<<<< HEAD
+ * @property AdFunction $AdFunction
+=======
+>>>>>>> oj/master
  * @property Doctrine_Collection $AdNotification
  * @property Doctrine_Collection $AdNotification_3
  * @property Doctrine_Collection $AdUserPatient
@@ -36,8 +39,13 @@ Doctrine_Manager::getInstance()->bindComponent('AdUser', 'doctrine');
  * @method integer             getAdFunctionId()     Returns the current record's "ad_function_id" value
  * @method string              getUnlockCode()       Returns the current record's "unlock_code" value
  * @method string              getToken()            Returns the current record's "token" value
+<<<<<<< HEAD
+ * @method AdRole              getAdRole()           Returns the current record's "AdRole" value
+ * @method AdFunction          getAdFunction()       Returns the current record's "AdFunction" value
+=======
  * @method AdFunction          getAdFunction()       Returns the current record's "AdFunction" value
  * @method AdRole              getAdRole()           Returns the current record's "AdRole" value
+>>>>>>> oj/master
  * @method Doctrine_Collection getAdNotification()   Returns the current record's "AdNotification" collection
  * @method Doctrine_Collection getAdNotification3()  Returns the current record's "AdNotification_3" collection
  * @method Doctrine_Collection getAdUserPatient()    Returns the current record's "AdUserPatient" collection
@@ -53,8 +61,13 @@ Doctrine_Manager::getInstance()->bindComponent('AdUser', 'doctrine');
  * @method AdUser              setAdFunctionId()     Sets the current record's "ad_function_id" value
  * @method AdUser              setUnlockCode()       Sets the current record's "unlock_code" value
  * @method AdUser              setToken()            Sets the current record's "token" value
+<<<<<<< HEAD
+ * @method AdUser              setAdRole()           Sets the current record's "AdRole" value
+ * @method AdUser              setAdFunction()       Sets the current record's "AdFunction" value
+=======
  * @method AdUser              setAdFunction()       Sets the current record's "AdFunction" value
  * @method AdUser              setAdRole()           Sets the current record's "AdRole" value
+>>>>>>> oj/master
  * @method AdUser              setAdNotification()   Sets the current record's "AdNotification" collection
  * @method AdUser              setAdNotification3()  Sets the current record's "AdNotification_3" collection
  * @method AdUser              setAdUserPatient()    Sets the current record's "AdUserPatient" collection
@@ -173,13 +186,21 @@ abstract class BaseAdUser extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasOne('AdRole', array(
+             'local' => 'ad_role_id',
+             'foreign' => 'role_id'));
+
         $this->hasOne('AdFunction', array(
              'local' => 'ad_function_id',
              'foreign' => 'function_id'));
 
-        $this->hasOne('AdRole', array(
-             'local' => 'ad_role_id',
-             'foreign' => 'role_id'));
+        $this->hasMany('AdNotification', array(
+             'local' => 'user_id',
+             'foreign' => 'prev_user_id'));
+
+        $this->hasMany('AdNotification as AdNotification_3', array(
+             'local' => 'user_id',
+             'foreign' => 'new_user_id'));
 
         $this->hasMany('AdNotification', array(
              'local' => 'user_id',
@@ -191,10 +212,10 @@ abstract class BaseAdUser extends sfDoctrineRecord
 
         $this->hasMany('AdUserPatient', array(
              'local' => 'user_id',
-             'foreign' => 'prev_user_id'));
+             'foreign' => 'user_id'));
 
         $this->hasMany('AdUserPatient as AdUserPatient_3', array(
              'local' => 'user_id',
-             'foreign' => 'user_id'));
+             'foreign' => 'prev_user_id'));
     }
 }

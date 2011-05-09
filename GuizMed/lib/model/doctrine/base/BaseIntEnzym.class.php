@@ -10,19 +10,16 @@ Doctrine_Manager::getInstance()->bindComponent('IntEnzym', 'doctrine');
  * @property integer $int_enzym_id
  * @property string $name
  * @property Doctrine_Collection $IntDrug
- * @property Doctrine_Collection $IntInteraction
  * @property Doctrine_Collection $IntMetabolism
  * 
- * @method integer             getIntEnzymId()     Returns the current record's "int_enzym_id" value
- * @method string              getName()           Returns the current record's "name" value
- * @method Doctrine_Collection getIntDrug()        Returns the current record's "IntDrug" collection
- * @method Doctrine_Collection getIntInteraction() Returns the current record's "IntInteraction" collection
- * @method Doctrine_Collection getIntMetabolism()  Returns the current record's "IntMetabolism" collection
- * @method IntEnzym            setIntEnzymId()     Sets the current record's "int_enzym_id" value
- * @method IntEnzym            setName()           Sets the current record's "name" value
- * @method IntEnzym            setIntDrug()        Sets the current record's "IntDrug" collection
- * @method IntEnzym            setIntInteraction() Sets the current record's "IntInteraction" collection
- * @method IntEnzym            setIntMetabolism()  Sets the current record's "IntMetabolism" collection
+ * @method integer             getIntEnzymId()    Returns the current record's "int_enzym_id" value
+ * @method string              getName()          Returns the current record's "name" value
+ * @method Doctrine_Collection getIntDrug()       Returns the current record's "IntDrug" collection
+ * @method Doctrine_Collection getIntMetabolism() Returns the current record's "IntMetabolism" collection
+ * @method IntEnzym            setIntEnzymId()    Sets the current record's "int_enzym_id" value
+ * @method IntEnzym            setName()          Sets the current record's "name" value
+ * @method IntEnzym            setIntDrug()       Sets the current record's "IntDrug" collection
+ * @method IntEnzym            setIntMetabolism() Sets the current record's "IntMetabolism" collection
  * 
  * @package    GuizMed
  * @subpackage model
@@ -57,10 +54,6 @@ abstract class BaseIntEnzym extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasMany('IntDrug', array(
-             'local' => 'int_enzym_id',
-             'foreign' => 'int_enzym_id'));
-
-        $this->hasMany('IntInteraction', array(
              'local' => 'int_enzym_id',
              'foreign' => 'int_enzym_id'));
 

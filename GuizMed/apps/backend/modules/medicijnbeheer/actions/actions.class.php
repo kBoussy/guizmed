@@ -34,13 +34,49 @@ class medicijnbeheerActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
+  if(isset($_POST['fName'])){
+      $med_type = new MedType();
+      $med_type->setMedSubtype1Id($_POST['med_subtype1']);
+      $med_type->setMedSubtype2Id($_POST['med_subtype2']);
+      $med_type->save();
+
+      $med_base_id = new MedBaseId();
+      $med_base_id->setMainclass($_POST['mainclass']);
+      $med_base_id->setGenName($_POST['gen_name']);
+      $med_base_id->setSpeciality($_POST['speciality']);
+      $med_base_id->setMedTypeId($med_type->getMedTypeId());
+      $med_base_id->save();
+
+      $med_form = new MedForm();
+      $med_form->setMedBaseId($med_base_id->getMedBaseId());
+      $med_form->setMedMagisterFormId($_POST['med_magister_form']);
+      $med_form->setDose($_POST['dose']);
+      $med_form->setBioavailability($_POST['bioavailability']);
+      $med_form->setProteineBinding($_POST['proteine_binding']);
+      $med_form->setTMaxH($_POST['t_max_h']);
+      $med_form->setHlf($_POST['hlf']);
+      $med_form->setDdd($_POST['ddd']);
+      $med_form->save();
+
+      $med_bnf_medicine=new MedBnfMedicine();
+      $med_bnf_percentage = Doctrine_Query::create()->from('med_bnf_percentage mbp')->where('mbp.percentage = ?',$_POST['bnf_percentage'])->execute();
+      $med_bnf_medicine->setBnfPercentageId($med_bnf_percentage[0]->getBnfPercentageId());
+      $med_bnf_medicine->setValue($_POST['bnf_value']);
+      $med_bnf_medicine->setMedFormId($med_form->getMedFormId());
+      $med_bnf_medicine->save();
+
+      $int_metabolism = new IntMetabolism();
+      $int_metabolism->setEnzymGroupId($_POST['enzym_name']);
+      $int_metabolism->setMedFormId($med_form->getMedFormId());
+      $int_metabolism->save();
+      }
+/*    $this->forward404Unless($request->isMethod(sfRequest::POST));
 
     $this->form = new medFormForm();
 
     $this->processForm($request, $this->form);
 
-    $this->setTemplate('new');
+    $this->setTemplate('new');*/
   }
 
   public function executeEdit(sfWebRequest $request)

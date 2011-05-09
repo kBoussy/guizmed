@@ -18,4 +18,9 @@ class AdPrescription extends BaseAdPrescription
         return $medForm[0]->getMedBaseId();
         //return $medBaseId->count().'haha';
     }
+    function stop($reason){
+        $this->setStopDate(date('y-m-d H:m:s'));
+        $this->setStopReason($reason);
+        $this->save();
+    }
 }

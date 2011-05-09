@@ -16,6 +16,16 @@ class voorschriftenActions extends sfActions
       ->createQuery('a')
       ->execute();
   }
+  public function executeStop(sfWebRequest $request)
+  {
+      if(isset($_POST['reason'])){
+    $ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id')));
+    $ad_prescription->stop($_POST['reason']);
+      }else{
+    $ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id')));
+    $ad_prescription->stop("No reason was given.");
+      }
+  }
 
   public function executeShow(sfWebRequest $request)
   {

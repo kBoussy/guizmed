@@ -18,8 +18,8 @@ Doctrine_Manager::getInstance()->bindComponent('AdPrescription', 'doctrine');
  * @property blob $comment
  * @property timestamp $stop_date
  * @property string $stop_reason
- * @property MedForm $MedForm
  * @property AdUserPatient $AdUserPatient
+ * @property MedForm $MedForm
  * 
  * @method integer        getAdPrescId()       Returns the current record's "ad_presc_id" value
  * @method timestamp      getStartDate()       Returns the current record's "start_date" value
@@ -32,8 +32,8 @@ Doctrine_Manager::getInstance()->bindComponent('AdPrescription', 'doctrine');
  * @method blob           getComment()         Returns the current record's "comment" value
  * @method timestamp      getStopDate()        Returns the current record's "stop_date" value
  * @method string         getStopReason()      Returns the current record's "stop_reason" value
- * @method MedForm        getMedForm()         Returns the current record's "MedForm" value
  * @method AdUserPatient  getAdUserPatient()   Returns the current record's "AdUserPatient" value
+ * @method MedForm        getMedForm()         Returns the current record's "MedForm" value
  * @method AdPrescription setAdPrescId()       Sets the current record's "ad_presc_id" value
  * @method AdPrescription setStartDate()       Sets the current record's "start_date" value
  * @method AdPrescription setEndDate()         Sets the current record's "end_date" value
@@ -45,8 +45,8 @@ Doctrine_Manager::getInstance()->bindComponent('AdPrescription', 'doctrine');
  * @method AdPrescription setComment()         Sets the current record's "comment" value
  * @method AdPrescription setStopDate()        Sets the current record's "stop_date" value
  * @method AdPrescription setStopReason()      Sets the current record's "stop_reason" value
- * @method AdPrescription setMedForm()         Sets the current record's "MedForm" value
  * @method AdPrescription setAdUserPatient()   Sets the current record's "AdUserPatient" value
+ * @method AdPrescription setMedForm()         Sets the current record's "MedForm" value
  * 
  * @package    GuizMed
  * @subpackage model
@@ -161,12 +161,12 @@ abstract class BaseAdPrescription extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('MedForm', array(
-             'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
-
         $this->hasOne('AdUserPatient', array(
              'local' => 'user_patient_id',
              'foreign' => 'user_patient_id'));
+
+        $this->hasOne('MedForm', array(
+             'local' => 'med_form_id',
+             'foreign' => 'med_form_id'));
     }
 }

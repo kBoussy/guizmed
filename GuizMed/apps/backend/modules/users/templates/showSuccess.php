@@ -6,6 +6,6 @@
 		"email":"<?php echo $ad_user->getEmail() ?>",
 		"phone":"<?php echo $ad_user->getPhone() ?>",
 		"function":"<?php echo $ad_user->getAdFunctionId() ?>",
-		"role":"<?php echo $ad_user->getAdRoleId() ?>"
+		"role":"<?php echo $ad_user->getAdRole()->getName() ?>"
 }
 }
