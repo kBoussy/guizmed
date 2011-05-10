@@ -79,10 +79,14 @@ abstract class BaseMedBnfMedicine extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('MedBnfPercentage', array(
              'local' => 'bnf_percentage_id',
-             'foreign' => 'bnf_percentage_id'));
+             'foreign' => 'bnf_percentage_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('MedForm', array(
              'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
+             'foreign' => 'med_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

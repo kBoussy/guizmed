@@ -163,10 +163,14 @@ abstract class BaseAdPrescription extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('AdUserPatient', array(
              'local' => 'user_patient_id',
-             'foreign' => 'user_patient_id'));
+             'foreign' => 'user_patient_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('MedForm', array(
              'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
+             'foreign' => 'med_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

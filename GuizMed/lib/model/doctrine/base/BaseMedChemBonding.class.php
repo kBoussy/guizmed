@@ -52,6 +52,8 @@ abstract class BaseMedChemBonding extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('MedFormBonding', array(
              'local' => 'chem_bonding_id',
-             'foreign' => 'med_chem_bonding_id'));
+             'foreign' => 'med_chem_bonding_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

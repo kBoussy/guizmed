@@ -55,10 +55,14 @@ abstract class BaseIntEnzym extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('IntDrug', array(
              'local' => 'int_enzym_id',
-             'foreign' => 'int_enzym_id'));
+             'foreign' => 'int_enzym_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('IntMetabolism', array(
              'local' => 'int_enzym_id',
-             'foreign' => 'enzym_group_id'));
+             'foreign' => 'enzym_group_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

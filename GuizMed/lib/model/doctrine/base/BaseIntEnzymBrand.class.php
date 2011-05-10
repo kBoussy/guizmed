@@ -52,6 +52,8 @@ abstract class BaseIntEnzymBrand extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('IntDrug', array(
              'local' => 'int_brand_id',
-             'foreign' => 'brand_id'));
+             'foreign' => 'brand_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }
