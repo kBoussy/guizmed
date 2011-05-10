@@ -7,7 +7,7 @@
     "type": [
     {
         "subtype1":"<?php echo $med_base_id->getMedType()->getMedSubtype1()->getName(); ?>",
-        "subtype2":"<?php echo $med_base_id->getMedType()->getMedSubtype1()->getName(); ?>"
+        "subtype2":"<?php echo $med_base_id->getMedType()->getMedSubtype2()->getName(); ?>"
         }
         ],
     "submeds":[

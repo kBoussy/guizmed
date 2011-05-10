@@ -12,7 +12,8 @@
                 } ?>
 			{
 				"id":"<?php echo $med_form_bonding->getMedFormBondingId() ?>",
-				"ki_value":"<?php echo $med_form_bonding->getMedKiVal()->getValue() ?>",
+				"name":"<?php echo $med_form_bonding->getMedForm()->getMedBaseId()->getSpeciality(); ?>",
+                                "ki_value":"<?php echo $med_form_bonding->getMedKiVal()->getValue() ?>",
 				"influence":"<?php echo $med_form_bonding->getMedKiVal()->getInfluence() ?>",
 				"tagval":"<?php echo $med_form_bonding->getMedKiVal()->getTagval() ?>"
 			}
