@@ -24,6 +24,10 @@ abstract class BaseMedSubtype2Form extends BaseFormDoctrine
       'name'            => new sfValidatorString(array('max_length' => 45)),
     ));
 
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'MedSubtype2', 'column' => array('name')))
+    );
+
     $this->widgetSchema->setNameFormat('med_subtype2[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

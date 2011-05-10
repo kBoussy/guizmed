@@ -64,6 +64,8 @@ abstract class BaseAdNonPsycho extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('AdNonPsychoPat', array(
              'local' => 'ad_non_psycho_id',
-             'foreign' => 'non_psycho_id'));
+             'foreign' => 'non_psycho_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

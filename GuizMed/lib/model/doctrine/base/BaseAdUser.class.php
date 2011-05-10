@@ -111,6 +111,7 @@ abstract class BaseAdUser extends sfDoctrineRecord
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
+             'unique' => true,
              'autoincrement' => false,
              'length' => 45,
              ));
@@ -175,26 +176,38 @@ abstract class BaseAdUser extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('AdRole', array(
              'local' => 'ad_role_id',
-             'foreign' => 'role_id'));
+             'foreign' => 'role_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('AdFunction', array(
              'local' => 'ad_function_id',
-             'foreign' => 'function_id'));
+             'foreign' => 'function_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('AdNotification', array(
              'local' => 'user_id',
-             'foreign' => 'prev_user_id'));
+             'foreign' => 'new_user_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('AdNotification as AdNotification_3', array(
              'local' => 'user_id',
-             'foreign' => 'new_user_id'));
+             'foreign' => 'prev_user_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('AdUserPatient', array(
              'local' => 'user_id',
-             'foreign' => 'user_id'));
+             'foreign' => 'user_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('AdUserPatient as AdUserPatient_3', array(
              'local' => 'user_id',
-             'foreign' => 'prev_user_id'));
+             'foreign' => 'prev_user_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

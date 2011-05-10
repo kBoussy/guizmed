@@ -52,6 +52,8 @@ abstract class BaseMedMagisterForm extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('MedForm', array(
              'local' => 'med_magister_form_id',
-             'foreign' => 'med_magister_form_id'));
+             'foreign' => 'med_magister_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

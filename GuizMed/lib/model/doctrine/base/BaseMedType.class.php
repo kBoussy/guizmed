@@ -70,14 +70,20 @@ abstract class BaseMedType extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('MedSubtype1', array(
              'local' => 'med_subtype1_id',
-             'foreign' => 'med_subtype1_id'));
+             'foreign' => 'med_subtype1_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('MedSubtype2', array(
              'local' => 'med_subtype2_id',
-             'foreign' => 'med_subtype2_id'));
+             'foreign' => 'med_subtype2_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('MedBaseId', array(
              'local' => 'med_type_id',
-             'foreign' => 'med_type_id'));
+             'foreign' => 'med_type_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

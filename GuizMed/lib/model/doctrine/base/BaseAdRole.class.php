@@ -52,6 +52,8 @@ abstract class BaseAdRole extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('AdUser', array(
              'local' => 'role_id',
-             'foreign' => 'ad_role_id'));
+             'foreign' => 'ad_role_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

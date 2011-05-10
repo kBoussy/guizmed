@@ -151,26 +151,38 @@ abstract class BaseMedForm extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('MedBaseId', array(
              'local' => 'med_base_id',
-             'foreign' => 'med_base_id'));
+             'foreign' => 'med_base_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('MedMagisterForm', array(
              'local' => 'med_magister_form_id',
-             'foreign' => 'med_magister_form_id'));
+             'foreign' => 'med_magister_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('AdPrescription', array(
              'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
+             'foreign' => 'med_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('IntMetabolism', array(
              'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
+             'foreign' => 'med_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('MedBnfMedicine', array(
              'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
+             'foreign' => 'med_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('MedFormBonding', array(
              'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
+             'foreign' => 'med_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

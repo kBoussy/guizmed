@@ -41,6 +41,7 @@ abstract class BaseMedSubtype1 extends sfDoctrineRecord
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
+             'unique' => true,
              'notnull' => true,
              'autoincrement' => false,
              'length' => 45,
@@ -52,6 +53,8 @@ abstract class BaseMedSubtype1 extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('MedType', array(
              'local' => 'med_subtype1_id',
-             'foreign' => 'med_subtype1_id'));
+             'foreign' => 'med_subtype1_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }
