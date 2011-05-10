@@ -20,6 +20,6 @@ class AdPatient extends BaseAdPatient
 return $q->execute();
   }
   public function getNonPsycho(){
-      return Doctrine_Query::create()->from('AdNonPsychoPat npp')->where('npp.patient_id = ?',$this->getPatientId())->execute();
+      return Doctrine_Query::create()->from('AdNonPsychoPat npp')->where('npp.ad_patient_id = ?',$this->getPatientId())->execute();
   }
 }
