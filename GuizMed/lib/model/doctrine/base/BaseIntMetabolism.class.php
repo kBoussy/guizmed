@@ -10,22 +10,22 @@ Doctrine_Manager::getInstance()->bindComponent('IntMetabolism', 'doctrine');
  * @property integer $int_metabolism_id
  * @property integer $med_form_id
  * @property integer $enzym_group_id
- * @property string $interaction_type
- * @property MedForm $MedForm
+ * @property enum $interaction_type
  * @property IntEnzym $IntEnzym
+ * @property MedForm $MedForm
  * 
  * @method integer       getIntMetabolismId()   Returns the current record's "int_metabolism_id" value
  * @method integer       getMedFormId()         Returns the current record's "med_form_id" value
  * @method integer       getEnzymGroupId()      Returns the current record's "enzym_group_id" value
- * @method string        getInteractionType()   Returns the current record's "interaction_type" value
- * @method MedForm       getMedForm()           Returns the current record's "MedForm" value
+ * @method enum          getInteractionType()   Returns the current record's "interaction_type" value
  * @method IntEnzym      getIntEnzym()          Returns the current record's "IntEnzym" value
+ * @method MedForm       getMedForm()           Returns the current record's "MedForm" value
  * @method IntMetabolism setIntMetabolismId()   Sets the current record's "int_metabolism_id" value
  * @method IntMetabolism setMedFormId()         Sets the current record's "med_form_id" value
  * @method IntMetabolism setEnzymGroupId()      Sets the current record's "enzym_group_id" value
  * @method IntMetabolism setInteractionType()   Sets the current record's "interaction_type" value
- * @method IntMetabolism setMedForm()           Sets the current record's "MedForm" value
  * @method IntMetabolism setIntEnzym()          Sets the current record's "IntEnzym" value
+ * @method IntMetabolism setMedForm()           Sets the current record's "MedForm" value
  * 
  * @package    GuizMed
  * @subpackage model
@@ -63,10 +63,16 @@ abstract class BaseIntMetabolism extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 4,
              ));
-        $this->hasColumn('interaction_type', 'string', 10, array(
-             'type' => 'string',
+        $this->hasColumn('interaction_type', 'enum', 10, array(
+             'type' => 'enum',
              'fixed' => 0,
              'unsigned' => false,
+             'values' => 
+             array(
+              0 => 'metabolism',
+              1 => 'inhibitor',
+              2 => 'inducer',
+             ),
              'primary' => false,
              'notnull' => false,
              'autoincrement' => false,
@@ -77,12 +83,16 @@ abstract class BaseIntMetabolism extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('MedForm', array(
-             'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
-
         $this->hasOne('IntEnzym', array(
              'local' => 'enzym_group_id',
-             'foreign' => 'int_enzym_id'));
+             'foreign' => 'int_enzym_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
+
+        $this->hasOne('MedForm', array(
+             'local' => 'med_form_id',
+             'foreign' => 'med_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

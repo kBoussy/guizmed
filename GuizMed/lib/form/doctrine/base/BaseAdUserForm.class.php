@@ -42,6 +42,10 @@ abstract class BaseAdUserForm extends BaseFormDoctrine
       'token'          => new sfValidatorString(array('max_length' => 45, 'required' => false)),
     ));
 
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'AdUser', 'column' => array('uname')))
+    );
+
     $this->widgetSchema->setNameFormat('ad_user[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

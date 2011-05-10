@@ -76,6 +76,8 @@ abstract class BaseMedKiVal extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('MedFormBonding', array(
              'local' => 'med_ki_val_id',
-             'foreign' => 'med_ki_val_id'));
+             'foreign' => 'med_ki_val_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

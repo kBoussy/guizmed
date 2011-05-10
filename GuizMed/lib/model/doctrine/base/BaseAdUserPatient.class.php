@@ -17,7 +17,6 @@ Doctrine_Manager::getInstance()->bindComponent('AdUserPatient', 'doctrine');
  * @property AdUser $AdUser
  * @property AdUser $AdUser_3
  * @property Doctrine_Collection $AdLog
- * @property Doctrine_Collection $AdNonPsychoPat
  * @property Doctrine_Collection $AdPrescription
  * 
  * @method integer             getUserPatientId()   Returns the current record's "user_patient_id" value
@@ -30,7 +29,6 @@ Doctrine_Manager::getInstance()->bindComponent('AdUserPatient', 'doctrine');
  * @method AdUser              getAdUser()          Returns the current record's "AdUser" value
  * @method AdUser              getAdUser3()         Returns the current record's "AdUser_3" value
  * @method Doctrine_Collection getAdLog()           Returns the current record's "AdLog" collection
- * @method Doctrine_Collection getAdNonPsychoPat()  Returns the current record's "AdNonPsychoPat" collection
  * @method Doctrine_Collection getAdPrescription()  Returns the current record's "AdPrescription" collection
  * @method AdUserPatient       setUserPatientId()   Sets the current record's "user_patient_id" value
  * @method AdUserPatient       setPatientId()       Sets the current record's "patient_id" value
@@ -42,7 +40,6 @@ Doctrine_Manager::getInstance()->bindComponent('AdUserPatient', 'doctrine');
  * @method AdUserPatient       setAdUser()          Sets the current record's "AdUser" value
  * @method AdUserPatient       setAdUser3()         Sets the current record's "AdUser_3" value
  * @method AdUserPatient       setAdLog()           Sets the current record's "AdLog" collection
- * @method AdUserPatient       setAdNonPsychoPat()  Sets the current record's "AdNonPsychoPat" collection
  * @method AdUserPatient       setAdPrescription()  Sets the current record's "AdPrescription" collection
  * 
  * @package    GuizMed
@@ -117,26 +114,32 @@ abstract class BaseAdUserPatient extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('AdPatient', array(
              'local' => 'patient_id',
-             'foreign' => 'patient_id'));
+             'foreign' => 'patient_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('AdUser', array(
              'local' => 'user_id',
-             'foreign' => 'user_id'));
+             'foreign' => 'user_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('AdUser as AdUser_3', array(
              'local' => 'prev_user_id',
-             'foreign' => 'user_id'));
+             'foreign' => 'user_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('AdLog', array(
              'local' => 'user_patient_id',
-             'foreign' => 'ad_user_patient_id'));
-
-        $this->hasMany('AdNonPsychoPat', array(
-             'local' => 'patient_id',
-             'foreign' => 'patient_id'));
+             'foreign' => 'ad_user_patient_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('AdPrescription', array(
              'local' => 'user_patient_id',
-             'foreign' => 'user_patient_id'));
+             'foreign' => 'user_patient_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

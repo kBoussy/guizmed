@@ -82,14 +82,20 @@ abstract class BaseMedFormBonding extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('MedForm', array(
              'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
+             'foreign' => 'med_form_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('MedChemBonding', array(
              'local' => 'med_chem_bonding_id',
-             'foreign' => 'chem_bonding_id'));
+             'foreign' => 'chem_bonding_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasOne('MedKiVal', array(
              'local' => 'med_ki_val_id',
-             'foreign' => 'med_ki_val_id'));
+             'foreign' => 'med_ki_val_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

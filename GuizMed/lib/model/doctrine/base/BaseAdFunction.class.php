@@ -52,6 +52,8 @@ abstract class BaseAdFunction extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('AdUser', array(
              'local' => 'function_id',
-             'foreign' => 'ad_function_id'));
+             'foreign' => 'ad_function_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

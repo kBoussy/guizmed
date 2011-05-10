@@ -18,14 +18,14 @@ abstract class BaseIntMetabolismForm extends BaseFormDoctrine
       'int_metabolism_id' => new sfWidgetFormInputHidden(),
       'med_form_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('MedForm'), 'add_empty' => false)),
       'enzym_group_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzym'), 'add_empty' => false)),
-      'interaction_type'  => new sfWidgetFormInputText(),
+      'interaction_type'  => new sfWidgetFormChoice(array('choices' => array('metabolism' => 'metabolism', 'inhibitor' => 'inhibitor', 'inducer' => 'inducer'))),
     ));
 
     $this->setValidators(array(
       'int_metabolism_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('int_metabolism_id')), 'empty_value' => $this->getObject()->get('int_metabolism_id'), 'required' => false)),
       'med_form_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('MedForm'))),
       'enzym_group_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzym'))),
-      'interaction_type'  => new sfValidatorString(array('max_length' => 10, 'required' => false)),
+      'interaction_type'  => new sfValidatorChoice(array('choices' => array(0 => 'metabolism', 1 => 'inhibitor', 2 => 'inducer'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('int_metabolism[%s]');

@@ -12,7 +12,8 @@ Doctrine_Manager::getInstance()->bindComponent('AdPatient', 'doctrine');
  * @property string $lname
  * @property date $bdate
  * @property timestamp $patient_since
- * @property string $sex
+ * @property enum $sex
+ * @property Doctrine_Collection $AdNonPsychoPat
  * @property Doctrine_Collection $AdNotification
  * @property Doctrine_Collection $AdUserPatient
  * 
@@ -21,7 +22,8 @@ Doctrine_Manager::getInstance()->bindComponent('AdPatient', 'doctrine');
  * @method string              getLname()          Returns the current record's "lname" value
  * @method date                getBdate()          Returns the current record's "bdate" value
  * @method timestamp           getPatientSince()   Returns the current record's "patient_since" value
- * @method string              getSex()            Returns the current record's "sex" value
+ * @method enum                getSex()            Returns the current record's "sex" value
+ * @method Doctrine_Collection getAdNonPsychoPat() Returns the current record's "AdNonPsychoPat" collection
  * @method Doctrine_Collection getAdNotification() Returns the current record's "AdNotification" collection
  * @method Doctrine_Collection getAdUserPatient()  Returns the current record's "AdUserPatient" collection
  * @method AdPatient           setPatientId()      Sets the current record's "patient_id" value
@@ -30,6 +32,7 @@ Doctrine_Manager::getInstance()->bindComponent('AdPatient', 'doctrine');
  * @method AdPatient           setBdate()          Sets the current record's "bdate" value
  * @method AdPatient           setPatientSince()   Sets the current record's "patient_since" value
  * @method AdPatient           setSex()            Sets the current record's "sex" value
+ * @method AdPatient           setAdNonPsychoPat() Sets the current record's "AdNonPsychoPat" collection
  * @method AdPatient           setAdNotification() Sets the current record's "AdNotification" collection
  * @method AdPatient           setAdUserPatient()  Sets the current record's "AdUserPatient" collection
  * 
@@ -87,10 +90,15 @@ abstract class BaseAdPatient extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 25,
              ));
-        $this->hasColumn('sex', 'string', 1, array(
-             'type' => 'string',
+        $this->hasColumn('sex', 'enum', 1, array(
+             'type' => 'enum',
              'fixed' => 0,
              'unsigned' => false,
+             'values' => 
+             array(
+              0 => 'M',
+              1 => 'F',
+             ),
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
@@ -101,12 +109,22 @@ abstract class BaseAdPatient extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasMany('AdNonPsychoPat', array(
+             'local' => 'patient_id',
+             'foreign' => 'ad_patient_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
+
         $this->hasMany('AdNotification', array(
              'local' => 'patient_id',
-             'foreign' => 'patient_id'));
+             'foreign' => 'patient_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('AdUserPatient', array(
              'local' => 'patient_id',
-             'foreign' => 'patient_id'));
+             'foreign' => 'patient_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

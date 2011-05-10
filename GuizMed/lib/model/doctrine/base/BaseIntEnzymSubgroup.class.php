@@ -52,6 +52,8 @@ abstract class BaseIntEnzymSubgroup extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('IntDrug', array(
              'local' => 'int_subgroup_id',
-             'foreign' => 'enzym_subgroup_id'));
+             'foreign' => 'enzym_subgroup_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

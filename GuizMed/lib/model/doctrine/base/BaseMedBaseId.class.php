@@ -91,10 +91,14 @@ abstract class BaseMedBaseId extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('MedType', array(
              'local' => 'med_type_id',
-             'foreign' => 'med_type_id'));
+             'foreign' => 'med_type_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
 
         $this->hasMany('MedForm', array(
              'local' => 'med_base_id',
-             'foreign' => 'med_base_id'));
+             'foreign' => 'med_base_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
     }
 }

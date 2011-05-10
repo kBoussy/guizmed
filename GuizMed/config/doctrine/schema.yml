@@ -17,6 +17,8 @@ AdFunction:
       autoincrement: false
   relations:
     AdUser:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: function_id
       foreign: ad_function_id
       type: many
@@ -84,6 +86,8 @@ AdNonPsycho:
       autoincrement: false
   relations:
     AdNonPsychoPat:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: ad_non_psycho_id
       foreign: non_psycho_id
       type: many
@@ -97,7 +101,7 @@ AdNonPsychoPat:
       unsigned: false
       primary: true
       autoincrement: true
-    patient_id:
+    ad_patient_id:
       type: integer(4)
       fixed: false
       unsigned: false
@@ -126,13 +130,17 @@ AdNonPsychoPat:
       notnull: false
       autoincrement: false
   relations:
+    AdPatient:
+      onDelete: CASCADE
+      onUpdate: CASCADE
+      local: ad_patient_id
+      foreign: patient_id
+      type: one
     AdNonPsycho:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: non_psycho_id
       foreign: ad_non_psycho_id
-      type: one
-    AdUserPatient:
-      local: patient_id
-      foreign: patient_id
       type: one
 AdNotification:
   connection: doctrine
@@ -197,19 +205,22 @@ AdNotification:
       autoincrement: false
   relations:
     AdUser:
-      onDelete: cascade
-      local: prev_user_id
+      onDelete: CASCADE
+      onUpdate: CASCADE
+      local: new_user_id
       foreign: user_id
       type: one
     AdPatient:
-      onDelete: cascade
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: patient_id
       foreign: patient_id
       type: one
     AdUser_3:
-      onDelete: cascade
+      onDelete: CASCADE
+      onUpdate: CASCADE
       class: AdUser
-      local: new_user_id
+      local: prev_user_id
       foreign: user_id
       type: one
 AdPatient:
@@ -251,18 +262,31 @@ AdPatient:
       notnull: true
       autoincrement: false
     sex:
-      type: string(1)
+      type: enum(1)
       fixed: false
       unsigned: false
+      values:
+        - M
+        - F
       primary: false
       notnull: true
       autoincrement: false
   relations:
+    AdNonPsychoPat:
+      onDelete: CASCADE
+      onUpdate: CASCADE
+      local: patient_id
+      foreign: ad_patient_id
+      type: many
     AdNotification:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: patient_id
       foreign: patient_id
       type: many
     AdUserPatient:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: patient_id
       foreign: patient_id
       type: many
@@ -348,10 +372,14 @@ AdPrescription:
       autoincrement: false
   relations:
     AdUserPatient:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: user_patient_id
       foreign: user_patient_id
       type: one
     MedForm:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_form_id
       foreign: med_form_id
       type: one
@@ -374,6 +402,8 @@ AdRole:
       autoincrement: false
   relations:
     AdUser:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: role_id
       foreign: ad_role_id
       type: many
@@ -414,6 +444,7 @@ AdUser:
       unsigned: false
       primary: false
       notnull: true
+      unique: true
       autoincrement: false
     passw:
       type: string(45)
@@ -459,27 +490,39 @@ AdUser:
       autoincrement: false
   relations:
     AdRole:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: ad_role_id
       foreign: role_id
       type: one
     AdFunction:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: ad_function_id
       foreign: function_id
       type: one
     AdNotification:
-      local: user_id
-      foreign: prev_user_id
-      type: many
-    AdNotification_3:
-      class: AdNotification
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: user_id
       foreign: new_user_id
       type: many
+    AdNotification_3:
+      onDelete: CASCADE
+      onUpdate: CASCADE
+      class: AdNotification
+      local: user_id
+      foreign: prev_user_id
+      type: many
     AdUserPatient:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: user_id
       foreign: user_id
       type: many
     AdUserPatient_3:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       class: AdUserPatient
       local: user_id
       foreign: prev_user_id
@@ -533,27 +576,33 @@ AdUserPatient:
       autoincrement: false
   relations:
     AdPatient:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: patient_id
       foreign: patient_id
       type: one
     AdUser:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: user_id
       foreign: user_id
       type: one
     AdUser_3:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       class: AdUser
       local: prev_user_id
       foreign: user_id
       type: one
     AdLog:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: user_patient_id
       foreign: ad_user_patient_id
       type: many
-    AdNonPsychoPat:
-      local: patient_id
-      foreign: patient_id
-      type: many
     AdPrescription:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: user_patient_id
       foreign: user_patient_id
       type: many
@@ -639,16 +688,22 @@ IntDrug:
       autoincrement: false
   relations:
     IntEnzymBrand:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: brand_id
       foreign: int_brand_id
       type: one
-    IntEnzym:
-      local: int_enzym_id
-      foreign: int_enzym_id
-      type: one
     IntEnzymSubgroup:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: enzym_subgroup_id
       foreign: int_subgroup_id
+      type: one
+    IntEnzym:
+      onDelete: CASCADE
+      onUpdate: CASCADE
+      local: int_enzym_id
+      foreign: int_enzym_id
       type: one
 IntEnzym:
   connection: doctrine
@@ -669,10 +724,14 @@ IntEnzym:
       autoincrement: false
   relations:
     IntDrug:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: int_enzym_id
       foreign: int_enzym_id
       type: many
     IntMetabolism:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: int_enzym_id
       foreign: enzym_group_id
       type: many
@@ -695,6 +754,8 @@ IntEnzymBrand:
       autoincrement: false
   relations:
     IntDrug:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: int_brand_id
       foreign: brand_id
       type: many
@@ -717,6 +778,8 @@ IntEnzymSubgroup:
       autoincrement: false
   relations:
     IntDrug:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: int_subgroup_id
       foreign: enzym_subgroup_id
       type: many
@@ -745,20 +808,28 @@ IntMetabolism:
       notnull: true
       autoincrement: false
     interaction_type:
-      type: string(10)
+      type: enum(10)
       fixed: false
       unsigned: false
+      values:
+        - metabolism
+        - inhibitor
+        - inducer
       primary: false
       notnull: false
       autoincrement: false
   relations:
-    MedForm:
-      local: med_form_id
-      foreign: med_form_id
-      type: one
     IntEnzym:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: enzym_group_id
       foreign: int_enzym_id
+      type: one
+    MedForm:
+      onDelete: CASCADE
+      onUpdate: CASCADE
+      local: med_form_id
+      foreign: med_form_id
       type: one
 MedBaseId:
   connection: doctrine
@@ -800,10 +871,14 @@ MedBaseId:
       autoincrement: false
   relations:
     MedType:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_type_id
       foreign: med_type_id
       type: one
     MedForm:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_base_id
       foreign: med_base_id
       type: many
@@ -840,10 +915,14 @@ MedBnfMedicine:
       autoincrement: false
   relations:
     MedBnfPercentage:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: bnf_percentage_id
       foreign: bnf_percentage_id
       type: one
     MedForm:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_form_id
       foreign: med_form_id
       type: one
@@ -866,6 +945,8 @@ MedBnfPercentage:
       autoincrement: false
   relations:
     MedBnfMedicine:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: bnf_percentage_id
       foreign: bnf_percentage_id
       type: many
@@ -888,6 +969,8 @@ MedChemBonding:
       autoincrement: false
   relations:
     MedFormBonding:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: chem_bonding_id
       foreign: med_chem_bonding_id
       type: many
@@ -959,26 +1042,38 @@ MedForm:
       autoincrement: false
   relations:
     MedBaseId:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_base_id
       foreign: med_base_id
       type: one
     MedMagisterForm:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_magister_form_id
       foreign: med_magister_form_id
       type: one
     AdPrescription:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_form_id
       foreign: med_form_id
       type: many
     IntMetabolism:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_form_id
       foreign: med_form_id
       type: many
     MedBnfMedicine:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_form_id
       foreign: med_form_id
       type: many
     MedFormBonding:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_form_id
       foreign: med_form_id
       type: many
@@ -1015,14 +1110,20 @@ MedFormBonding:
       autoincrement: false
   relations:
     MedForm:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_form_id
       foreign: med_form_id
       type: one
     MedChemBonding:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_chem_bonding_id
       foreign: chem_bonding_id
       type: one
     MedKiVal:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_ki_val_id
       foreign: med_ki_val_id
       type: one
@@ -1059,6 +1160,8 @@ MedKiVal:
       autoincrement: false
   relations:
     MedFormBonding:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_ki_val_id
       foreign: med_ki_val_id
       type: many
@@ -1081,6 +1184,8 @@ MedMagisterForm:
       autoincrement: false
   relations:
     MedForm:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_magister_form_id
       foreign: med_magister_form_id
       type: many
@@ -1099,10 +1204,13 @@ MedSubtype1:
       fixed: false
       unsigned: false
       primary: false
+      unique: true
       notnull: true
       autoincrement: false
   relations:
     MedType:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_subtype1_id
       foreign: med_subtype1_id
       type: many
@@ -1122,9 +1230,12 @@ MedSubtype2:
       unsigned: false
       primary: false
       notnull: true
+      unique: true
       autoincrement: false
   relations:
     MedType:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_subtype2_id
       foreign: med_subtype2_id
       type: many
@@ -1154,14 +1265,20 @@ MedType:
       autoincrement: false
   relations:
     MedSubtype1:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_subtype1_id
       foreign: med_subtype1_id
       type: one
     MedSubtype2:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_subtype2_id
       foreign: med_subtype2_id
       type: one
     MedBaseId:
+      onDelete: CASCADE
+      onUpdate: CASCADE
       local: med_type_id
       foreign: med_type_id
       type: many
