@@ -43,11 +43,12 @@ class voorschriftenActions extends sfActions
       if(isset($_POST['startDate'])){
         $prescription = new AdPrescription();
         $prescription->setStartDate($_POST['startDate']);
-        $prescription->setPrescDate($_POST['prescDate']);
+        $prescription->setPrescDate(date('y-m-d H:m:s'));
         $prescription->setDose($_POST['dose']);
         $prescription->setFrequency($_POST['frequency']);
         $prescription->setMedFormId($_POST['medFormId']);
-        $prescription->setUserPatientId($_POST['userPatientId']);
+        $userPatients= Doctrine_Query::create()->from('AdUserPatient aup')->where('aup.user_patient_id = ?',$_POST['userPatientId'])->execute();
+        $prescription->setUserPatientId($userPatients[0]->getUserPatientId());
         $prescription->setComment($_POST['comment']);
         $prescription->save();
         $this->redirect('show_prescription',array('ad_presc_id'=>$prescription->getAdPrescId()));
