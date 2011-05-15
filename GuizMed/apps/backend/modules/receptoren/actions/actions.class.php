@@ -20,7 +20,7 @@ class receptorenActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
     $this->id = $request->getParameter('med_chem_bonding_id');
-    $this->med_form_bondings = Doctrine_Query::create()->from('medFormBonding mfb')->where('mfb.med_chem_bonding_id = ?',$request->getParameter('med_chem_bonding_id'))->execute();
+    $this->med_form_bondings = Doctrine_Query::create()->from('medFormBonding mfb')->where('mfb.med_chem_bonding_id = ?',$request->getParameter('med_chem_bonding_id'))->orderBy('med_ki_val_id')->execute();
     $this->forward404Unless($this->med_form_bondings);
   }
 

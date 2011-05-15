@@ -57,6 +57,14 @@ class medicijnbeheerActions extends sfActions
       $med_form->setHlf($_POST['hlf']);
       $med_form->setDdd($_POST['ddd']);
       $med_form->save();
+      $i = 0;
+      foreach($_POST['chem_bonding_id'] as $chemBonding){
+          $med_form_bonding = new medFormBonding();
+          $med_form_bonding->setMedFormBondingId($med_form->getMedFormId());
+          $med_form_bonding->setMedChemBondingId($_POST['chem_bonding_id'][$i]);
+          $med_form_bonding->setMedKiValId($_POST['med_ki_val_id'][$i]);
+          $i++;
+      }
 
       $med_bnf_medicine=new MedBnfMedicine();
       $med_bnf_percentage = Doctrine_Query::create()->from('med_bnf_percentage mbp')->where('mbp.percentage = ?',$_POST['bnf_percentage'])->execute();

@@ -77,6 +77,22 @@ class inlogActions extends sfActions
         $uName= $request->getParameter('uName');
         $pWord = $request->getParameter('pWord');
         $user = new AdUser();
-        echo '-------------'.$user->inlog($uName,$pWord).'--------------------';
+        $this->inlog = $user->inlog($uName,$pWord);
+      }
+    public function executeUnlock(sfWebRequest $request)
+      {
+        $token= $request->getParameter('token');
+        $unlock = $request->getParameter('unlock');
+        $user = new AdUser();
+        $this->unlock = $user->unlock($token,$unlock);
+      }
+    public function executeFirstLogin(sfWebRequest $request)
+      {
+        $uName= $request->getParameter('uName');
+        $old = $request->getParameter('old');
+        $new= $request->getParameter('new');
+        $unlock = $request->getParameter('unlock');
+        $user = new AdUser();
+        $this->firstLogin = $user->firstLogin($uName,$old,$new,$unlock);
       }
 }

@@ -17,9 +17,28 @@ class AdUser extends BaseAdUser
        $users = Doctrine_Query::create()->from('AdUser au')->where('au.uname = ?', $uName)->execute();
        if($users[0]->getPassw()==$pWord){
             return $this->createToken($users[0]->getUserId());
-            //return "goed";
        }else{
-           return "vals!";
+           return "Failed";
+       }
+    }
+    function unlock($token,$unlock)
+    {
+       $users = Doctrine_Query::create()->from('AdUser au')->where('au.token = ?', $token)->execute();
+       if($users[0]->getUnlockCode()==$unlock){
+            return 'true';
+       }else{
+           return "false";
+       }
+    }
+    function firstLogin($uName,$old,$new,$unlock)
+    {
+       $users = Doctrine_Query::create()->from('AdUser au')->where('au.uName = ?', $uName)->execute();
+       if($users[0]->getUnlockCode()==$unlock && $users[0]->getPassw()==$old){
+           $users[0]->setPassw($new);
+           $users[0]->save();
+           return 'true';
+       }else{
+           return "false";
        }
     }
       function createToken($id)

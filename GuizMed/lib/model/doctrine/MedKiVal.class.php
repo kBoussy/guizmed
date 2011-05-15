@@ -13,6 +13,6 @@
 class MedKiVal extends BaseMedKiVal
 {
     function  __toString() {
-        return $this->getValue();
+        return $this->getInfluence();
     }
 }
