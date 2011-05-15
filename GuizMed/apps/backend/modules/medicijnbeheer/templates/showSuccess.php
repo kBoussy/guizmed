@@ -4,12 +4,12 @@
     "mainclass" :  "<?php echo $med_base_id->getMainclass(); ?>",
     "gen_name" : "<?php echo $med_base_id->getGenName(); ?>",
     "med_base" : "<?php echo $med_base_id->getSpeciality(); ?>",
-    "type": [
+    "type": 
     {
         "subtype1":"<?php echo $med_base_id->getMedType()->getMedSubtype1()->getName(); ?>",
         "subtype2":"<?php echo $med_base_id->getMedType()->getMedSubtype2()->getName(); ?>"
         }
-        ],
+        ,
     "submeds":[
             <?php $bol = true?>
     <?php foreach ($med_forms as $med_form): ?>
@@ -30,12 +30,13 @@
             "Proteine_binding": "<?php echo $med_form->getProteineBinding() ?>",
             "T_max_h":"<?php echo $med_form->getTMaxH() ?>",
             "Hlf":"<?php echo $med_form->getHlf() ?>",
-            "Ddd":"<?php echo $med_form->getDdd() ?>"
+            "Ddd":"<?php echo $med_form->getDdd() ?>",
+            "metabolism" : [
+            <?php $comma = true; ?>
     <?php foreach ($med_form->getAllMetabolism() as $metabolism): ?>
-        ,<?php echo '"'.$metabolism->getInteractionType().'" : ['; ?>
+        <?php echo /*'"'.$metabolism->getInteractionType().'" : ['*/''; ?>
             
             <?php #echo '"'.$metabolism->getIntEnzym().'"'; ?>
-            <?php $comma = true; ?>
             <?php foreach ($metabolism->getDrugs() as $drug): ?>
             <?php if($comma == true){
                 $comma = false;
@@ -44,9 +45,9 @@
             } ?>
                 <?php echo '"'.$drug->getName().'"'; ?>
             <?php endforeach; ?>
-            
-            ]
+       
     <?php endforeach; ?>
+            ]
             
             
         }

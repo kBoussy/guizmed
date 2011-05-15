@@ -10,7 +10,10 @@
 ?>
  {
 			"id":"<?php echo $ad_user->getUserId() ?>",
-			"name":"<?php echo $ad_user->getFname().' '.$ad_user->getLname() ?>"
+                        "lname":"<?php echo $ad_user->getLname(); ?>",
+			"fname":"<?php echo $ad_user->getFname(); ?>",
+                        "phone":"<?php echo $ad_user->getPhone(); ?>",
+                        "email":"<?php echo $ad_user->getEmail(); ?>"
 }
     <?php endforeach; ?>
 			]

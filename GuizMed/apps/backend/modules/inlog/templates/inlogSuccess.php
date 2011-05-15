@@ -1,1 +1,5 @@
-Tis in orde :)
+{
+"message" : {
+		"inlog": "<?php echo $inlog; ?>"
+}
+}

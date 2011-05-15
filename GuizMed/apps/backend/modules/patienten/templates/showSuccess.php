@@ -41,13 +41,36 @@
             ],
             "meds": [
             <?php foreach($medsActive as $medsA): ?>
-                "id":"<?php $medsA->getAdPresId(); ?>",
-                "name":"",
-                "start_date":"",
-                "end_date":"",
-                "stop_date":""
+                "id":"<?php $medsA->getMedFromId(); ?>",
+                "pres_id":"<?php $medsA->getAdPresId(); ?>",
+                "name":"<?php $medsA->getMedForm()->getMedBaseId()->getSpeciality(); ?>",
+                "start_date":"<?php $medsA->getStartDate(); ?>",
+                "end_date":"<?php $medsA->getEndDate(); ?>",
+                "stop_date":"<?php $medsA->getStopDate(); ?>"
             <?php endforeach; ?>
             ],
+
+
+            
+	    "doctors":[
+            <?php $doctorbol = true; ?>
+            <?php foreach($ad_patient->getAdUserPatient() as $ad_user): ?>
+            <?php if ($doctorbol = true){
+                $doctorbol = false;
+            }else{
+                echo ',';
+            } ?>
+		{
+		   "id":"<?php echo $ad_user->getAdUser()->getUserId(); ?>",
+		   "lName":"<?php echo $ad_user->getAdUser()->getLName(); ?>",
+		   "fName":"<?php echo $ad_user->getAdUser()->getFName(); ?>"
+		}
+            <?php endforeach; ?>            
+	    ],
+
+
+
+
             "non_psycho": [
     <?php $bolNonPharma = true; ?>
     <?php foreach($nonPsychos as $nonPsycho): ?>

@@ -12,5 +12,8 @@
  */
 class AdNotification extends BaseAdNotification
 {
-
+//    function getPatient(){
+//        $patients = Doctrine_Query::create()->from('AdPatient ap')->where('ap.patient_id = ?',$this->getPatiendId())->execute();
+//        return $patients[0];
+//    }
 }
