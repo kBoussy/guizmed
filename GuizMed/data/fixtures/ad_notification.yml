@@ -1,0 +1,47 @@
+# data/fixtures/ad_notification.yml
+AdNotification:
+  ad_notification1:
+    notification_id: 1
+    prev_user_id: 1
+    new_user_id: 2
+    patient_id: 1
+    reason: Doctor refused to have this patient any longer
+    accepted: true
+    checked: true
+    date: '2010/11/13'
+  ad_notification2:
+    notification_id: 2
+    prev_user_id: 1
+    new_user_id: 3
+    patient_id: 2
+    reason: Docter is taking a leave of absence
+    accepted: true
+    checked: true
+    date: '2011/02/13'
+  ad_notification3:
+    notification_id: 3
+    prev_user_id: 3
+    new_user_id: 1
+    patient_id: 2
+    reason: Docter came back 
+    accepted: true
+    checked: true
+    date: '2011/03/13'
+  ad_notification4:
+    notification_id: 4
+    prev_user_id: 2
+    new_user_id: 3
+    patient_id: 1
+    reason: Request for transfer 
+    accepted: false
+    checked: false
+    date: '2011/03/14'
+  ad_notification5:
+    notification_id: 5
+    prev_user_id: 1
+    new_user_id: 2
+    patient_id: 4
+    reason: Docter is going on a vacation 
+    accepted: false
+    checked: true
+    date: '2011/03/15'
