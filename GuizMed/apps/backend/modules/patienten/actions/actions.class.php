@@ -50,6 +50,7 @@ class patientenActions extends sfActions
         $patient->setLname($_POST['lName']);
         $patient->setBdate($_POST['bDate']);
         $patient->setSex($_POST['sex']);
+        $patient->setPatientSince(date('y-m-d H:m:s'));
         $patient->save();
         $this->redirect('show_patient',array('patient_id'=>$patient->getId()));
       }else{
