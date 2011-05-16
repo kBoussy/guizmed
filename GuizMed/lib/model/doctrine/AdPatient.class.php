@@ -12,6 +12,49 @@
  */
 class AdPatient extends BaseAdPatient
 {
+     public function berekenBNF($patient_id)
+        {
+        $patient_id=$this->getPatientId();
+        $bnfWaarde = 0;
+
+        /** selectie van alle voorschriften per patient met patient_id * */
+
+        $p = Doctrine_Query::create()
+        ->from('adPrescription a')
+        ->where('a.user_patient_id = ?', $patient_id)
+        ->select('a.med_form_id', 'a.end_date')->execute();
+
+        foreach($p as $prec):
+            $d=$prec->getMedForm();
+            $s = $d->getHlf();
+            $n = $d->getMedBnfMedicine();
+
+        if ($prec->getEndDate() !== null){
+
+        $hlf = explode("-", $d->getHlf());   /** koppelteken als splitsing aangeduid tss twee waarden* */
+        $Tijd = 5 * (($hlf[0])/ 60);        /** berekening met de tweede (hoogste) waarde uit de db(stel hln in uren)* */
+
+        date_default_timezone_set('UTC');
+
+        $today = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));
+        $end_date_prescription = $prec->getEndDate();
+        $verschil= ($end_date_prescription-$today + 1)/86400;
+
+        if ($verschil > 1){
+        $bnfWaarde == $n[0]->getPercentage();
+        } else {
+
+            $bnfWaarde == $bnfWaarde + $n[0]->getMedBnfPercentage()->getPercentage();
+        }
+        } else {
+
+            $bnfWaarde == $bnfwaarde + $n[0]->getMedBnfPercentage()->getPercentage();
+        }
+
+        endforeach;
+
+        return $bnfWaarde;
+    }
   public function getPrescriptions($id)
   {
     $q = Doctrine_Query::create()

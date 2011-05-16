@@ -26,7 +26,6 @@ class voorschriftenActions extends sfActions
     $ad_prescription->stop("No reason was given.");
       }
   }
-
   public function executeShow(sfWebRequest $request)
   {
     $this->ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id')));

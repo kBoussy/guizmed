@@ -10,8 +10,8 @@
         }?>
 	   {
 		"id":"<?php echo $incomming->getNotificationId(); ?>",
-		"fName":"<?php echo $incomming->getAdPatient()->getFname(); ?>",
-		"lName":"<?php echo $incomming->getAdPatient()->getLname(); ?>",
+		"fName":"<?php echo $incomming->getOldUser()->getFname(); ?>",
+		"lName":"<?php echo $incomming->getOldUser()->getLname(); ?>",
 		"accepted":"<?php echo $incomming->getAccepted(); ?>",
 		"checked":"<?php echo $incomming->getChecked(); ?>"
 	   }
@@ -27,8 +27,8 @@
         }?>
 	   {
 		"id":"<?php echo $outcomming->getNotificationId(); ?>",
-		"fName":"<?php echo $outcomming->getAdPatient()->getFname(); ?>",
-		"lName":"<?php echo $outcomming->getAdPatient()->getLname(); ?>",
+		"fName":"<?php echo $outcomming->getNewUser()->getFname(); ?>",
+		"lName":"<?php echo $outcomming->getNewUser()->getLname(); ?>",
 		"accepted":"<?php echo $outcomming->getAccepted(); ?>",
 		"checked":"<?php echo $outcomming->getChecked(); ?>"
 	   }

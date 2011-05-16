@@ -27,6 +27,7 @@ class notificationsActions extends sfActions
   public function executeShownot(sfWebRequest $request)
   {
     $this->ad_notification = Doctrine_Core::getTable('AdNotification')->find(array($request->getParameter('notification_id')));
+    $this->userId= $request->getParameter('userId');
     $this->forward404Unless($this->ad_notification);
   }
 

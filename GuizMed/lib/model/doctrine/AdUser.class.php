@@ -16,6 +16,7 @@ class AdUser extends BaseAdUser
     {
        $users = Doctrine_Query::create()->from('AdUser au')->where('au.uname = ?', $uName)->execute();
        if($users[0]->getPassw()==$pWord){
+            $this->setUserId($users[0]->getUserId());
             return $this->createToken($users[0]->getUserId());
        }else{
            return "Failed";

@@ -12,7 +12,6 @@
  */
 class AdNonPsychoPat extends BaseAdNonPsychoPat
 {
-
     public function stop(){
         $this->setStopDate(date('y-m-d H:m:s'));
         $this->save();

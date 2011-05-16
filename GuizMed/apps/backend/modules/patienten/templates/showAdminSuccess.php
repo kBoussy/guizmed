@@ -52,8 +52,22 @@
             ],
 
 
-            
 
+	    "doctors":[
+            <?php $doctorbol = true; ?>
+            <?php foreach($ad_patient->getAdUserPatient() as $ad_user): ?>
+            <?php if ($doctorbol == true){
+                $doctorbol = false;
+            }else{
+                echo ',';
+            } ?>
+		{
+		   "id":"<?php echo $ad_user->getAdUser()->getUserId(); ?>",
+		   "lName":"<?php echo $ad_user->getAdUser()->getLName(); ?>",
+		   "fName":"<?php echo $ad_user->getAdUser()->getFName(); ?>"
+		}
+            <?php endforeach; ?>
+	    ],
 
 
 
