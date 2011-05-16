@@ -74,24 +74,25 @@ class inlogActions extends sfActions
   }
     public function executeInlog(sfWebRequest $request)
       {
-        $uName= $request->getParameter('uName');
-        $pWord = $request->getParameter('pWord');
+        $uName= $_POST['uName'];//$request->getParameter('uName');
+        $pWord = $_POST['pWord']; //$request->getParameter('pWord');
         $user = new AdUser();
         $this->inlog = $user->inlog($uName,$pWord);
+        $this->userId = $user->getUserId();
       }
     public function executeUnlock(sfWebRequest $request)
       {
-        $token= $request->getParameter('token');
-        $unlock = $request->getParameter('unlock');
+        $token= $_POST['token'];//$request->getParameter('token');
+        $unlock = $_POST['unlock']; //$request->getParameter('unlock');
         $user = new AdUser();
         $this->unlock = $user->unlock($token,$unlock);
       }
     public function executeFirstLogin(sfWebRequest $request)
       {
-        $uName= $request->getParameter('uName');
-        $old = $request->getParameter('old');
-        $new= $request->getParameter('new');
-        $unlock = $request->getParameter('unlock');
+        $uName= $_POST['uName'];// $request->getParameter('uName');
+        $old = $_POST['old']; //$request->getParameter('old');
+        $new= $_POST['new']; //$request->getParameter('new');
+        $unlock = $_POST['unlock']; // $request->getParameter('unlock');
         $user = new AdUser();
         $this->firstLogin = $user->firstLogin($uName,$old,$new,$unlock);
       }

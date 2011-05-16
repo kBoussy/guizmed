@@ -30,21 +30,17 @@ class nonPsychoActions extends sfActions
 
     public function executeStop(sfWebRequest $request)
   {
-      $_POST['nonPsychoPatId'] = '7';
-      $adNonPsychoPat = Doctrine_Query::create()->from('adNonPsychoPat anp')->where('anp.patient_id = ?', $_POST['nonPsychoPatId'])->execute();
+      $_POST['nonPsychoPatId']='8';
+      $adNonPsychoPat = Doctrine_Query::create()->from('adNonPsychoPat anp')->where('anp.non_psycho_pat_id = ?', $_POST['nonPsychoPatId'])->execute();
       $adNonPsychoPat[0]->stop();
   }
-
   public function executeCreate(sfWebRequest $request)
   {
-
-
     $adNonPsychoPat = new AdNonPsychoPat();
     $adNonPsychoPat->setPatientId($_POST['patientId']);
     $adNonPsychoPat->setNonPsychoId($_POST['nonPsychoId']);
     $adNonPsychoPat->setStartDate($_POST['startDate']);
-    $adNonPsychoPat->save();
-  
+    $adNonPsychoPat->save();  
 /*    $this->forward404Unless($request->isMethod(sfRequest::POST));
     $this->form = new adNonPsychoPatForm();
     $this->processForm($request, $this->form);
