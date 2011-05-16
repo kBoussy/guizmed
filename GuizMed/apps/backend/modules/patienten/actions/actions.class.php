@@ -12,7 +12,6 @@ class patientenActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-      $_POST['token']='KimBoussy';
       $user = new AdUser();
       if($user->isAllowed($_POST['token'])){
     $this->ad_patients = Doctrine_Core::getTable('adPatient')
@@ -24,7 +23,7 @@ class patientenActions extends sfActions
     $log->setDate(date('y-m-d H:m:s'));
     $log->save();
       }else{
-              $this->forward404Unless('not logged in!');
+              $this->redirect('users/error?message=Not logged in!&title=Error&type=error');
       }
   }
 

@@ -17495,3 +17495,614 @@ May 16 10:14:52 symfony [info] {sfWebDebugLogger} Action "patienten/index" 74.78
 May 16 10:14:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
 May 16 10:14:52 symfony [info] {sfWebDebugLogger} View "Success" for "patienten/index" 30.07 ms (1)
 May 16 10:14:52 symfony [info] {sfWebResponse} Send content (32201 o)
+May 16 10:22:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:22:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:22:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:22:27 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:22:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:22:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:22:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:22:27 symfony [warning] {sfWebDebugLogger}  Warning at C:\wamp\www\guizmed\GuizMed\lib\model\doctrine\AdUser.class.php on line 50 (hash() [<a href='function.hash'>function.hash</a>]: Unknown hashing algorithm: Kim11-05-16 10:05:27Boussy)
+May 16 10:22:27 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (, 2)
+May 16 10:22:28 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:22:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:22:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:22:28 symfony [info] {sfWebDebugLogger} Configuration 718.38 ms (9)
+May 16 10:22:28 symfony [info] {sfWebDebugLogger} Factories 312.72 ms (1)
+May 16 10:22:28 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 219.75 ms (1)
+May 16 10:22:28 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:22:28 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 38.88 ms (1)
+May 16 10:22:28 symfony [info] {sfWebResponse} Send content (24702 o)
+May 16 10:23:34 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:23:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:23:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:23:34 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:23:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:23:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:23:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:23:34 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (04ea52d5f2c8ddb7e0e0e6a39a21ad5671ac8bcb, 2)
+May 16 10:23:34 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:23:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:23:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:23:34 symfony [info] {sfWebDebugLogger} Configuration 19.48 ms (9)
+May 16 10:23:34 symfony [info] {sfWebDebugLogger} Factories 111.10 ms (1)
+May 16 10:23:34 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 195.15 ms (1)
+May 16 10:23:34 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:23:34 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 31.11 ms (1)
+May 16 10:23:34 symfony [info] {sfWebResponse} Send content (24850 o)
+May 16 10:23:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:23:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:23:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:23:50 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:23:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:23:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:23:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:23:50 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (dd4160cb42dace28c7ceb79ef1355b06ca0d4acd, 2)
+May 16 10:23:50 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:23:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:23:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:23:50 symfony [info] {sfWebDebugLogger} Configuration 18.60 ms (9)
+May 16 10:23:50 symfony [info] {sfWebDebugLogger} Factories 85.87 ms (1)
+May 16 10:23:50 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 242.04 ms (1)
+May 16 10:23:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.06 ms (4)
+May 16 10:23:50 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 30.52 ms (1)
+May 16 10:23:50 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:23:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:23:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:23:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:23:52 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:23:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:23:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:23:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:23:52 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (ecf45ed4d5ee3b192d082e85d8ae07a03b1fe5fa, 2)
+May 16 10:23:52 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:23:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:23:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:23:52 symfony [info] {sfWebDebugLogger} Configuration 17.62 ms (9)
+May 16 10:23:52 symfony [info] {sfWebDebugLogger} Factories 85.26 ms (1)
+May 16 10:23:52 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 197.01 ms (1)
+May 16 10:23:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.06 ms (4)
+May 16 10:23:52 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 30.74 ms (1)
+May 16 10:23:52 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:23:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:23:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:23:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:23:54 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:23:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:23:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:23:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:23:54 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (38af9a9d3e86d3ff681857a8214cef3b2c2f352f, 2)
+May 16 10:23:54 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:23:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:23:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:23:54 symfony [info] {sfWebDebugLogger} Configuration 19.25 ms (9)
+May 16 10:23:54 symfony [info] {sfWebDebugLogger} Factories 85.60 ms (1)
+May 16 10:23:54 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 179.37 ms (1)
+May 16 10:23:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:23:54 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 22.78 ms (1)
+May 16 10:23:54 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:23:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:23:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:23:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:23:59 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:23:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:23:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:23:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:23:59 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (5b92f269f0176890408ff2bdf4e559d7602cd587, 2)
+May 16 10:24:00 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:00 symfony [info] {sfWebDebugLogger} Configuration 18.87 ms (9)
+May 16 10:24:00 symfony [info] {sfWebDebugLogger} Factories 85.77 ms (1)
+May 16 10:24:00 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 173.46 ms (1)
+May 16 10:24:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:24:00 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 22.06 ms (1)
+May 16 10:24:00 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:01 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:01 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:01 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (64ae5723b04c0b301d000d2fd7509dd97626c946, 2)
+May 16 10:24:01 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:01 symfony [info] {sfWebDebugLogger} Configuration 19.70 ms (9)
+May 16 10:24:01 symfony [info] {sfWebDebugLogger} Factories 83.22 ms (1)
+May 16 10:24:01 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 172.17 ms (1)
+May 16 10:24:01 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:24:01 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 30.58 ms (1)
+May 16 10:24:01 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:02 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:02 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (505c848f893681f9f3b6aee6acd3313cec99302b, 2)
+May 16 10:24:02 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:02 symfony [info] {sfWebDebugLogger} Configuration 20.06 ms (9)
+May 16 10:24:02 symfony [info] {sfWebDebugLogger} Factories 85.97 ms (1)
+May 16 10:24:02 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 222.26 ms (1)
+May 16 10:24:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.06 ms (4)
+May 16 10:24:02 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 22.62 ms (1)
+May 16 10:24:02 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:03 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:03 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (7c06541b46bcd872dfdcf0d67fefb57fd462cf4f, 2)
+May 16 10:24:03 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} Configuration 18.55 ms (9)
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} Factories 87.63 ms (1)
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 207.99 ms (1)
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 30.34 ms (1)
+May 16 10:24:04 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:04 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:04 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:04 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (17a27bda74a2aabc947cb77b8ec187a9d67d3219, 2)
+May 16 10:24:04 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} Configuration 18.25 ms (9)
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} Factories 86.69 ms (1)
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 247.41 ms (1)
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:24:04 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 30.64 ms (1)
+May 16 10:24:05 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:05 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:05 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (dcbffb5ce2af5ea81caa21b390c1e551748f96de, 2)
+May 16 10:24:05 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:05 symfony [info] {sfWebDebugLogger} Configuration 17.30 ms (9)
+May 16 10:24:05 symfony [info] {sfWebDebugLogger} Factories 84.90 ms (1)
+May 16 10:24:05 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 194.23 ms (1)
+May 16 10:24:05 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:24:05 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 30.36 ms (1)
+May 16 10:24:05 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:06 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:06 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (71017097892959bcb946123a299d738dcbbeb540, 2)
+May 16 10:24:06 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:06 symfony [info] {sfWebDebugLogger} Configuration 17.61 ms (9)
+May 16 10:24:06 symfony [info] {sfWebDebugLogger} Factories 86.19 ms (1)
+May 16 10:24:06 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 204.91 ms (1)
+May 16 10:24:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:24:06 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 31.47 ms (1)
+May 16 10:24:06 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:07 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:07 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (664ae8de3cfe3ed1c408c61d92a8b7ab09542e8d, 2)
+May 16 10:24:07 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:07 symfony [info] {sfWebDebugLogger} Configuration 18.16 ms (9)
+May 16 10:24:07 symfony [info] {sfWebDebugLogger} Factories 79.21 ms (1)
+May 16 10:24:07 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 185.52 ms (1)
+May 16 10:24:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:24:07 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 26.61 ms (1)
+May 16 10:24:07 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:08 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:08 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (6f0b661a2e5ec592cc4939b5fe21e0e18699ba16, 2)
+May 16 10:24:08 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:08 symfony [info] {sfWebDebugLogger} Configuration 18.50 ms (9)
+May 16 10:24:08 symfony [info] {sfWebDebugLogger} Factories 82.74 ms (1)
+May 16 10:24:08 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 180.75 ms (1)
+May 16 10:24:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.06 ms (4)
+May 16 10:24:08 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 30.88 ms (1)
+May 16 10:24:08 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:09 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:09 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (5e0d610c767a729f0e4c6e29ce68e8bf1726369f, 2)
+May 16 10:24:09 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:09 symfony [info] {sfWebDebugLogger} Configuration 16.74 ms (9)
+May 16 10:24:09 symfony [info] {sfWebDebugLogger} Factories 79.08 ms (1)
+May 16 10:24:09 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 198.24 ms (1)
+May 16 10:24:09 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:24:09 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 25.71 ms (1)
+May 16 10:24:09 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:10 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:10 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (c83eb34398c439bc1ed92d9c7e45ed15cb92269f, 2)
+May 16 10:24:10 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:10 symfony [info] {sfWebDebugLogger} Configuration 21.54 ms (9)
+May 16 10:24:10 symfony [info] {sfWebDebugLogger} Factories 82.05 ms (1)
+May 16 10:24:10 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 273.56 ms (1)
+May 16 10:24:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.06 ms (4)
+May 16 10:24:10 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 27.08 ms (1)
+May 16 10:24:10 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:10 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:11 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user SET token = ? WHERE user_id = ? - (9cf5495488c751e3bd58b3fef7498ba896cf7f7b, 2)
+May 16 10:24:11 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} Configuration 18.23 ms (9)
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} Factories 80.52 ms (1)
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 168.94 ms (1)
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (4)
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 31.28 ms (1)
+May 16 10:24:11 symfony [info] {sfWebResponse} Send content (24849 o)
+May 16 10:24:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:11 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:11 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} Configuration 18.35 ms (9)
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} Factories 78.93 ms (1)
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 107.03 ms (1)
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (3)
+May 16 10:24:11 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 24.95 ms (1)
+May 16 10:24:11 symfony [info] {sfWebResponse} Send content (23865 o)
+May 16 10:24:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:24:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:24:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:24:11 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:24:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:24:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - (Kim.Boussy)
+May 16 10:24:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 16 10:24:11 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/inlog/templates/inlogSuccess.php"
+May 16 10:24:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:24:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:24:12 symfony [info] {sfWebDebugLogger} Configuration 17.73 ms (9)
+May 16 10:24:12 symfony [info] {sfWebDebugLogger} Factories 86.03 ms (1)
+May 16 10:24:12 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 106.33 ms (1)
+May 16 10:24:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (3)
+May 16 10:24:12 symfony [info] {sfWebDebugLogger} View "Success" for "inlog/inlog" 30.31 ms (1)
+May 16 10:24:12 symfony [info] {sfWebResponse} Send content (23865 o)
+May 16 10:27:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+May 16 10:27:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:27:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:27:26 symfony [info] {patientenActions} Call "patientenActions->executeIndex()"
+May 16 10:27:26 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\patienten\actions\actions.class.php on line 16 (Undefined index: token)
+May 16 10:27:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:27:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 16 10:27:26 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error"
+May 16 10:27:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 16 10:27:26 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error"
+May 16 10:27:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:27:26 symfony [info] {sfWebDebugLogger} Configuration 206.47 ms (9)
+May 16 10:27:26 symfony [info] {sfWebDebugLogger} Factories 233.51 ms (1)
+May 16 10:27:26 symfony [info] {sfWebDebugLogger} Action "patienten/index" 82.98 ms (1)
+May 16 10:27:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+May 16 10:27:26 symfony [info] {sfWebResponse} Send content (131 o)
+May 16 10:27:27 symfony [info] {sfPatternRouting} Match route "error" (/users/error) for /users/error with parameters array (  'module' => 'users',  'action' => 'error',)
+May 16 10:27:27 symfony [info] {sfFrontWebController} Action "users/error" does not exist
+May 16 10:27:27 symfony [err] {sfError404Exception} Action "users/error" does not exist.
+May 16 10:27:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+May 16 10:27:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:27:27 symfony [info] {sfWebDebugLogger} Configuration 11.48 ms (5)
+May 16 10:27:27 symfony [info] {sfWebDebugLogger} Factories 93.40 ms (1)
+May 16 10:27:42 symfony [info] {sfPatternRouting} Match route "error" (/users/error) for /users/error with parameters array (  'module' => 'users',  'action' => 'error',)
+May 16 10:27:42 symfony [info] {sfFrontWebController} Action "users/error" does not exist
+May 16 10:27:42 symfony [err] {sfError404Exception} Action "users/error" does not exist.
+May 16 10:27:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+May 16 10:27:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:27:42 symfony [info] {sfWebDebugLogger} Configuration 9.74 ms (5)
+May 16 10:27:42 symfony [info] {sfWebDebugLogger} Factories 88.20 ms (1)
+May 16 10:28:03 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /users with parameters array (  'module' => 'users',  'action' => 'index',)
+May 16 10:28:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:28:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:28:03 symfony [info] {usersActions} Call "usersActions->executeIndex()"
+May 16 10:28:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:28:03 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a - ()
+May 16 10:28:03 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/indexSuccess.php"
+May 16 10:28:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:28:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:28:03 symfony [info] {sfWebDebugLogger} Configuration 85.25 ms (10)
+May 16 10:28:03 symfony [info] {sfWebDebugLogger} Factories 78.01 ms (1)
+May 16 10:28:03 symfony [info] {sfWebDebugLogger} Action "users/index" 61.34 ms (1)
+May 16 10:28:03 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+May 16 10:28:03 symfony [info] {sfWebDebugLogger} View "Success" for "users/index" 50.16 ms (1)
+May 16 10:28:03 symfony [info] {sfWebResponse} Send content (21730 o)
+May 16 10:28:10 symfony [info] {sfPatternRouting} Match route "error" (/users/error) for /users/error with parameters array (  'module' => 'users',  'action' => 'error',)
+May 16 10:28:10 symfony [info] {sfFrontWebController} Action "users/error" does not exist
+May 16 10:28:10 symfony [err] {sfError404Exception} Action "users/error" does not exist.
+May 16 10:28:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+May 16 10:28:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:28:10 symfony [info] {sfWebDebugLogger} Configuration 10.50 ms (5)
+May 16 10:28:10 symfony [info] {sfWebDebugLogger} Factories 82.16 ms (1)
+May 16 10:28:42 symfony [info] {sfPatternRouting} Match route "error" (/users/error) for /users/error with parameters array (  'module' => 'users',  'action' => 'error',)
+May 16 10:28:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:28:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:28:42 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 16 10:28:42 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 16 10:28:42 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\users\templates\errorSuccess.php on line 3 (Undefined variable: message)
+May 16 10:28:42 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\users\templates\errorSuccess.php on line 4 (Undefined variable: title)
+May 16 10:28:42 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\users\templates\errorSuccess.php on line 5 (Undefined variable: type)
+May 16 10:28:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:28:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:28:42 symfony [info] {sfWebDebugLogger} Configuration 19.56 ms (9)
+May 16 10:28:42 symfony [info] {sfWebDebugLogger} Factories 78.87 ms (1)
+May 16 10:28:42 symfony [info] {sfWebDebugLogger} Action "users/error" 0.39 ms (1)
+May 16 10:28:42 symfony [info] {sfWebDebugLogger} View "Success" for "users/error" 29.49 ms (1)
+May 16 10:28:42 symfony [info] {sfWebResponse} Send content (33584 o)
+May 16 10:31:12 symfony [info] {sfPatternRouting} Match route "error" (/users/error) for /users/error with parameters array (  'module' => 'users',  'action' => 'error',)
+May 16 10:31:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:31:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:31:12 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 16 10:31:12 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\users\actions\actions.class.php on line 26 (Undefined index: message)
+May 16 10:31:12 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\users\actions\actions.class.php on line 27 (Undefined index: title)
+May 16 10:31:12 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\users\actions\actions.class.php on line 28 (Undefined index: type)
+May 16 10:31:12 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 16 10:31:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:31:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:31:12 symfony [info] {sfWebDebugLogger} Configuration 22.19 ms (9)
+May 16 10:31:12 symfony [info] {sfWebDebugLogger} Factories 80.44 ms (1)
+May 16 10:31:12 symfony [info] {sfWebDebugLogger} Action "users/error" 2.78 ms (1)
+May 16 10:31:12 symfony [info] {sfWebDebugLogger} View "Success" for "users/error" 26.90 ms (1)
+May 16 10:31:12 symfony [info] {sfWebResponse} Send content (17651 o)
+May 16 10:33:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /users/error with parameters array (  'module' => 'users',  'action' => 'error',)
+May 16 10:33:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:33:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:33:41 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 16 10:33:41 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 16 10:33:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:33:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:33:41 symfony [info] {sfWebDebugLogger} Configuration 184.00 ms (10)
+May 16 10:33:41 symfony [info] {sfWebDebugLogger} Factories 244.41 ms (1)
+May 16 10:33:41 symfony [info] {sfWebDebugLogger} Action "users/error" 0.44 ms (1)
+May 16 10:33:41 symfony [info] {sfWebDebugLogger} View "Success" for "users/error" 29.86 ms (1)
+May 16 10:33:41 symfony [info] {sfWebResponse} Send content (17662 o)
+May 16 10:35:43 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /users with parameters array (  'module' => 'users',  'action' => 'index',)
+May 16 10:35:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:35:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:35:43 symfony [info] {usersActions} Call "usersActions->executeIndex()"
+May 16 10:35:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:35:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a - ()
+May 16 10:35:43 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/indexSuccess.php"
+May 16 10:35:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:35:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:35:43 symfony [info] {sfWebDebugLogger} Configuration 21.04 ms (9)
+May 16 10:35:43 symfony [info] {sfWebDebugLogger} Factories 81.77 ms (1)
+May 16 10:35:43 symfony [info] {sfWebDebugLogger} Action "users/index" 65.78 ms (1)
+May 16 10:35:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+May 16 10:35:43 symfony [info] {sfWebDebugLogger} View "Success" for "users/index" 36.61 ms (1)
+May 16 10:35:43 symfony [info] {sfWebResponse} Send content (21760 o)
+May 16 10:35:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:35:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:35:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:35:49 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:35:49 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\inlog\actions\actions.class.php on line 77 (Undefined index: uName)
+May 16 10:35:49 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\inlog\actions\actions.class.php on line 78 (Undefined index: pWord)
+May 16 10:35:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:35:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - ()
+May 16 10:35:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - ()
+May 16 10:35:49 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user (token) VALUES (?) - (2f60e68930b6521ab8ada9dd4f0f09f89e8ee09e)
+May 16 10:35:49 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user`, CONSTRAINT `ad_user_ad_role_id_ad_role_role_id` FOREIGN KEY (`ad_role_id`) REFERENCES `ad_role` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 16 10:35:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 16 10:35:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:35:49 symfony [info] {sfWebDebugLogger} Configuration 15.86 ms (8)
+May 16 10:35:49 symfony [info] {sfWebDebugLogger} Factories 82.59 ms (1)
+May 16 10:35:49 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 295.17 ms (1)
+May 16 10:35:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (3)
+May 16 10:36:00 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+May 16 10:36:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:36:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:36:00 symfony [info] {patientenActions} Call "patientenActions->executeIndex()"
+May 16 10:36:00 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\patienten\actions\actions.class.php on line 16 (Undefined index: token)
+May 16 10:36:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:36:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 16 10:36:00 symfony [info] {sfFrontWebController} Redirect to "/users/error/title/fout/message/you are not logged in/type/Fatal"
+May 16 10:36:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 16 10:36:00 symfony [info] {sfWebResponse} Send header "Location: /users/error/title/fout/message/you are not logged in/type/Fatal"
+May 16 10:36:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:36:00 symfony [info] {sfWebDebugLogger} Configuration 16.92 ms (8)
+May 16 10:36:00 symfony [info] {sfWebDebugLogger} Factories 80.65 ms (1)
+May 16 10:36:00 symfony [info] {sfWebDebugLogger} Action "patienten/index" 76.55 ms (1)
+May 16 10:36:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+May 16 10:36:00 symfony [info] {sfWebResponse} Send content (135 o)
+May 16 10:36:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:36:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:36:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:36:25 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:36:25 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\inlog\actions\actions.class.php on line 77 (Undefined index: uName)
+May 16 10:36:25 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\inlog\actions\actions.class.php on line 78 (Undefined index: pWord)
+May 16 10:36:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:36:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - ()
+May 16 10:36:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - ()
+May 16 10:36:25 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user (token) VALUES (?) - (568d5bf31cb70a9239e0124778d90f436875f8bc)
+May 16 10:36:25 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user`, CONSTRAINT `ad_user_ad_role_id_ad_role_role_id` FOREIGN KEY (`ad_role_id`) REFERENCES `ad_role` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 16 10:36:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 16 10:36:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:36:26 symfony [info] {sfWebDebugLogger} Configuration 16.93 ms (8)
+May 16 10:36:26 symfony [info] {sfWebDebugLogger} Factories 83.06 ms (1)
+May 16 10:36:26 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 311.28 ms (1)
+May 16 10:36:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (3)
+May 16 10:36:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+May 16 10:36:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:36:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:36:32 symfony [info] {patientenActions} Call "patientenActions->executeIndex()"
+May 16 10:36:32 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\patienten\actions\actions.class.php on line 16 (Undefined index: token)
+May 16 10:36:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:36:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 16 10:36:32 symfony [info] {sfFrontWebController} Redirect to "/users/error/title/fout/message/you/type/Fatal"
+May 16 10:36:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 16 10:36:32 symfony [info] {sfWebResponse} Send header "Location: /users/error/title/fout/message/you/type/Fatal"
+May 16 10:36:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:36:32 symfony [info] {sfWebDebugLogger} Configuration 13.84 ms (8)
+May 16 10:36:32 symfony [info] {sfWebDebugLogger} Factories 77.97 ms (1)
+May 16 10:36:32 symfony [info] {sfWebDebugLogger} Action "patienten/index" 75.52 ms (1)
+May 16 10:36:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+May 16 10:36:32 symfony [info] {sfWebResponse} Send content (117 o)
+May 16 10:37:10 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+May 16 10:37:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:37:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:37:10 symfony [info] {patientenActions} Call "patientenActions->executeIndex()"
+May 16 10:37:10 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\patienten\actions\actions.class.php on line 16 (Undefined index: token)
+May 16 10:37:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:37:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 16 10:37:10 symfony [err] {InvalidArgumentException} The "/users/error/title/:title/message/:message/type/:type" route has some missing mandatory parameters (:title, :message, :type).
+May 16 10:37:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 16 10:37:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:37:10 symfony [info] {sfWebDebugLogger} Configuration 14.65 ms (8)
+May 16 10:37:10 symfony [info] {sfWebDebugLogger} Factories 79.87 ms (1)
+May 16 10:37:10 symfony [info] {sfWebDebugLogger} Action "patienten/index" 190.05 ms (1)
+May 16 10:37:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+May 16 10:37:34 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+May 16 10:39:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+May 16 10:39:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:39:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:39:42 symfony [info] {patientenActions} Call "patientenActions->executeIndex()"
+May 16 10:39:43 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\patienten\actions\actions.class.php on line 16 (Undefined index: token)
+May 16 10:39:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:39:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 16 10:39:43 symfony [err] {InvalidArgumentException} An internal URI must contain a module and an action (module/action) ("error?message=hallo&title=wow&type=yes" given).
+May 16 10:39:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 16 10:39:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:39:43 symfony [info] {sfWebDebugLogger} Configuration 18.15 ms (8)
+May 16 10:39:43 symfony [info] {sfWebDebugLogger} Factories 80.11 ms (1)
+May 16 10:39:43 symfony [info] {sfWebDebugLogger} Action "patienten/index" 163.25 ms (1)
+May 16 10:39:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+May 16 10:39:54 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+May 16 10:39:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:39:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:39:54 symfony [info] {patientenActions} Call "patientenActions->executeIndex()"
+May 16 10:39:54 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\patienten\actions\actions.class.php on line 16 (Undefined index: token)
+May 16 10:39:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:39:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 16 10:39:54 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/wow/message/hallo/type/yes"
+May 16 10:39:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 16 10:39:54 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/wow/message/hallo/type/yes"
+May 16 10:39:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:39:54 symfony [info] {sfWebDebugLogger} Configuration 19.24 ms (8)
+May 16 10:39:54 symfony [info] {sfWebDebugLogger} Factories 98.05 ms (1)
+May 16 10:39:54 symfony [info] {sfWebDebugLogger} Action "patienten/index" 89.20 ms (1)
+May 16 10:39:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+May 16 10:39:54 symfony [info] {sfWebResponse} Send content (164 o)
+May 16 10:39:54 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/wow/message/hallo/type/yes with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'wow',  'message' => 'hallo',  'type' => 'yes',)
+May 16 10:39:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:39:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:39:54 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 16 10:39:54 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 16 10:39:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:39:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:39:54 symfony [info] {sfWebDebugLogger} Configuration 17.12 ms (9)
+May 16 10:39:54 symfony [info] {sfWebDebugLogger} Factories 75.14 ms (1)
+May 16 10:39:54 symfony [info] {sfWebDebugLogger} Action "users/error" 0.44 ms (1)
+May 16 10:39:54 symfony [info] {sfWebDebugLogger} View "Success" for "users/error" 27.53 ms (1)
+May 16 10:39:54 symfony [info] {sfWebResponse} Send content (18045 o)
+May 16 10:40:23 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/wow/message/hallo/type/yes with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'wow',  'message' => 'hallo',  'type' => 'yes',)
+May 16 10:40:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:40:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:40:24 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 16 10:40:24 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 16 10:40:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:40:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:40:24 symfony [info] {sfWebDebugLogger} Configuration 19.23 ms (9)
+May 16 10:40:24 symfony [info] {sfWebDebugLogger} Factories 77.50 ms (1)
+May 16 10:40:24 symfony [info] {sfWebDebugLogger} Action "users/error" 0.43 ms (1)
+May 16 10:40:24 symfony [info] {sfWebDebugLogger} View "Success" for "users/error" 29.58 ms (1)
+May 16 10:40:24 symfony [info] {sfWebResponse} Send content (18045 o)
+May 16 10:40:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /inlog/inlog with parameters array (  'module' => 'inlog',  'action' => 'inlog',)
+May 16 10:40:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:40:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:40:25 symfony [info] {inlogActions} Call "inlogActions->executeInlog()"
+May 16 10:40:25 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\inlog\actions\actions.class.php on line 77 (Undefined index: uName)
+May 16 10:40:25 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\inlog\actions\actions.class.php on line 78 (Undefined index: pWord)
+May 16 10:40:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:40:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.uname = ?) - ()
+May 16 10:40:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - ()
+May 16 10:40:25 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user (token) VALUES (?) - (568d5bf31cb70a9239e0124778d90f436875f8bc)
+May 16 10:40:25 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user`, CONSTRAINT `ad_user_ad_role_id_ad_role_role_id` FOREIGN KEY (`ad_role_id`) REFERENCES `ad_role` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 16 10:40:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 16 10:40:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:40:25 symfony [info] {sfWebDebugLogger} Configuration 13.98 ms (8)
+May 16 10:40:25 symfony [info] {sfWebDebugLogger} Factories 78.19 ms (1)
+May 16 10:40:25 symfony [info] {sfWebDebugLogger} Action "inlog/inlog" 316.25 ms (1)
+May 16 10:40:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (3)
+May 16 10:40:29 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+May 16 10:40:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:40:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:40:29 symfony [info] {patientenActions} Call "patientenActions->executeIndex()"
+May 16 10:40:29 symfony [notice] {sfWebDebugLogger}  Notice at C:\wamp\www\guizmed\GuizMed\apps\backend\modules\patienten\actions\actions.class.php on line 16 (Undefined index: token)
+May 16 10:40:29 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 10:40:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 16 10:40:29 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/Error/message/Not+logged+in%21/type/error"
+May 16 10:40:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 16 10:40:29 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/Error/message/Not+logged+in%21/type/error"
+May 16 10:40:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:40:29 symfony [info] {sfWebDebugLogger} Configuration 16.03 ms (8)
+May 16 10:40:29 symfony [info] {sfWebDebugLogger} Factories 79.86 ms (1)
+May 16 10:40:29 symfony [info] {sfWebDebugLogger} Action "patienten/index" 77.66 ms (1)
+May 16 10:40:29 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+May 16 10:40:29 symfony [info] {sfWebResponse} Send content (179 o)
+May 16 10:40:29 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/Error/message/Not+logged+in!/type/error with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'Error',  'message' => 'Not logged in!',  'type' => 'error',)
+May 16 10:40:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 10:40:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 10:40:30 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 16 10:40:30 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 16 10:40:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 10:40:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 10:40:30 symfony [info] {sfWebDebugLogger} Configuration 16.81 ms (9)
+May 16 10:40:30 symfony [info] {sfWebDebugLogger} Factories 79.90 ms (1)
+May 16 10:40:30 symfony [info] {sfWebDebugLogger} Action "users/error" 0.43 ms (1)
+May 16 10:40:30 symfony [info] {sfWebDebugLogger} View "Success" for "users/error" 27.91 ms (1)
+May 16 10:40:30 symfony [info] {sfWebResponse} Send content (18131 o)
