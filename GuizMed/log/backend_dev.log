@@ -17178,3 +17178,62 @@ May 16 09:27:07 symfony [info] {sfWebDebugLogger} Action "patienten/show" 111.91
 May 16 09:27:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.21 ms (16)
 May 16 09:27:07 symfony [info] {sfWebDebugLogger} View "Success" for "patienten/show" 183.11 ms (1)
 May 16 09:27:07 symfony [info] {sfWebResponse} Send content (49133 o)
+May 16 09:40:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patienten/create with parameters array (  'module' => 'patienten',  'action' => 'create',)
+May 16 09:40:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 09:40:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 09:40:43 symfony [info] {patientenActions} Call "patientenActions->executeCreate()"
+May 16 09:40:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 09:40:43 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_patient (fname, lname, bdate, sex, patient_since) VALUES (?, ?, ?, ?, ?) - (test, hehe, 11-05-16 09:05:43, M, 11-05-16 09:05:43)
+May 16 09:40:43 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "id" on "AdPatient"
+May 16 09:40:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 16 09:40:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 09:40:43 symfony [info] {sfWebDebugLogger} Configuration 680.38 ms (8)
+May 16 09:40:43 symfony [info] {sfWebDebugLogger} Factories 305.60 ms (1)
+May 16 09:40:43 symfony [info] {sfWebDebugLogger} Action "patienten/create" 311.23 ms (1)
+May 16 09:40:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (2)
+May 16 09:41:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patienten/create with parameters array (  'module' => 'patienten',  'action' => 'create',)
+May 16 09:41:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 09:41:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 09:41:02 symfony [info] {patientenActions} Call "patientenActions->executeCreate()"
+May 16 09:41:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 09:41:02 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_patient (fname, lname, bdate, sex, patient_since) VALUES (?, ?, ?, ?, ?) - (test, hehe, 11-05-16 09:05:02, M, 11-05-16 09:05:02)
+May 16 09:41:02 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "ad_patient_id" on "AdPatient"
+May 16 09:41:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 16 09:41:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 09:41:02 symfony [info] {sfWebDebugLogger} Configuration 17.82 ms (8)
+May 16 09:41:02 symfony [info] {sfWebDebugLogger} Factories 81.69 ms (1)
+May 16 09:41:02 symfony [info] {sfWebDebugLogger} Action "patienten/create" 306.59 ms (1)
+May 16 09:41:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+May 16 09:41:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patienten/create with parameters array (  'module' => 'patienten',  'action' => 'create',)
+May 16 09:41:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 09:41:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 09:41:15 symfony [info] {patientenActions} Call "patientenActions->executeCreate()"
+May 16 09:41:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 09:41:15 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_patient (fname, lname, bdate, sex, patient_since) VALUES (?, ?, ?, ?, ?) - (test, hehe, 11-05-16 09:05:15, M, 11-05-16 09:05:15)
+May 16 09:41:15 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/patienten/show/patient_id/7"
+May 16 09:41:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 16 09:41:15 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/patienten/show/patient_id/7"
+May 16 09:41:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 09:41:15 symfony [info] {sfWebDebugLogger} Configuration 17.16 ms (8)
+May 16 09:41:15 symfony [info] {sfWebDebugLogger} Factories 106.57 ms (1)
+May 16 09:41:15 symfony [info] {sfWebDebugLogger} Action "patienten/create" 199.54 ms (1)
+May 16 09:41:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+May 16 09:41:15 symfony [info] {sfWebResponse} Send content (147 o)
+May 16 09:41:15 symfony [info] {sfPatternRouting} Match route "show_patient" (/patienten/show/patient_id/:patient_id) for /patienten/show/patient_id/7 with parameters array (  'module' => 'patienten',  'action' => 'show',  'patient_id' => '7',)
+May 16 09:41:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 16 09:41:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 16 09:41:15 symfony [info] {patientenActions} Call "patientenActions->executeShow()"
+May 16 09:41:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 16 09:41:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.patient_id AS a__patient_id, a.fname AS a__fname, a.lname AS a__lname, a.bdate AS a__bdate, a.patient_since AS a__patient_since, a.sex AS a__sex FROM ad_patient a WHERE (a.patient_id = ?) LIMIT 1 - (7)
+May 16 09:41:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.ad_presc_id AS a__ad_presc_id, a.start_date AS a__start_date, a.end_date AS a__end_date, a.presc_date AS a__presc_date, a.dose AS a__dose, a.frequency AS a__frequency, a.user_patient_id AS a__user_patient_id, a.med_form_id AS a__med_form_id, a.comment AS a__comment, a.stop_date AS a__stop_date, a.stop_reason AS a__stop_reason FROM ad_prescription a WHERE (a.user_patient_id = ?) - (7)
+May 16 09:41:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.non_psycho_pat_id AS a__non_psycho_pat_id, a.ad_patient_id AS a__ad_patient_id, a.non_psycho_id AS a__non_psycho_id, a.start_date AS a__start_date, a.stop_date AS a__stop_date FROM ad_non_psycho_pat a WHERE (a.ad_patient_id = ?) - (7)
+May 16 09:41:15 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/patienten/templates/showSuccess.php"
+May 16 09:41:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.ad_presc_id AS a__ad_presc_id, a.med_form_id AS a__med_form_id FROM ad_prescription a WHERE (a.user_patient_id = ?) - (7)
+May 16 09:41:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 16 09:41:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 16 09:41:15 symfony [info] {sfWebDebugLogger} Configuration 77.90 ms (10)
+May 16 09:41:15 symfony [info] {sfWebDebugLogger} Factories 75.80 ms (1)
+May 16 09:41:15 symfony [info] {sfWebDebugLogger} Action "patienten/show" 142.54 ms (1)
+May 16 09:41:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (5)
+May 16 09:41:15 symfony [info] {sfWebDebugLogger} View "Success" for "patienten/show" 107.56 ms (1)
+May 16 09:41:15 symfony [info] {sfWebResponse} Send content (27352 o)

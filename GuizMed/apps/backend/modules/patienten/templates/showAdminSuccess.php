@@ -1,4 +1,3 @@
-<?php echo $ad_patient->berekenBNF(1); ?>
 {    "patient" : [
         {
             "personalInfo": {

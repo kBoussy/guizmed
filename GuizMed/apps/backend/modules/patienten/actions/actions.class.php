@@ -52,7 +52,7 @@ class patientenActions extends sfActions
         $patient->setSex($_POST['sex']);
         $patient->setPatientSince(date('y-m-d H:m:s'));
         $patient->save();
-        $this->redirect('show_patient',array('patient_id'=>$patient->getId()));
+        $this->redirect('show_patient',array('patient_id'=>$patient->getPatientId()));
       }else{
          $this->forward404('ge moet fName invullen dumbo');
       }
