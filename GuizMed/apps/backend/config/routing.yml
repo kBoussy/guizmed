@@ -6,6 +6,10 @@ homepage:
   url:   /
   param: { module: default, action: index }
 
+error:
+  url:   /users/error/title/:title/message/:message/type/:type
+  param: { module: users, action: error }
+
 inlog:
   url:   /login/uName/:uName/pWord/:pWord
   param: { module: inlog, action: inlog }

@@ -22,7 +22,11 @@ class usersActions extends sfActions
       $title = $_POST['title'];
       $type = $_POST['type'];
   }*/
-
+  public function executeError(sfWebRequest $request){
+      $this->message =$request->getParameter('message');
+      $this->title =$request->getParameter('title');
+      $this->type =$request->getParameter('type');
+  }
   public function executeShow(sfWebRequest $request)
   {
       $headers = "From: ".'Kim Boussy'."<the_chosen_dragon@hotmail.com>\r\n";

@@ -46,7 +46,8 @@ class AdUser extends BaseAdUser
     {
         $users = Doctrine_Query::create()->from('AdUser au')->where('au.user_id = ?',$id)->execute();
         $user = $users[0];
-        $token = $user->getFname().$user->getLname();
+        $token = $user->getFname().date('y-m-d H:m:s').$user->getLname();
+        $token = hash('ripemd160',$token);
         $user->setToken($token);
         $user->save();
 
