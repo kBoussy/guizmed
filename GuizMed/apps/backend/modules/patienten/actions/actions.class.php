@@ -12,8 +12,9 @@ class patientenActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+      $_POST['token']='KimBoussy';
       $user = new AdUser();
-      if($user->isAllowed($_POST('token'))){
+      if($user->isAllowed($_POST['token'])){
     $this->ad_patients = Doctrine_Core::getTable('adPatient')
       ->createQuery('a')
       ->execute();
