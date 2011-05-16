@@ -46,7 +46,7 @@ class voorschriftenActions extends sfActions
         $prescription->setDose($_POST['dose']);
         $prescription->setFrequency($_POST['frequency']);
         $prescription->setMedFormId($_POST['medFormId']);
-        $userPatients= Doctrine_Query::create()->from('AdUserPatient aup')->where('aup.user_patient_id = ?',$_POST['userPatientId'])->execute();
+        $userPatients= Doctrine_Query::create()->from('AdUserPatient aup')->where('aup.patient_id = ?',$_POST['patientId'])->execute();
         $prescription->setUserPatientId($userPatients[0]->getUserPatientId());
         $prescription->setComment($_POST['comment']);
         $prescription->save();
