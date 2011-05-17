@@ -18143,3 +18143,63 @@ May 16 15:57:14 symfony [info] {sfWebDebugLogger} Action "voorschriften/show" 82
 May 16 15:57:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.06 ms (5)
 May 16 15:57:14 symfony [info] {sfWebDebugLogger} View "Success" for "voorschriften/show" 184.82 ms (1)
 May 16 15:57:14 symfony [info] {sfWebResponse} Send content (28212 o)
+May 17 08:17:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/show/uId/1 with parameters array (  'module' => 'notifications',  'action' => 'show',  'uId' => '1',)
+May 17 08:17:45 symfony [info] {myUser} Automatic user logout due to timeout
+May 17 08:17:45 symfony [info] {myUser} User is not authenticated
+May 17 08:17:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 17 08:17:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 17 08:17:45 symfony [info] {notificationsActions} Call "notificationsActions->executeShow()"
+May 17 08:17:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 17 08:17:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.new_user_id = ?) - (1)
+May 17 08:17:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.prev_user_id = ?) - (1)
+May 17 08:17:49 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/notifications/templates/showSuccess.php"
+May 17 08:17:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:17:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:17:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 17 08:17:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 17 08:17:49 symfony [info] {sfWebDebugLogger} Configuration 1853.76 ms (9)
+May 17 08:17:49 symfony [info] {sfWebDebugLogger} Factories 864.98 ms (1)
+May 17 08:17:49 symfony [info] {sfWebDebugLogger} Action "notifications/show" 3562.62 ms (1)
+May 17 08:17:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (5)
+May 17 08:17:49 symfony [info] {sfWebDebugLogger} View "Success" for "notifications/show" 352.56 ms (1)
+May 17 08:17:50 symfony [info] {sfWebResponse} Send content (29161 o)
+May 17 08:18:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/shownot/notification_id/2 with parameters array (  'module' => 'notifications',  'action' => 'shownot',  'notification_id' => '2',)
+May 17 08:18:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 17 08:18:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 17 08:18:02 symfony [info] {notificationsActions} Call "notificationsActions->executeShownot()"
+May 17 08:18:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 17 08:18:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (2)
+May 17 08:18:03 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/notifications/templates/shownotSuccess.php"
+May 17 08:18:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.patient_id AS a__patient_id, a.fname AS a__fname, a.lname AS a__lname, a.bdate AS a__bdate, a.patient_since AS a__patient_since, a.sex AS a__sex FROM ad_patient a WHERE (a.patient_id = ?) - (1)
+May 17 08:18:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:18:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:18:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:18:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:18:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 17 08:18:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 17 08:18:03 symfony [info] {sfWebDebugLogger} Configuration 33.60 ms (9)
+May 17 08:18:03 symfony [info] {sfWebDebugLogger} Factories 123.36 ms (1)
+May 17 08:18:03 symfony [info] {sfWebDebugLogger} Action "notifications/shownot" 156.98 ms (1)
+May 17 08:18:03 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (7)
+May 17 08:18:03 symfony [info] {sfWebDebugLogger} View "Success" for "notifications/shownot" 296.97 ms (1)
+May 17 08:18:03 symfony [info] {sfWebResponse} Send content (32758 o)
+May 17 08:19:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/shownot/notification_id/2/userId/1 with parameters array (  'module' => 'notifications',  'action' => 'shownot',  'notification_id' => '2',  'userId' => '1',)
+May 17 08:19:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 17 08:19:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 17 08:19:15 symfony [info] {notificationsActions} Call "notificationsActions->executeShownot()"
+May 17 08:19:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 17 08:19:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (2)
+May 17 08:19:16 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/notifications/templates/shownotSuccess.php"
+May 17 08:19:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.patient_id AS a__patient_id, a.fname AS a__fname, a.lname AS a__lname, a.bdate AS a__bdate, a.patient_since AS a__patient_since, a.sex AS a__sex FROM ad_patient a WHERE (a.patient_id = ?) - (1)
+May 17 08:19:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:19:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:19:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:19:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.user_id = ?) - (2)
+May 17 08:19:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 17 08:19:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 17 08:19:16 symfony [info] {sfWebDebugLogger} Configuration 18.89 ms (9)
+May 17 08:19:16 symfony [info] {sfWebDebugLogger} Factories 70.80 ms (1)
+May 17 08:19:16 symfony [info] {sfWebDebugLogger} Action "notifications/shownot" 70.06 ms (1)
+May 17 08:19:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.08 ms (7)
+May 17 08:19:16 symfony [info] {sfWebDebugLogger} View "Success" for "notifications/shownot" 308.73 ms (1)
+May 17 08:19:16 symfony [info] {sfWebResponse} Send content (32868 o)
