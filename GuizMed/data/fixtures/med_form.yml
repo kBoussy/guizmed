@@ -183,7 +183,7 @@ MedForm:
   med_form19:
      med_form_id: 19
      med_base_id: 10
-     med_magister_form_id: 
+     med_magister_form_id: 7
      dose: 5mg/ml
      bioavailability: 
      proteine_binding: 
@@ -253,7 +253,7 @@ MedForm:
   med_form26:
      med_form_id: 26
      med_base_id: 15
-     med_magister_form_id: 
+     med_magister_form_id: 7
      dose: 2.5 mg/ml
      bioavailability: 
      proteine_binding: 
@@ -363,7 +363,7 @@ MedForm:
   med_form37:
      med_form_id: 37
      med_base_id: 21
-     med_magister_form_id: 
+     med_magister_form_id: 7
      dose: 
      bioavailability: 
      proteine_binding: 

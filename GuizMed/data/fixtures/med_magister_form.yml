@@ -18,3 +18,6 @@ MedMagisterForm:
   med_magister_form6:
     med_magister_form_id: 0006
     naam: flacon
+  med_magister_form7:
+    med_magister_form_id: 0007
+    naam: Amp. IM
