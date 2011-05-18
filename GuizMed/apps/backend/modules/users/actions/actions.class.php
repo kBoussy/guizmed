@@ -29,8 +29,8 @@ class usersActions extends sfActions
   }
   public function executeShow(sfWebRequest $request)
   {
-      $headers = "From: ".'Kim Boussy'."<the_chosen_dragon@hotmail.com>\r\n";
-      mail('kim.boussy@howest.be','hallo','yu',$headers);
+//      $headers = "From: ".'Kim Boussy'."<the_chosen_dragon@hotmail.com>\r\n";
+//      mail('kim.boussy@howest.be','hallo','yu',$headers);
     // send an email to the affiliate
 /*    $message = $this->getMailer()->compose(
       array('henry@zaagt.turk' => 'Info'),

@@ -12,7 +12,7 @@ class nonPsychoActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->ad_non_psycho_pats = Doctrine_Core::getTable('adNonPsychoPat')
+    $this->ad_non_psychos = Doctrine_Core::getTable('adNonPsycho')
       ->createQuery('a')
       ->execute();
   }
