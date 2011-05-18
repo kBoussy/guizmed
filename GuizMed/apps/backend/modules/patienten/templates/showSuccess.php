@@ -40,13 +40,21 @@
     <?php endforeach; ?>
             ],
             "meds": [
+            <?php $bolMeds = true; ?>
             <?php foreach($medsActive as $medsA): ?>
-                "id":"<?php $medsA->getMedFromId(); ?>",
-                "pres_id":"<?php $medsA->getAdPresId(); ?>",
+            <?php if($bolMeds==true){
+                $bolMeds=false;
+            }else{
+                echo ',';
+            }
+
+            ?>
+            {   "id":"<?php $medsA->getMedFormId(); ?>",
+                "pres_id":"<?php $medsA->getAdPrescId(); ?>",
                 "name":"<?php $medsA->getMedForm()->getMedBaseId()->getSpeciality(); ?>",
                 "start_date":"<?php $medsA->getStartDate(); ?>",
                 "end_date":"<?php $medsA->getEndDate(); ?>",
-                "stop_date":"<?php $medsA->getStopDate(); ?>"
+                "stop_date":"<?php $medsA->getStopDate(); ?>"}
             <?php endforeach; ?>
             ],
 

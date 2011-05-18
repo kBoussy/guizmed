@@ -5,7 +5,7 @@
 		"lName":"<?php echo $ad_user->getLname() ?>",
 		"email":"<?php echo $ad_user->getEmail() ?>",
 		"phone":"<?php echo $ad_user->getPhone() ?>",
-		"function":"<?php echo $ad_user->getAdFunctionId() ?>",
+		"function":"<?php echo $ad_user->getAdFunction()->getName() ?>",
 		"role":"<?php echo $ad_user->getAdRole()->getName() ?>"
 }
 }
