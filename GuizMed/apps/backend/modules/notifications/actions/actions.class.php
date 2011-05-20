@@ -54,16 +54,42 @@ class notificationsActions extends sfActions
   {
     $this->form = new AdNotificationForm();
   }
+  public function executeAccept(sfWebRequest $request)
+  {
+      $notification = Doctrine_Core::getTable('AdNotification')->find(array($_POST['notif_id']));
+      $notification->setReason($_POST['reason']);
+      $notification->setAccepted($_POST['accepted']);
+      $notification->save();
+
+      if($notification->getAccepted()==true){
+      $ad_user_patient = Doctrine_Query::create()->from('AdUserPatient aup')->where('aup.patient_id= ?',$notification->getPrevUserId())->andWhere('aup.user_id = ?', $notification->getNewUser())->execute();
+      $ad_user_patient->setUserId($notification->getNewUserId());
+      $ad_user_patient->save();
+      }
+
+      $this->redirect('notifications/show/uId/'.$notification->getNotificationId());
+  }
 
   public function executeCreate(sfWebRequest $request)
   {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
+    $POST_['user_id']=1;
+    $POST_['patient_id']=1;
+
+    $not = new AdNotification();
+    $not->setNewUserId($POST_['user_id']);
+    $not->setPatientId($POST_['patient_id']);
+    $not->setPrevUserId($not->getOldDoctorPatient($POST_['patient_id']));
+    $not->setDate(date('y-m-d H:m:s'));
+    $not->save();
+
+    $this->redirect('notifications/show/uId/'.$not->getNotificationId());
+/*    $this->forward404Unless($request->isMethod(sfRequest::POST));
 
     $this->form = new AdNotificationForm();
 
     $this->processForm($request, $this->form);
 
-    $this->setTemplate('new');
+    $this->setTemplate('new');*/
   }
 
   public function executeEdit(sfWebRequest $request)
