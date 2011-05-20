@@ -9,20 +9,20 @@ Doctrine_Manager::getInstance()->bindComponent('AdLog', 'doctrine');
  * 
  * @property integer $ad_log
  * @property string $action
- * @property integer $ad_user_patient_id
+ * @property integer $ad_user_id
  * @property timestamp $date
- * @property AdUserPatient $AdUserPatient
+ * @property AdUser $AdUser
  * 
- * @method integer       getAdLog()              Returns the current record's "ad_log" value
- * @method string        getAction()             Returns the current record's "action" value
- * @method integer       getAdUserPatientId()    Returns the current record's "ad_user_patient_id" value
- * @method timestamp     getDate()               Returns the current record's "date" value
- * @method AdUserPatient getAdUserPatient()      Returns the current record's "AdUserPatient" value
- * @method AdLog         setAdLog()              Sets the current record's "ad_log" value
- * @method AdLog         setAction()             Sets the current record's "action" value
- * @method AdLog         setAdUserPatientId()    Sets the current record's "ad_user_patient_id" value
- * @method AdLog         setDate()               Sets the current record's "date" value
- * @method AdLog         setAdUserPatient()      Sets the current record's "AdUserPatient" value
+ * @method integer   getAdLog()      Returns the current record's "ad_log" value
+ * @method string    getAction()     Returns the current record's "action" value
+ * @method integer   getAdUserId()   Returns the current record's "ad_user_id" value
+ * @method timestamp getDate()       Returns the current record's "date" value
+ * @method AdUser    getAdUser()     Returns the current record's "AdUser" value
+ * @method AdLog     setAdLog()      Sets the current record's "ad_log" value
+ * @method AdLog     setAction()     Sets the current record's "action" value
+ * @method AdLog     setAdUserId()   Sets the current record's "ad_user_id" value
+ * @method AdLog     setDate()       Sets the current record's "date" value
+ * @method AdLog     setAdUser()     Sets the current record's "AdUser" value
  * 
  * @package    GuizMed
  * @subpackage model
@@ -51,7 +51,7 @@ abstract class BaseAdLog extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 150,
              ));
-        $this->hasColumn('ad_user_patient_id', 'integer', 4, array(
+        $this->hasColumn('ad_user_id', 'integer', 4, array(
              'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
@@ -74,9 +74,9 @@ abstract class BaseAdLog extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('AdUserPatient', array(
-             'local' => 'ad_user_patient_id',
-             'foreign' => 'user_patient_id',
+        $this->hasOne('AdUser', array(
+             'local' => 'ad_user_id',
+             'foreign' => 'user_id',
              'onDelete' => 'CASCADE',
              'onUpdate' => 'CASCADE'));
     }

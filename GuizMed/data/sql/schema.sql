@@ -1,5 +1,5 @@
 CREATE TABLE ad_function (function_id INT AUTO_INCREMENT, name VARCHAR(45), PRIMARY KEY(function_id)) ENGINE = INNODB;
-CREATE TABLE ad_log (ad_log INT AUTO_INCREMENT, action VARCHAR(150), ad_user_patient_id INT NOT NULL, date DATETIME NOT NULL, INDEX ad_user_patient_id_idx (ad_user_patient_id), PRIMARY KEY(ad_log)) ENGINE = INNODB;
+CREATE TABLE ad_log (ad_log INT AUTO_INCREMENT, action VARCHAR(150), ad_user_id INT NOT NULL, date DATETIME NOT NULL, INDEX ad_user_id_idx (ad_user_id), PRIMARY KEY(ad_log)) ENGINE = INNODB;
 CREATE TABLE ad_non_psycho (ad_non_psycho_id INT AUTO_INCREMENT, name VARCHAR(45) NOT NULL, comment LONGBLOB, PRIMARY KEY(ad_non_psycho_id)) ENGINE = INNODB;
 CREATE TABLE ad_non_psycho_pat (non_psycho_pat_id INT AUTO_INCREMENT, ad_patient_id INT NOT NULL, non_psycho_id INT NOT NULL, start_date DATETIME NOT NULL, stop_date DATETIME, INDEX ad_patient_id_idx (ad_patient_id), INDEX non_psycho_id_idx (non_psycho_id), PRIMARY KEY(non_psycho_pat_id)) ENGINE = INNODB;
 CREATE TABLE ad_notification (notification_id INT AUTO_INCREMENT, prev_user_id INT NOT NULL, new_user_id INT NOT NULL, patient_id INT NOT NULL, reason LONGBLOB, accepted TINYINT DEFAULT '0' NOT NULL, checked TINYINT DEFAULT '0' NOT NULL, date DATETIME NOT NULL, INDEX new_user_id_idx (new_user_id), INDEX patient_id_idx (patient_id), INDEX prev_user_id_idx (prev_user_id), PRIMARY KEY(notification_id)) ENGINE = INNODB;
@@ -24,7 +24,7 @@ CREATE TABLE med_magister_form (med_magister_form_id INT AUTO_INCREMENT, naam VA
 CREATE TABLE med_subtype1 (med_subtype1_id INT AUTO_INCREMENT, name VARCHAR(45) NOT NULL UNIQUE, PRIMARY KEY(med_subtype1_id)) ENGINE = INNODB;
 CREATE TABLE med_subtype2 (med_subtype2_id INT AUTO_INCREMENT, name VARCHAR(45) NOT NULL UNIQUE, PRIMARY KEY(med_subtype2_id)) ENGINE = INNODB;
 CREATE TABLE med_type (med_type_id INT AUTO_INCREMENT, med_subtype1_id INT NOT NULL, med_subtype2_id INT NOT NULL, INDEX med_subtype1_id_idx (med_subtype1_id), INDEX med_subtype2_id_idx (med_subtype2_id), PRIMARY KEY(med_type_id)) ENGINE = INNODB;
-ALTER TABLE ad_log ADD CONSTRAINT ad_log_ad_user_patient_id_ad_user_patient_user_patient_id FOREIGN KEY (ad_user_patient_id) REFERENCES ad_user_patient(user_patient_id) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE ad_log ADD CONSTRAINT ad_log_ad_user_id_ad_user_user_id FOREIGN KEY (ad_user_id) REFERENCES ad_user(user_id) ON UPDATE CASCADE ON DELETE CASCADE;
 ALTER TABLE ad_non_psycho_pat ADD CONSTRAINT ad_non_psycho_pat_non_psycho_id_ad_non_psycho_ad_non_psycho_id FOREIGN KEY (non_psycho_id) REFERENCES ad_non_psycho(ad_non_psycho_id) ON UPDATE CASCADE ON DELETE CASCADE;
 ALTER TABLE ad_non_psycho_pat ADD CONSTRAINT ad_non_psycho_pat_ad_patient_id_ad_patient_patient_id FOREIGN KEY (ad_patient_id) REFERENCES ad_patient(patient_id) ON UPDATE CASCADE ON DELETE CASCADE;
 ALTER TABLE ad_notification ADD CONSTRAINT ad_notification_prev_user_id_ad_user_user_id FOREIGN KEY (prev_user_id) REFERENCES ad_user(user_id) ON UPDATE CASCADE ON DELETE CASCADE;

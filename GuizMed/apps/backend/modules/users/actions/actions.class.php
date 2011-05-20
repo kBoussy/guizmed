@@ -58,6 +58,15 @@ EOF"
   {
   }
 
+  public function executeCheck(sfWebRequest $request)
+  {
+    $q = Doctrine_Query::create()->from('AdUserPatient aup')->where('aup.patient_id=?',$_POST['patient_id'])->andWhere('aup.user_id = ?', $_POST['user_id'])->execute();
+    if($q->count()==0){
+        $this->allowed = false;
+    }else{
+        $this->allowed = true;
+    }
+  }
   public function executeCreate(sfWebRequest $request)
   {
       if(isset($_POST['fName'])){
