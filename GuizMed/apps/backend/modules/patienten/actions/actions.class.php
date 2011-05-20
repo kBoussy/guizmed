@@ -30,7 +30,7 @@ class patientenActions extends sfActions
   public function executeIndexAdmin(sfWebRequest $request)
   {
       $user = new AdUser();
-//      if($user->isAllowed($_POST['token'])){
+      if($user->isAllowed($_POST['token'])){
     $this->ad_patients = Doctrine_Core::getTable('adPatient')
       ->createQuery('a')
       ->execute();
@@ -39,9 +39,9 @@ class patientenActions extends sfActions
     $log->setAdUserId(1);
     $log->setDate(date('y-m-d H:m:s'));
     $log->save();
-//      }else{
-//              $this->redirect('users/error?message=Not logged in!&title=Error&type=error');
-//      }
+      }else{
+              $this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+      }
   }
 
   public function executeShow(sfWebRequest $request)

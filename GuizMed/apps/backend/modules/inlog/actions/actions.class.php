@@ -81,7 +81,7 @@ class inlogActions extends sfActions
 		$this->userId = $user->getUserId();
 		$log = new AdLog();
 		$log->setAction('De gebruiker heeft zich ingelogd.');
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($user->getUserId());
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
       }
