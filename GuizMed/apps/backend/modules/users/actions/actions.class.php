@@ -12,9 +12,19 @@ class usersActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->ad_users = Doctrine_Core::getTable('adUser')
-      ->createQuery('a')
-      ->execute();
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->ad_users = Doctrine_Core::getTable('adUser')
+		  ->createQuery('a')
+		  ->execute();
+		$log = new AdLog();
+		$log->setAction('De gebruiker heeft de lijst met gebruikers opgevraagd.');
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
 /*  public function executeIndex(sfWebRequest $request)
   {
@@ -60,6 +70,8 @@ EOF"
 
   public function executeCreate(sfWebRequest $request)
   {
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
       if(isset($_POST['fName'])){
         $user = new AdUser();
         $user->setFname($_POST['fName']);
@@ -99,12 +111,20 @@ mail($to,$subject,$message,$headers);
         $this->redirect('show_user',array('user_id'=>$user->getUserId()));
       }else{
         $this->redirect('show_user',array('user_id'=>'1'));
-         $this->forward404('ge moet fName invullen dumbo');
+         $this->forward404('Gelieve alle velden in te vullen.');
       }
 //    $this->forward404Unless($request->isMethod(sfRequest::POST));
 //    $this->form = new adUserForm();
 //    $this->processForm($request, $this->form);
 //    $this->setTemplate('new');
+		$log = new AdLog();
+		$log->setAction('De gebruiker heeft een nieuwe gebruiker toegevoegd: ' . $user->getFname() . ' ' . $user->getLname());
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
 
   public function executeEdit(sfWebRequest $request)
@@ -127,11 +147,21 @@ mail($to,$subject,$message,$headers);
   public function executeDelete(sfWebRequest $request)
   {
 //    $request->checkCSRFProtection();
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
 
-    $this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
-    $ad_user->delete();
-
-    $this->redirect('users/index');
+		$log = new AdLog();
+		$log->setAction('De gebruiker heeft een andere gebruiker verwijderd: ' . $ad_user->getFname() . $ad_user->getLname());
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+		
+		$ad_user->delete();
+		$this->redirect('users/index');
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
