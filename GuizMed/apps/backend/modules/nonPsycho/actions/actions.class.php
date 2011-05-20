@@ -35,15 +35,26 @@ class nonPsychoActions extends sfActions
   }
   public function executeCreate(sfWebRequest $request)
   {
-    $adNonPsychoPat = new AdNonPsychoPat();
-    $adNonPsychoPat->setPatientId($_POST['patientId']);
-    $adNonPsychoPat->setNonPsychoId($_POST['nonPsychoId']);
-    $adNonPsychoPat->setStartDate($_POST['startDate']);
-    $adNonPsychoPat->save();  
-/*    $this->forward404Unless($request->isMethod(sfRequest::POST));
-    $this->form = new adNonPsychoPatForm();
-    $this->processForm($request, $this->form);
-    $this->setTemplate('new');*/
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$adNonPsychoPat = new AdNonPsychoPat();
+		$adNonPsychoPat->setPatientId($_POST['patientId']);
+		$adNonPsychoPat->setNonPsychoId($_POST['nonPsychoId']);
+		$adNonPsychoPat->setStartDate($_POST['startDate']);
+		$adNonPsychoPat->save();  
+	/*    $this->forward404Unless($request->isMethod(sfRequest::POST));
+		$this->form = new adNonPsychoPatForm();
+		$this->processForm($request, $this->form);
+		$this->setTemplate('new');*/
+		$this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($_POST['patientId']));
+		$log = new AdLog();
+		$log->setAction('Er is een nieuwe non-psycho toegevoegd aan de patient: ' . $this->ad_patient->getFname() . $this->ad_patient->getLname());
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
 
   public function executeEdit(sfWebRequest $request)

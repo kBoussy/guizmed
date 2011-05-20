@@ -12,23 +12,42 @@ class notificationsActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->ad_notifications = Doctrine_Core::getTable('AdNotification')
-      ->createQuery('a')
-      ->execute();
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->ad_notifications = Doctrine_Core::getTable('AdNotification')
+		  ->createQuery('a')
+		  ->execute();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
   public function executeShow(sfWebRequest $request)
   {
-      $this->incommings = Doctrine_Query::create()->from('AdNotification an')->where('an.new_user_id = ?',$request->getParameter('uId'))->execute();
-      $this->outcommings = Doctrine_Query::create()->from('AdNotification an')->where('an.prev_user_id = ?',$request->getParameter('uId'))->execute();
-
+    $user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->incommings = Doctrine_Query::create()->from('AdNotification an')->where('an.new_user_id = ?',$request->getParameter('uId'))->execute();
+		$this->outcommings = Doctrine_Query::create()->from('AdNotification an')->where('an.prev_user_id = ?',$request->getParameter('uId'))->execute();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
 //    $this->ad_notification = Doctrine_Core::getTable('AdNotification')->find(array($request->getParameter('notification_id')));
 //    $this->forward404Unless($this->ad_notification);
   }
   public function executeShownot(sfWebRequest $request)
   {
-    $this->ad_notification = Doctrine_Core::getTable('AdNotification')->find(array($request->getParameter('notification_id')));
-    $this->userId= $request->getParameter('userId');
-    $this->forward404Unless($this->ad_notification);
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->ad_notification = Doctrine_Core::getTable('AdNotification')->find(array($request->getParameter('notification_id')));
+		$this->userId= $request->getParameter('userId');
+		$this->forward404Unless($this->ad_notification);
+		$log = new AdLog();
+		$log->setAction('De gebruiker heeft zijn notifications gecontroleerd.');
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}	
   }
 
   public function executeNew(sfWebRequest $request)

@@ -12,9 +12,19 @@ class kiActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->med_ki_vals = Doctrine_Core::getTable('medKiVal')
-      ->createQuery('a')
-      ->execute();
+		$user = new AdUser();
+		if($user->isAllowed($_POST['token'], $_POST['userId'])){
+			$this->med_ki_vals = Doctrine_Core::getTable('medKiVal')
+			  ->createQuery('a')
+			  ->execute();
+			$log = new AdLog();
+			$log->setAction('De ki waarden zijn opgevraagd.');
+			$log->setAdUserId($_POST['userId']);
+			$log->setDate(date('y-m-d H:m:s'));
+			$log->save();
+		}else{
+			$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+		}
   }
 
   public function executeShow(sfWebRequest $request)

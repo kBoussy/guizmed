@@ -53,7 +53,7 @@ class AdUser extends BaseAdUser
 
         return $token;
     }
-    function isAllowed($token){
+    function isAllowed($token, $patientId){
         $users = Doctrine_Query::create()->from('AdUser au')->where('au.token = ? ', $token)->execute();
         if($users->count()>0){
             return true;

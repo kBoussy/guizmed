@@ -12,16 +12,37 @@ class receptorenActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->med_chem_bondings = Doctrine_Core::getTable('medChemBonding')
-      ->createQuery('a')
-      ->execute();
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->med_chem_bondings = Doctrine_Core::getTable('medChemBonding')
+		  ->createQuery('a')
+		  ->execute();
+		$log = new AdLog();
+		$log->setAction('De gebruiker heeft de lijst met receptoren opgevraagd.');
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->id = $request->getParameter('med_chem_bonding_id');
-    $this->med_form_bondings = Doctrine_Query::create()->from('medFormBonding mfb')->where('mfb.med_chem_bonding_id = ?',$request->getParameter('med_chem_bonding_id'))->orderBy('med_ki_val_id')->execute();
-    $this->forward404Unless($this->med_form_bondings);
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->id = $request->getParameter('med_chem_bonding_id');
+		$this->med_form_bondings = Doctrine_Query::create()->from('medFormBonding mfb')->where('mfb.med_chem_bonding_id = ?',$request->getParameter('med_chem_bonding_id'))->orderBy('med_ki_val_id')->execute();
+		$this->forward404Unless($this->med_form_bondings);
+		$log = new AdLog();
+		$med_chem_bonding = Doctrine_Core::getTable('medChemBonding')->find(array($request->getParameter('med_chem_bonding_id')));
+		$log->setAction('De gebruiker heeft info over een receptor opgevraagd: ' . $med_chem_bonding->getName());
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
 
   public function executeNew(sfWebRequest $request)

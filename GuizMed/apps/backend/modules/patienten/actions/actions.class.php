@@ -13,15 +13,15 @@ class patientenActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
       $user = new AdUser();
-      if($user->isAllowed($_POST['token'])){
-    $this->ad_patients = Doctrine_Core::getTable('adPatient')
-      ->createQuery('a')
-      ->execute();
-    $log = new AdLog();
-    $log->setAction('Er is gekeken naar de patienten.');
-    $log->setAdUserPatientId(1);
-    $log->setDate(date('y-m-d H:m:s'));
-    $log->save();
+      if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->ad_patients = Doctrine_Core::getTable('adPatient')
+		  ->createQuery('a')
+		  ->execute();
+		$log = new AdLog();
+		$log->setAction('Er is gekeken naar de patienten.');
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
       }else{
               $this->redirect('users/error?message=Not logged in!&title=Error&type=error');
       }
@@ -30,7 +30,7 @@ class patientenActions extends sfActions
   public function executeIndexAdmin(sfWebRequest $request)
   {
       $user = new AdUser();
-//      if($user->isAllowed($_POST['token'])){
+      if($user->isAllowed($_POST['token'])){
     $this->ad_patients = Doctrine_Core::getTable('adPatient')
       ->createQuery('a')
       ->execute();
@@ -39,24 +39,44 @@ class patientenActions extends sfActions
     $log->setAdUserId(1);
     $log->setDate(date('y-m-d H:m:s'));
     $log->save();
-//      }else{
-//              $this->redirect('users/error?message=Not logged in!&title=Error&type=error');
-//      }
+      }else{
+              $this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+      }
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($request->getParameter('patient_id')));
-    $this->prescriptions = $this->ad_patient->getPrescriptions($this->ad_patient->getPatientId());
-    $this->forward404Unless($this->ad_patient);
-    $this->nonPsychos = $this->ad_patient->getNonPsycho();
+	$user = new AdUser();
+      if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($request->getParameter('patient_id')));
+		$this->prescriptions = $this->ad_patient->getPrescriptions($this->ad_patient->getPatientId());
+		$this->forward404Unless($this->ad_patient);
+		$this->nonPsychos = $this->ad_patient->getNonPsycho();
+		$log = new AdLog();
+		$log->setAction('Er is gekeken naar patient: '. $this->ad_patient->getFname() . ' ' . $this->ad_patient->getLname());
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	  }else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	  }
   }
   public function executeShowAdmin(sfWebRequest $request)
   {
-    $this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($request->getParameter('patient_id')));
-    $this->prescriptions = $this->ad_patient->getPrescriptions($this->ad_patient->getPatientId());
-    $this->forward404Unless($this->ad_patient);
-    $this->nonPsychos = $this->ad_patient->getNonPsycho();
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($request->getParameter('patient_id')));
+		$this->prescriptions = $this->ad_patient->getPrescriptions($this->ad_patient->getPatientId());
+		$this->forward404Unless($this->ad_patient);
+		$this->nonPsychos = $this->ad_patient->getNonPsycho();
+		$log = new AdLog();
+		$log->setAction('De beheerder heeft de lijst met patienten bekeken.');
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
 
   public function executeNew(sfWebRequest $request)
@@ -66,6 +86,8 @@ class patientenActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
       if(isset($_POST['fName'])){
         $patient = new AdPatient();
         $patient->setFname($_POST['fName']);
@@ -74,10 +96,18 @@ class patientenActions extends sfActions
         $patient->setSex($_POST['sex']);
         $patient->setPatientSince(date('y-m-d H:m:s'));
         $patient->save();
+		$log = new AdLog();
+		$log->setAction('Een nieuwe patient is toegevoegd: ' . $patient->getFname . ' ' . $patient->getLname);
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
         $this->redirect('show_patient',array('patient_id'=>$patient->getPatientId()));
       }else{
-         $this->forward404('ge moet fName invullen dumbo');
+         $this->forward404('er is een fout gebeurd bij het invullen van de gegevens');
       }
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
 #    $this->forward404Unless($request->isMethod(sfRequest::POST));
 #    $this->form = new adPatientForm();
 #    $this->processForm($request, $this->form);
