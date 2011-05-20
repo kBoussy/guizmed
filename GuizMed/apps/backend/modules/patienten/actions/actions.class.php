@@ -27,6 +27,23 @@ class patientenActions extends sfActions
       }
   }
 
+  public function executeIndexAdmin(sfWebRequest $request)
+  {
+      $user = new AdUser();
+//      if($user->isAllowed($_POST['token'])){
+    $this->ad_patients = Doctrine_Core::getTable('adPatient')
+      ->createQuery('a')
+      ->execute();
+    $log = new AdLog();
+    $log->setAction('Er is gekeken naar de patienten.');
+    $log->setAdUserId(1);
+    $log->setDate(date('y-m-d H:m:s'));
+    $log->save();
+//      }else{
+//              $this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+//      }
+  }
+
   public function executeShow(sfWebRequest $request)
   {
     $this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($request->getParameter('patient_id')));

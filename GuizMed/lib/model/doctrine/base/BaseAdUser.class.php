@@ -18,6 +18,7 @@ Doctrine_Manager::getInstance()->bindComponent('AdUser', 'doctrine');
  * @property integer $ad_function_id
  * @property string $unlock_code
  * @property string $token
+ * @property Doctrine_Collection $AdLog
  * @property AdRole $AdRole
  * @property AdFunction $AdFunction
  * @property Doctrine_Collection $AdNotification
@@ -36,6 +37,7 @@ Doctrine_Manager::getInstance()->bindComponent('AdUser', 'doctrine');
  * @method integer             getAdFunctionId()     Returns the current record's "ad_function_id" value
  * @method string              getUnlockCode()       Returns the current record's "unlock_code" value
  * @method string              getToken()            Returns the current record's "token" value
+ * @method Doctrine_Collection getAdLog()            Returns the current record's "AdLog" collection
  * @method AdRole              getAdRole()           Returns the current record's "AdRole" value
  * @method AdFunction          getAdFunction()       Returns the current record's "AdFunction" value
  * @method Doctrine_Collection getAdNotification()   Returns the current record's "AdNotification" collection
@@ -53,6 +55,7 @@ Doctrine_Manager::getInstance()->bindComponent('AdUser', 'doctrine');
  * @method AdUser              setAdFunctionId()     Sets the current record's "ad_function_id" value
  * @method AdUser              setUnlockCode()       Sets the current record's "unlock_code" value
  * @method AdUser              setToken()            Sets the current record's "token" value
+ * @method AdUser              setAdLog()            Sets the current record's "AdLog" collection
  * @method AdUser              setAdRole()           Sets the current record's "AdRole" value
  * @method AdUser              setAdFunction()       Sets the current record's "AdFunction" value
  * @method AdUser              setAdNotification()   Sets the current record's "AdNotification" collection
@@ -174,6 +177,12 @@ abstract class BaseAdUser extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasMany('AdLog', array(
+             'local' => 'user_id',
+             'foreign' => 'ad_user_id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
+
         $this->hasOne('AdRole', array(
              'local' => 'ad_role_id',
              'foreign' => 'role_id',

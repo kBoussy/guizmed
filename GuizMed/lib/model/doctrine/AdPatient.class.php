@@ -65,4 +65,8 @@ return $q->execute();
   public function getNonPsycho(){
       return Doctrine_Query::create()->from('AdNonPsychoPat npp')->where('npp.ad_patient_id = ?',$this->getPatientId())->execute();
   }
+  public function getAduserpatients(){
+    $adUserPatients = Doctrine_Query::create()->from('AdUserPatient aup')->where('aup.patient_id = ?',$this->getPatientId())->execute();
+    return $adUserPatients;
+  }
 }

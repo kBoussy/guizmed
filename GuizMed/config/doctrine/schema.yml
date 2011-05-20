@@ -39,7 +39,7 @@ AdLog:
       primary: false
       notnull: false
       autoincrement: false
-    ad_user_patient_id:
+    ad_user_id:
       type: integer(4)
       fixed: false
       unsigned: false
@@ -54,11 +54,11 @@ AdLog:
       notnull: true
       autoincrement: false
   relations:
-    AdUserPatient:
+    AdUser:
       onDelete: CASCADE
       onUpdate: CASCADE
-      local: ad_user_patient_id
-      foreign: user_patient_id
+      local: ad_user_id
+      foreign: user_id
       type: one
 AdNonPsycho:
   connection: doctrine
@@ -489,6 +489,13 @@ AdUser:
       notnull: false
       autoincrement: false
   relations:
+    AdLog:
+      onDelete: CASCADE
+      onUpdate: CASCADE
+      local: user_id
+      foreign: ad_user_id
+      type: many
+
     AdRole:
       onDelete: CASCADE
       onUpdate: CASCADE
@@ -594,12 +601,6 @@ AdUserPatient:
       local: prev_user_id
       foreign: user_id
       type: one
-    AdLog:
-      onDelete: CASCADE
-      onUpdate: CASCADE
-      local: user_patient_id
-      foreign: ad_user_patient_id
-      type: many
     AdPrescription:
       onDelete: CASCADE
       onUpdate: CASCADE
