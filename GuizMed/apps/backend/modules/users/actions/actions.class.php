@@ -158,16 +158,15 @@ mail($to,$subject,$message,$headers);
 //    $request->checkCSRFProtection();
 	$user = new AdUser();
 	if($user->isAllowed($_POST['token'], $_POST['userId'])){
-		$this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
-
-		$log = new AdLog();
+    $this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
+                $log = new AdLog();
 		$log->setAction('De gebruiker heeft een andere gebruiker verwijderd: ' . $ad_user->getFname() . $ad_user->getLname());
 		$log->setAdUserId($_POST['userId']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
-		
-		$ad_user->delete();
-		$this->redirect('users/index');
+        
+        	$ad_user->delete();
+                $this->redirect('users/index');
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}

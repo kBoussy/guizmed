@@ -74,16 +74,31 @@ class inlogActions extends sfActions
   }
     public function executeInlog(sfWebRequest $request)
       {
+<<<<<<< HEAD
+        $uName= $_POST['uName'];//$request->getParameter('uName');
+        $pWord = $_POST['pWord']; //$request->getParameter('pWord');
+        $user = new AdUser();
+        $this->inlog = $user->inlog($uName,$pWord);
+        $this->unlock = $user->checkUnlock($uName);
+        $this->userId = $user->getUserId();
+        $log = new AdLog();
+	$log->setAction('De gebruiker heeft zich ingelogd.');
+	$log->setAdUserId($user->getUserId());
+	$log->setDate(date('y-m-d H:m:s'));
+	$log->save();
+=======
 		$uName= $_POST['uName'];//$request->getParameter('uName');
 		$pWord = $_POST['pWord']; //$request->getParameter('pWord');
 		$user = new AdUser();
 		$this->inlog = $user->inlog($uName,$pWord);
+                $this->unlock = $user->checkUnlock($uName);
 		$this->userId = $user->getUserId();
 		$log = new AdLog();
 		$log->setAction('De gebruiker heeft zich ingelogd.');
 		$log->setAdUserId($user->getUserId());
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
+>>>>>>> oj/master
       }
     public function executeUnlock(sfWebRequest $request)
       {

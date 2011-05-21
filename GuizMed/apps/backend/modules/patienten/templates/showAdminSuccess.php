@@ -67,10 +67,6 @@
 		}
             <?php endforeach; ?>
 	    ],
-
-
-
-
             "non_psycho": [
     <?php $bolNonPharma = true; ?>
     <?php foreach($nonPsychos as $nonPsycho): ?>
