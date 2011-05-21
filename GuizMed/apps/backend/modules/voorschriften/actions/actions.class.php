@@ -12,19 +12,36 @@ class voorschriftenActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->ad_prescriptions = Doctrine_Core::getTable('adPrescription')
-      ->createQuery('a')
-      ->execute();
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		$this->ad_prescriptions = Doctrine_Core::getTable('adPrescription')
+		  ->createQuery('a')
+		  ->execute();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
   public function executeStop(sfWebRequest $request)
   {
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
       if(isset($_POST['reason'])){
-    $ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id')));
-    $ad_prescription->stop($_POST['reason']);
+		$ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id')));
+		$ad_prescription->stop($_POST['reason']);
       }else{
-    $ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id')));
-    $ad_prescription->stop("No reason was given.");
+		$ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id')));
+		$ad_prescription->stop("No reason was given.");
       }
+	  $ad_user_patient = Doctrine_Core::getTable('adUserPatient')->find(array($ad_prescription->getUserPatientId()));
+	  $ad_patient = Doctrine_Core::getTable('adPatient')->find(array($ad_user_patient->getPatientId()))
+		$log = new AdLog();
+		$log->setAction('De gebruiker heeft een voorschrift stopgezet voor patient' . $ad_patient->getFname() . ' ' . $ad_patient->getLname());
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
   public function executeShow(sfWebRequest $request)
   {
@@ -39,6 +56,8 @@ class voorschriftenActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['userId'])){
       if(isset($_POST['startDate'])){
         $prescription = new AdPrescription();
         $prescription->setStartDate($_POST['startDate']);
@@ -54,7 +73,16 @@ class voorschriftenActions extends sfActions
       }else{
          $this->forward404('ge moet startDate invullen dumbo');
       }
+		$ad_patient = Doctrine_Core::getTable('adPatient')->find(array($_POST['patientId']));
 
+		$log = new AdLog();
+		$log->setAction('De gebruiker heeft een voorschrift toegevoegd voor patient' . $ad_patient->getFname() . ' ' . $ad_patient->getLname());
+		$log->setAdUserId($_POST['userId']);
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
       
 /*    $this->forward404Unless($request->isMethod(sfRequest::POST));
 
