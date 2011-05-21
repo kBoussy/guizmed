@@ -13,13 +13,13 @@ class usersActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->ad_users = Doctrine_Core::getTable('adUser')
 		  ->createQuery('a')
 		  ->execute();
 		$log = new AdLog();
 		$log->setAction('De gebruiker heeft de lijst met gebruikers opgevraagd.');
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
 	}else{
@@ -80,7 +80,7 @@ EOF"
   public function executeCreate(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
       if(isset($_POST['fName'])){
         $user = new AdUser();
         $user->setFname($_POST['fName']);
@@ -128,7 +128,7 @@ mail($to,$subject,$message,$headers);
 //    $this->setTemplate('new');
 		$log = new AdLog();
 		$log->setAction('De gebruiker heeft een nieuwe gebruiker toegevoegd: ' . $user->getFname() . ' ' . $user->getLname());
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
 	}else{
@@ -157,11 +157,11 @@ mail($to,$subject,$message,$headers);
   {
 //    $request->checkCSRFProtection();
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
     $this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
                 $log = new AdLog();
 		$log->setAction('De gebruiker heeft een andere gebruiker verwijderd: ' . $ad_user->getFname() . $ad_user->getLname());
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
         

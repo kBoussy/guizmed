@@ -13,7 +13,7 @@ class notificationsActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->ad_notifications = Doctrine_Core::getTable('AdNotification')
 		  ->createQuery('a')
 		  ->execute();
@@ -24,7 +24,7 @@ class notificationsActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
     $user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->incommings = Doctrine_Query::create()->from('AdNotification an')->where('an.new_user_id = ?',$request->getParameter('uId'))->execute();
 		$this->outcommings = Doctrine_Query::create()->from('AdNotification an')->where('an.prev_user_id = ?',$request->getParameter('uId'))->execute();
 	}else{
@@ -36,13 +36,13 @@ class notificationsActions extends sfActions
   public function executeShownot(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->ad_notification = Doctrine_Core::getTable('AdNotification')->find(array($request->getParameter('notification_id')));
-		$this->userId= $request->getParameter('userId');
+		$this->userId= $request->getParameter('user_id');
 		$this->forward404Unless($this->ad_notification);
 		$log = new AdLog();
 		$log->setAction('De gebruiker heeft zijn notifications gecontroleerd.');
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
 	}else{
@@ -56,10 +56,6 @@ class notificationsActions extends sfActions
   }
   public function executeAccept(sfWebRequest $request)
   {
-      $_POST['reason']= 'zomaar';
-      $_POST['accepted']= false;
-      $_POST['notif_id']= 1;
-
       $notification = Doctrine_Core::getTable('AdNotification')->find(array($_POST['notif_id']));
       $notification->setAccepted($_POST['accepted']);
       $notification->save();
@@ -70,26 +66,32 @@ class notificationsActions extends sfActions
       $ad_user_patient->save();
       }
 
-      $this->redirect('notifications/show/uId/'.$notification->getNotificationId());
+	  $this->redirect('show_notification',array('user_id'=>$_POST['user_id']));
   }
 
   public function executeCreate(sfWebRequest $request)
   {
-    $not = new AdNotification();
-    $not->setNewUserId($POST_['user_id']);
-    $not->setPatientId($POST_['patient_id']);
-    $not->setPrevUserId($not->getOldDoctorPatient($POST_['patient_id']));
-    $not->setDate(date('y-m-d H:m:s'));
-    $not->save();
+	$user = new AdUser();
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
+		$not = new AdNotification();
+		$not->setNewUserId($_POST['user_id']);
+		$not->setPatientId($_POST['patient_id']);
+		$not->setPrevUserId($not->getOldDoctorPatient($_POST['patient_id'])->getUserId());
+		$not->setReason($_POST['reason']);
+		$not->setDate(date('y-m-d H:m:s'));
+		$not->save();
 
-    $this->redirect('notifications/show/uId/'.$not->getNotificationId());
-/*    $this->forward404Unless($request->isMethod(sfRequest::POST));
+		$this->redirect('show_notification',array('user_id'=>$_POST['user_id']));
+	/*    $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new AdNotificationForm();
+		$this->form = new AdNotificationForm();
 
-    $this->processForm($request, $this->form);
+		$this->processForm($request, $this->form);
 
-    $this->setTemplate('new');*/
+		$this->setTemplate('new');*/
+	}else{
+		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+	}
   }
 
   public function executeEdit(sfWebRequest $request)
