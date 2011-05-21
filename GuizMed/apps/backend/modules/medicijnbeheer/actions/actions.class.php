@@ -27,6 +27,14 @@ class medicijnbeheerActions extends sfActions
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}
   }
+  public function executeIndexAdmin(sfWebRequest $request)
+  {
+    $this->med_forms = Doctrine_Core::getTable('medForm')
+      ->createQuery('a')
+      ->execute();
+
+    $this->medicaties = Doctrine_Core::getTable('medBaseId')->createQuery('a')->execute();
+  }
   public function executeGetmedname(sfWebRequest $request)
   {
 	$user = new AdUser();
