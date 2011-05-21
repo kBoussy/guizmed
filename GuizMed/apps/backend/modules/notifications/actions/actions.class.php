@@ -57,7 +57,6 @@ class notificationsActions extends sfActions
   public function executeAccept(sfWebRequest $request)
   {
       $notification = Doctrine_Core::getTable('AdNotification')->find(array($_POST['notif_id']));
-      $notification->setReason($_POST['reason']);
       $notification->setAccepted($_POST['accepted']);
       $notification->save();
 
