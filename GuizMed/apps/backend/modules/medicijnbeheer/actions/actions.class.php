@@ -18,6 +18,14 @@ class medicijnbeheerActions extends sfActions
 
     $this->medicaties = Doctrine_Core::getTable('medBaseId')->createQuery('a')->execute();
   }
+  public function executeIndexAdmin(sfWebRequest $request)
+  {
+    $this->med_forms = Doctrine_Core::getTable('medForm')
+      ->createQuery('a')
+      ->execute();
+
+    $this->medicaties = Doctrine_Core::getTable('medBaseId')->createQuery('a')->execute();
+  }
   public function executeGetmedname(sfWebRequest $request)
   {
     $this->med = Doctrine_Core::getTable('medForm')->find(array($request->getParameter('medFormId')));

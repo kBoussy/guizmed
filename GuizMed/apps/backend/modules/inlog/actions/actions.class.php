@@ -78,6 +78,7 @@ class inlogActions extends sfActions
         $pWord = $_POST['pWord']; //$request->getParameter('pWord');
         $user = new AdUser();
         $this->inlog = $user->inlog($uName,$pWord);
+        $this->unlock = $user->checkUnlock($uName);
         $this->userId = $user->getUserId();
       }
     public function executeUnlock(sfWebRequest $request)

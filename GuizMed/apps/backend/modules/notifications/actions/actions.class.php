@@ -37,6 +37,10 @@ class notificationsActions extends sfActions
   }
   public function executeAccept(sfWebRequest $request)
   {
+      $_POST['reason']= 'zomaar';
+      $_POST['accepted']= false;
+      $_POST['notif_id']= 1;
+
       $notification = Doctrine_Core::getTable('AdNotification')->find(array($_POST['notif_id']));
       $notification->setReason($_POST['reason']);
       $notification->setAccepted($_POST['accepted']);
@@ -53,9 +57,6 @@ class notificationsActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
-    $POST_['user_id']=1;
-    $POST_['patient_id']=1;
-
     $not = new AdNotification();
     $not->setNewUserId($POST_['user_id']);
     $not->setPatientId($POST_['patient_id']);

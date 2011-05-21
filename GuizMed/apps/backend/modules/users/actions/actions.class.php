@@ -136,7 +136,7 @@ mail($to,$subject,$message,$headers);
   public function executeDelete(sfWebRequest $request)
   {
 //    $request->checkCSRFProtection();
-
+    
     $this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
     $ad_user->delete();
 

@@ -22,6 +22,15 @@ class AdUser extends BaseAdUser
            return "Failed";
        }
     }
+    function checkUnlock($uName)
+    {
+       $users = Doctrine_Query::create()->from('AdUser au')->where('au.uname = ?', $uName)->execute();
+       if($users[0]->getUnlockCode()==''){
+            return 'false';
+        }else{
+            return 'true';
+       }
+    }
     function unlock($token,$unlock)
     {
        $users = Doctrine_Query::create()->from('AdUser au')->where('au.token = ?', $token)->execute();
