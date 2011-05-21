@@ -36,7 +36,7 @@ class nonPsychoActions extends sfActions
   public function executeCreate(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$adNonPsychoPat = new AdNonPsychoPat();
 		$adNonPsychoPat->setPatientId($_POST['patientId']);
 		$adNonPsychoPat->setNonPsychoId($_POST['nonPsychoId']);
@@ -49,7 +49,7 @@ class nonPsychoActions extends sfActions
 		$this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($_POST['patientId']));
 		$log = new AdLog();
 		$log->setAction('Er is een nieuwe non-psycho toegevoegd aan de patient: ' . $this->ad_patient->getFname() . $this->ad_patient->getLname());
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
 	}else{

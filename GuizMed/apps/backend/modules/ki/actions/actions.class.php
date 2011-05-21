@@ -13,13 +13,13 @@ class kiActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
 		$user = new AdUser();
-		if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 			$this->med_ki_vals = Doctrine_Core::getTable('medKiVal')
 			  ->createQuery('a')
 			  ->execute();
 			$log = new AdLog();
 			$log->setAction('De ki waarden zijn opgevraagd.');
-			$log->setAdUserId($_POST['userId']);
+			$log->setAdUserId($_POST['user_id']);
 			$log->setDate(date('y-m-d H:m:s'));
 			$log->save();
 		}else{

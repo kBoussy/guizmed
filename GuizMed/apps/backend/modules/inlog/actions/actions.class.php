@@ -74,7 +74,6 @@ class inlogActions extends sfActions
   }
     public function executeInlog(sfWebRequest $request)
       {
-<<<<<<< HEAD
         $uName= $_POST['uName'];//$request->getParameter('uName');
         $pWord = $_POST['pWord']; //$request->getParameter('pWord');
         $user = new AdUser();
@@ -82,35 +81,22 @@ class inlogActions extends sfActions
         $this->unlock = $user->checkUnlock($uName);
         $this->userId = $user->getUserId();
         $log = new AdLog();
-	$log->setAction('De gebruiker heeft zich ingelogd.');
-	$log->setAdUserId($user->getUserId());
-	$log->setDate(date('y-m-d H:m:s'));
-	$log->save();
-=======
-		$uName= $_POST['uName'];//$request->getParameter('uName');
-		$pWord = $_POST['pWord']; //$request->getParameter('pWord');
-		$user = new AdUser();
-		$this->inlog = $user->inlog($uName,$pWord);
-                $this->unlock = $user->checkUnlock($uName);
-		$this->userId = $user->getUserId();
-		$log = new AdLog();
 		$log->setAction('De gebruiker heeft zich ingelogd.');
 		$log->setAdUserId($user->getUserId());
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
->>>>>>> oj/master
       }
     public function executeUnlock(sfWebRequest $request)
       {
 		$user = new AdUser();
-		if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 			$token= $_POST['token'];//$request->getParameter('token');
 			$unlock = $_POST['unlock']; //$request->getParameter('unlock');
 			$user = new AdUser();
 			$this->unlock = $user->unlock($token,$unlock);
 			$log = new AdLog();
 			$log->setAction('De gebruiker heeft zijn applicatie ontgrendeld.');
-			$log->setAdUserId($_POST['userId']);
+			$log->setAdUserId($_POST['user_id']);
 			$log->setDate(date('y-m-d H:m:s'));
 			$log->save();
 		}else{
@@ -120,7 +106,7 @@ class inlogActions extends sfActions
     public function executeFirstLogin(sfWebRequest $request)
       {
 		$user = new AdUser();
-		if($user->isAllowed($_POST['token'], $_POST['userId'])){
+		if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 			$uName= $_POST['uName'];// $request->getParameter('uName');
 			$old = $_POST['old']; //$request->getParameter('old');
 			$new= $_POST['new']; //$request->getParameter('new');
@@ -129,7 +115,7 @@ class inlogActions extends sfActions
 			$this->firstLogin = $user->firstLogin($uName,$old,$new,$unlock);
 			$log = new AdLog();
 			$log->setAction('De gebruiker heeft zich geregistreerd.');
-			$log->setAdUserId($_POST['userId']);
+			$log->setAdUserId($_POST['user_id']);
 			$log->setDate(date('y-m-d H:m:s'));
 			$log->save();
 		}else{

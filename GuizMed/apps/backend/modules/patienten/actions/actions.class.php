@@ -13,13 +13,13 @@ class patientenActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
       $user = new AdUser();
-      if($user->isAllowed($_POST['token'], $_POST['userId'])){
+      if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->ad_patients = Doctrine_Core::getTable('adPatient')
 		  ->createQuery('a')
 		  ->execute();
 		$log = new AdLog();
 		$log->setAction('Er is gekeken naar de patienten.');
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
       }else{
@@ -47,14 +47,14 @@ class patientenActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
 	$user = new AdUser();
-      if($user->isAllowed($_POST['token'], $_POST['userId'])){
+      if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($request->getParameter('patient_id')));
 		$this->prescriptions = $this->ad_patient->getPrescriptions($this->ad_patient->getPatientId());
 		$this->forward404Unless($this->ad_patient);
 		$this->nonPsychos = $this->ad_patient->getNonPsycho();
 		$log = new AdLog();
 		$log->setAction('Er is gekeken naar patient: '. $this->ad_patient->getFname() . ' ' . $this->ad_patient->getLname());
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
 	  }else{
@@ -64,14 +64,14 @@ class patientenActions extends sfActions
   public function executeShowAdmin(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->ad_patient = Doctrine_Core::getTable('adPatient')->find(array($request->getParameter('patient_id')));
 		$this->prescriptions = $this->ad_patient->getPrescriptions($this->ad_patient->getPatientId());
 		$this->forward404Unless($this->ad_patient);
 		$this->nonPsychos = $this->ad_patient->getNonPsycho();
 		$log = new AdLog();
 		$log->setAction('De beheerder heeft de lijst met patienten bekeken.');
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
 	}else{
@@ -87,7 +87,7 @@ class patientenActions extends sfActions
   public function executeCreate(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
       if(isset($_POST['fName'])){
         $patient = new AdPatient();
         $patient->setFname($_POST['fName']);
@@ -98,7 +98,7 @@ class patientenActions extends sfActions
         $patient->save();
 		$log = new AdLog();
 		$log->setAction('Een nieuwe patient is toegevoegd: ' . $patient->getFname . ' ' . $patient->getLname);
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
         $this->redirect('show_patient',array('patient_id'=>$patient->getPatientId()));

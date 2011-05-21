@@ -13,13 +13,13 @@ class receptorenActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->med_chem_bondings = Doctrine_Core::getTable('medChemBonding')
 		  ->createQuery('a')
 		  ->execute();
 		$log = new AdLog();
 		$log->setAction('De gebruiker heeft de lijst met receptoren opgevraagd.');
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
 	}else{
@@ -30,14 +30,14 @@ class receptorenActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->id = $request->getParameter('med_chem_bonding_id');
 		$this->med_form_bondings = Doctrine_Query::create()->from('medFormBonding mfb')->where('mfb.med_chem_bonding_id = ?',$request->getParameter('med_chem_bonding_id'))->orderBy('med_ki_val_id')->execute();
 		$this->forward404Unless($this->med_form_bondings);
 		$log = new AdLog();
 		$med_chem_bonding = Doctrine_Core::getTable('medChemBonding')->find(array($request->getParameter('med_chem_bonding_id')));
 		$log->setAction('De gebruiker heeft info over een receptor opgevraagd: ' . $med_chem_bonding->getName());
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
 	}else{

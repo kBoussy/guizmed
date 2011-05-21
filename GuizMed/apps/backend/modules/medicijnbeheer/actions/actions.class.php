@@ -13,13 +13,13 @@ class medicijnbeheerActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->med_forms = Doctrine_Core::getTable('medForm')
 		  ->createQuery('a')
 		  ->execute();
 			$log = new AdLog();
 			$log->setAction('De lijst met medicijnen is opgevraagd.');
-			$log->setAdUserId($_POST['userId']);
+			$log->setAdUserId($_POST['user_id']);
 			$log->setDate(date('y-m-d H:m:s'));
 			$log->save();
 		$this->medicaties = Doctrine_Core::getTable('medBaseId')->createQuery('a')->execute();
@@ -38,7 +38,7 @@ class medicijnbeheerActions extends sfActions
   public function executeGetmedname(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->med = Doctrine_Core::getTable('medForm')->find(array($request->getParameter('medFormId')));
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
@@ -48,14 +48,14 @@ class medicijnbeheerActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$q = Doctrine_Query::create()->from('medForm m')->where('m.med_base_id = ?', $request->getParameter('med_form_id'));
 		$this->med_forms = $q->execute();
 		$this->med_base_id = Doctrine_Core::getTable('medBaseId')->find(array($request->getParameter('med_form_id')));
 		$this->forward404Unless($this->med_forms);
 		$log = new AdLog();
 		$log->setAction('Info over volgend medicijn is opgevraagd: ' . $this->med_base_id->getSpeciality());
-		$log->setAdUserId($_POST['userId']);
+		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
 	}else{
@@ -71,7 +71,7 @@ class medicijnbeheerActions extends sfActions
   public function executeCreate(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['userId'])){
+	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 	  if(isset($_POST['fName'])){
 		  $med_type = new MedType();
 		  $med_type->setMedSubtype1Id($_POST['med_subtype1']);
@@ -118,7 +118,7 @@ class medicijnbeheerActions extends sfActions
 		  
 		  $log = new AdLog();
 		  $log->setAction('Een nieuw medicijn is toegevoegd: ' . $med_base_id->getSpeciality());
-		  $log->setAdUserId($_POST['userId']);
+		  $log->setAdUserId($_POST['user_id']);
 		  $log->setDate(date('y-m-d H:m:s'));
 		  $log->save();
 	  }
