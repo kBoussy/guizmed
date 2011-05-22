@@ -86,6 +86,21 @@ class inlogActions extends sfActions
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
       }
+    public function executeAdminInlog(sfWebRequest $request)
+      {
+        $uName= $_POST['uName'];//$request->getParameter('uName');
+        $pWord = $_POST['pWord']; //$request->getParameter('pWord');
+        $user = new AdUser();
+        $this->inlog = $user->adminInlog($uName,$pWord);
+        $this->userId = $user->getUserId();
+        if($user->getUserId()!=null ||$user->getUserId()!=''){
+                $log = new AdLog();
+		$log->setAction('De gebruiker heeft zich ingelogd.');
+		$log->setAdUserId($user->getUserId());
+		$log->setDate(date('y-m-d H:m:s'));
+		$log->save();
+        }
+      }
     public function executeUnlock(sfWebRequest $request)
       {
 		$user = new AdUser();

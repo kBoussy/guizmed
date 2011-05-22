@@ -52,12 +52,35 @@ class medicijnbeheerActions extends sfActions
 		$q = Doctrine_Query::create()->from('medForm m')->where('m.med_base_id = ?', $request->getParameter('med_form_id'));
 		$this->med_forms = $q->execute();
 		$this->med_base_id = Doctrine_Core::getTable('medBaseId')->find(array($request->getParameter('med_form_id')));
-		$this->forward404Unless($this->med_forms);
+                $this->metabolisms = array();
+                $this->inhibitor = array();
+                $this->inducer = array();
+                foreach ($this->med_forms[0]->getAllMetabolism() as $metabolism){
+                    if($metabolism->getInteractionType()=='metabolism'){
+                            foreach ($metabolism->getDrugs() as $drug){
+                                array_push($this->metabolisms,$drug);
+                            }
+                        }elseif($metabolism->getInteractionType()=='inhibitor'){
+                            foreach ($metabolism->getDrugs() as $drug){
+                                array_push($this->inhibitor,$drug);
+                            }
+
+                        }elseif($metabolism->getInteractionType()=='inducer'){
+                            foreach ($metabolism->getDrugs() as $drug){
+                                array_push($this->inducer,$drug);
+                            }
+
+                        }
+                }
+
+
+                $this->forward404Unless($this->med_forms);
 		$log = new AdLog();
 		$log->setAction('Info over volgend medicijn is opgevraagd: ' . $this->med_base_id->getSpeciality());
 		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
+                
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}
@@ -70,9 +93,25 @@ class medicijnbeheerActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
+      //-------------TEST--------------
+//        $_POST['med_subtype1']=1;
+//        $_POST['med_subtype2']=1;
+//        $_POST['mainclass']=1;
+//        $_POST['gen_name']=1;
+//        $_POST['speciality']=1;
+//        $_POST['med_magister_form']=1;
+//        $_POST['dose']=1;
+//        $_POST['bioavailability']=1;
+//        $_POST['proteine_binding']=1;
+//        $_POST['t_max_h']=1;
+//        $_POST['hlf']=1;
+//        $_POST['ddd']=1;
+//        $_POST['t_max_h']=1;
+
+      //----------EIND TEST------------
+
 	$user = new AdUser();
 	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
-	  if(isset($_POST['fName'])){
 		  $med_type = new MedType();
 		  $med_type->setMedSubtype1Id($_POST['med_subtype1']);
 		  $med_type->setMedSubtype2Id($_POST['med_subtype2']);
@@ -86,7 +125,7 @@ class medicijnbeheerActions extends sfActions
 		  $med_base_id->save();
 
 		  $med_form = new MedForm();
-		  $med_form->setMedBaseId($med_base_id->getMedBaseId());
+		  $med_form->setMedBaseId($med_base_id);
 		  $med_form->setMedMagisterFormId($_POST['med_magister_form']);
 		  $med_form->setDose($_POST['dose']);
 		  $med_form->setBioavailability($_POST['bioavailability']);
@@ -143,8 +182,8 @@ $int_metabolism->save();
 		  $log->setAdUserId($_POST['user_id']);
 		  $log->setDate(date('y-m-d H:m:s'));
 		  $log->save();
-        $this->redirect('users/error?message=medicin added!&title=success&type=message');
-	  }
+        $this->redirect('users/error?message=medicine added!&title=success&type=message');
+	  
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}
