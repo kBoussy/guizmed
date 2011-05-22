@@ -35,7 +35,7 @@ show_prescription:
   param: { module: voorschriften, action: show }
 
 show_notification:
-  url: /notifications/show/uId/:user_id
+  url: /notifications/show/uId/:uId
   param: { module: notifications, action: show }
 
 # generic rules

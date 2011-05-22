@@ -79,10 +79,20 @@ EOF"
   }
   public function executeCreate(sfWebRequest $request)
   {
-	$user = new AdUser();
+      //--------------------TEST------------------
+//        $_POST['fName']='HEHE222';
+//        $_POST['lName']='HOHO';
+//        $_POST['eMail']='the_chosen_dragon@hotmail.com';
+//       $_POST['phone']='105512';
+
+        //-------------------einde test---------------
+
+        $user = new AdUser();
 	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
       if(isset($_POST['fName'])){
         $user = new AdUser();
+  
+
         $user->setFname($_POST['fName']);
         $user->setLname($_POST['lName']);
         $user->setEmail($_POST['eMail']);
@@ -111,16 +121,10 @@ EOF;
 $from = "bot@guizmed.be";
 $headers = "From:" . $from;
 mail($to,$subject,$message,$headers);
-
-
-
-
-
-
         $this->redirect('show_user',array('user_id'=>$user->getUserId()));
       }else{
         $this->redirect('show_user',array('user_id'=>'1'));
-         $this->forward404('Gelieve alle velden in te vullen.');
+        $this->forward404('Gelieve alle velden in te vullen.');
       }
 //    $this->forward404Unless($request->isMethod(sfRequest::POST));
 //    $this->form = new adUserForm();

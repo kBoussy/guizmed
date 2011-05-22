@@ -49,12 +49,12 @@
             }
 
             ?>
-            {   "id":"<?php $medsA->getMedFormId(); ?>",
-                "pres_id":"<?php $medsA->getAdPrescId(); ?>",
-                "name":"<?php $medsA->getMedForm()->getMedBaseId()->getSpeciality(); ?>",
-                "start_date":"<?php $medsA->getStartDate(); ?>",
-                "end_date":"<?php $medsA->getEndDate(); ?>",
-                "stop_date":"<?php $medsA->getStopDate(); ?>"}
+            {   "id":"<?php echo $medsA->getMedFormId(); ?>",
+                "pres_id":"<?php echo $medsA->getAdPrescId(); ?>",
+                "name":"<?php echo $medsA->getMedForm()->getMedBaseId()->getSpeciality(); ?>",
+                "start_date":"<?php echo $medsA->getStartDate(); ?>",
+                "end_date":"<?php echo $medsA->getEndDate(); ?>",
+                "stop_date":"<?php echo $medsA->getStopDate(); ?>"}
             <?php endforeach; ?>
             ],
 
