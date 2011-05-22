@@ -13,6 +13,7 @@ class usersActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
 	$user = new AdUser();
+        $this->postUser = $_POST['user_id'];
 	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->ad_users = Doctrine_Core::getTable('adUser')
 		  ->createQuery('a')
@@ -80,16 +81,15 @@ EOF"
   public function executeCreate(sfWebRequest $request)
   {
       //--------------------TEST------------------
-//        $_POST['fName']='HEHE222';
-//        $_POST['lName']='HOHO';
-//        $_POST['eMail']='the_chosen_dragon@hotmail.com';
-//       $_POST['phone']='105512';
+//        $_POST['fName']='HEHE2222';
+  //      $_POST['lName']='HOHO';
+    //    $_POST['eMail']='the_chosen_dragon@hotmail.com';
+     //  $_POST['phone']='105512';
 
         //-------------------einde test---------------
 
         $user = new AdUser();
 	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
-      if(isset($_POST['fName'])){
         $user = new AdUser();
   
 
@@ -121,20 +121,17 @@ EOF;
 $from = "bot@guizmed.be";
 $headers = "From:" . $from;
 mail($to,$subject,$message,$headers);
-        $this->redirect('show_user',array('user_id'=>$user->getUserId()));
-      }else{
-        $this->redirect('show_user',array('user_id'=>'1'));
-        $this->forward404('Gelieve alle velden in te vullen.');
-      }
+//        $this->redirect('show_user',array('user_id'=>$user->getUserId()));
 //    $this->forward404Unless($request->isMethod(sfRequest::POST));
 //    $this->form = new adUserForm();
 //    $this->processForm($request, $this->form);
 //    $this->setTemplate('new');
 		$log = new AdLog();
 		$log->setAction('De gebruiker heeft een nieuwe gebruiker toegevoegd: ' . $user->getFname() . ' ' . $user->getLname());
-		$log->setAdUserId($_POST['user_id']);
+		$log->setAdUserId(/*$_POST['user_id']*/1);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
+        $this->redirect('users/error?message=user created!&title=success&type=message');
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}
@@ -170,7 +167,7 @@ mail($to,$subject,$message,$headers);
 		$log->save();
         
         	$ad_user->delete();
-                $this->redirect('users/index');
+                $this->redirect('users/error?message=user deleted!&title=success&type=message');
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}

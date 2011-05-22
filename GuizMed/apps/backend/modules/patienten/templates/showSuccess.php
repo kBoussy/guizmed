@@ -52,9 +52,9 @@
             {   "id":"<?php echo $medsA->getMedFormId(); ?>",
                 "pres_id":"<?php echo $medsA->getAdPrescId(); ?>",
                 "name":"<?php echo $medsA->getMedForm()->getMedBaseId()->getSpeciality(); ?>",
-                "start_date":"<?php echo $medsA->getStartDate(); ?>",
-                "end_date":"<?php echo $medsA->getEndDate(); ?>",
-                "stop_date":"<?php echo $medsA->getStopDate(); ?>"}
+                "start_date":"<?php $datedeel = preg_split('/ /',$medsA->getStartDate()); echo $datedeel[0]; ?>",
+                "end_date":"<?php $datedeel = preg_split('/ /', $medsA->getEndDate()); echo $datedeel[0]; ?>",
+                "stop_date":"<?php $datedeel = preg_split('/ /',$medsA->getStopDate()); echo $datedeel[0]; ?>"}
             <?php endforeach; ?>
             ],
 

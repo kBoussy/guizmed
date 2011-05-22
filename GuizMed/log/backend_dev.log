@@ -19634,3 +19634,259 @@ May 22 11:51:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT 
 May 22 11:51:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
 May 22 11:51:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 May 22 11:51:00 symfony [info] {sfWebResponse} Send content (186 o)
+May 22 12:12:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:12:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:12:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:12:42 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:12:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:12:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 22 12:12:42 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/Error/message/Not+logged+in%21/type/error"
+May 22 12:12:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 22 12:12:42 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/Error/message/Not+logged+in%21/type/error"
+May 22 12:12:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:12:42 symfony [info] {sfWebResponse} Send content (179 o)
+May 22 12:12:42 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/Error/message/Not+logged+in!/type/error with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'Error',  'message' => 'Not logged in!',  'type' => 'error',)
+May 22 12:12:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:12:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:12:42 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 22 12:12:42 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 22 12:12:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 12:12:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:12:42 symfony [info] {sfWebResponse} Send content (94 o)
+May 22 12:12:55 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/Error/message/Not+logged+in!/type/error with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'Error',  'message' => 'Not logged in!',  'type' => 'error',)
+May 22 12:12:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:12:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:12:55 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 22 12:12:55 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 22 12:12:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 12:12:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:12:55 symfony [info] {sfWebResponse} Send content (94 o)
+May 22 12:13:03 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:13:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:13:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:13:03 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:13:04 symfony [err] {Doctrine_Exception} Couldn't find class med_base_id
+May 22 12:13:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:13:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:13:16 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:13:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:13:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:13:16 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:13:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:13:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd, m2.med_base_id AS m2__med_base_id, m2.mainclass AS m2__mainclass, m2.gen_name AS m2__gen_name, m2.speciality AS m2__speciality, m2.med_type_id AS m2__med_type_id FROM med_form m, med_base_id m2 ORDER BY m2.speciality - ()
+May 22 12:13:17 symfony [err] {Doctrine_Hydrator_Exception} "medBaseId" with an alias of "medBaseId" in your query does not reference the parent component it is related to.
+May 22 12:13:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:13:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:14:33 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:14:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:14:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:14:33 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:14:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:14:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY m.med_base_id - ()
+May 22 12:14:33 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, date) VALUES (?, ?) - (De lijst met medicijnen is opgevraagd., 11-05-22 12:05:33)
+May 22 12:14:33 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 22 12:14:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:14:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:19:12 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:19:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:19:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:19:12 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:19:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:19:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY m.med_base_id - ()
+May 22 12:19:12 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, date) VALUES (?, ?) - (De lijst met medicijnen is opgevraagd., 11-05-22 12:05:12)
+May 22 12:19:12 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 22 12:19:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:19:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:19:15 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:19:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:19:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:19:15 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:19:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:19:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY m.med_base_id - ()
+May 22 12:19:15 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, date) VALUES (?, ?) - (De lijst met medicijnen is opgevraagd., 11-05-22 12:05:15)
+May 22 12:19:15 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 22 12:19:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:19:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:23:04 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:23:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:23:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:23:04 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:23:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:23:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY m.med_base_id - ()
+May 22 12:23:04 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, date) VALUES (?, ?) - (De lijst met medicijnen is opgevraagd., 11-05-22 12:05:04)
+May 22 12:23:04 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 22 12:23:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:23:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:26:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:26:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:26:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:26:26 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:26:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:26:26 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY m.med_base_id - ()
+May 22 12:26:26 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, ad_user_id, date) VALUES (?, ?, ?) - (De lijst met medicijnen is opgevraagd., 0, 11-05-22 12:05:26)
+May 22 12:26:26 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 22 12:26:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:26:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:26:35 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:26:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:26:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:26:35 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:26:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:26:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY m.med_base_id - ()
+May 22 12:26:35 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, ad_user_id, date) VALUES (?, ?, ?) - (De lijst met medicijnen is opgevraagd., 1, 11-05-22 12:05:35)
+May 22 12:26:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m - ()
+May 22 12:26:35 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/medicijnbeheer/templates/indexSuccess.php"
+May 22 12:26:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 12:26:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:26:36 symfony [info] {sfWebResponse} Send content (2552 o)
+May 22 12:28:33 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:28:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:28:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:28:33 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:28:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:28:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY speciality - ()
+May 22 12:28:33 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'speciality' in 'order clause'. Failing Query: "SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY speciality"
+May 22 12:28:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:28:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:28:43 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:28:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:28:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:28:43 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:28:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:28:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY speciality - ()
+May 22 12:28:43 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'speciality' in 'order clause'. Failing Query: "SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY speciality"
+May 22 12:28:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:28:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:28:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:28:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:28:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:28:44 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:28:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:28:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY speciality - ()
+May 22 12:28:44 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'speciality' in 'order clause'. Failing Query: "SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY speciality"
+May 22 12:28:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:28:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:28:47 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:28:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:28:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:28:47 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:28:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:28:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY speciality - ()
+May 22 12:28:48 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'speciality' in 'order clause'. Failing Query: "SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m ORDER BY speciality"
+May 22 12:28:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:28:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:29:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:29:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:29:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:29:23 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:29:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:29:23 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m - ()
+May 22 12:29:23 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, ad_user_id, date) VALUES (?, ?, ?) - (De lijst met medicijnen is opgevraagd., 1, 11-05-22 12:05:23)
+May 22 12:29:23 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m ORDER BY m.speciality - ()
+May 22 12:29:23 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/medicijnbeheer/templates/indexSuccess.php"
+May 22 12:29:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 12:29:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:29:23 symfony [info] {sfWebResponse} Send content (2552 o)
+May 22 12:51:58 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:51:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:51:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:51:58 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:51:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:51:58 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m - ()
+May 22 12:51:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, date) VALUES (?, ?) - (De lijst met medicijnen is opgevraagd., 11-05-22 12:05:58)
+May 22 12:51:59 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 22 12:51:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:51:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:52:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:52:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:52:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:52:18 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:52:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:52:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m - ()
+May 22 12:52:18 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, date) VALUES (?, ?) - (De lijst met medicijnen is opgevraagd., 11-05-22 12:05:18)
+May 22 12:52:18 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 22 12:52:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:52:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:52:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /users/create with parameters array (  'module' => 'users',  'action' => 'create',)
+May 22 12:52:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:52:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:52:42 symfony [info] {usersActions} Call "usersActions->executeCreate()"
+May 22 12:52:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:52:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 22 12:52:42 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/Error/message/Not+logged+in%21/type/error"
+May 22 12:52:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 22 12:52:42 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/Error/message/Not+logged+in%21/type/error"
+May 22 12:52:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:52:42 symfony [info] {sfWebResponse} Send content (179 o)
+May 22 12:52:43 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/Error/message/Not+logged+in!/type/error with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'Error',  'message' => 'Not logged in!',  'type' => 'error',)
+May 22 12:52:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:52:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:52:43 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 22 12:52:43 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 22 12:52:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 12:52:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:52:43 symfony [info] {sfWebResponse} Send content (94 o)
+May 22 12:52:56 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/Error/message/Not+logged+in!/type/error with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'Error',  'message' => 'Not logged in!',  'type' => 'error',)
+May 22 12:52:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:52:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:52:56 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 22 12:52:56 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 22 12:52:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 12:52:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:52:56 symfony [info] {sfWebResponse} Send content (94 o)
+May 22 12:52:58 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+May 22 12:52:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:52:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:52:58 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+May 22 12:52:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:52:58 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m - ()
+May 22 12:52:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, date) VALUES (?, ?) - (De lijst met medicijnen is opgevraagd., 11-05-22 12:05:58)
+May 22 12:52:58 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 22 12:52:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 22 12:52:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:53:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /users with parameters array (  'module' => 'users',  'action' => 'index',)
+May 22 12:53:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:53:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:53:02 symfony [info] {usersActions} Call "usersActions->executeIndex()"
+May 22 12:53:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:53:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_id AS a__user_id, a.fname AS a__fname, a.lname AS a__lname, a.email AS a__email, a.uname AS a__uname, a.passw AS a__passw, a.phone AS a__phone, a.ad_role_id AS a__ad_role_id, a.ad_function_id AS a__ad_function_id, a.unlock_code AS a__unlock_code, a.token AS a__token FROM ad_user a WHERE (a.token = ?) - ()
+May 22 12:53:02 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/Error/message/Not+logged+in%21/type/error"
+May 22 12:53:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 22 12:53:02 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/Error/message/Not+logged+in%21/type/error"
+May 22 12:53:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:53:02 symfony [info] {sfWebResponse} Send content (179 o)
+May 22 12:53:02 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/Error/message/Not+logged+in!/type/error with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'Error',  'message' => 'Not logged in!',  'type' => 'error',)
+May 22 12:53:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:53:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:53:02 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 22 12:53:02 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 22 12:53:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 12:53:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:53:02 symfony [info] {sfWebResponse} Send content (94 o)
+May 22 12:53:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /users/create with parameters array (  'module' => 'users',  'action' => 'create',)
+May 22 12:53:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:53:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:53:15 symfony [info] {usersActions} Call "usersActions->executeCreate()"
+May 22 12:53:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 22 12:53:15 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user (fname, lname, email, ad_role_id, ad_function_id, uname, passw, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?) - (HEHE2222, HOHO, the_chosen_dragon@hotmail.com, 2, 2, HEHE2222HOHO, rZGXhNpx, 105512)
+May 22 12:53:16 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/user+created%21/type/message"
+May 22 12:53:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 22 12:53:16 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/user+created%21/type/message"
+May 22 12:53:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:53:16 symfony [info] {sfWebResponse} Send content (182 o)
+May 22 12:53:16 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/success/message/user+created!/type/message with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'success',  'message' => 'user created!',  'type' => 'message',)
+May 22 12:53:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:53:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:53:16 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 22 12:53:16 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 22 12:53:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 12:53:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:53:16 symfony [info] {sfWebResponse} Send content (97 o)
+May 22 12:55:41 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/success/message/user+created!/type/message with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'success',  'message' => 'user created!',  'type' => 'message',)
+May 22 12:55:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 22 12:55:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 22 12:55:41 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 22 12:55:41 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 22 12:55:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 22 12:55:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 22 12:55:41 symfony [info] {sfWebResponse} Send content (99 o)

@@ -46,6 +46,7 @@ class kiActions extends sfActions
       $med_ki_val->setInfluence($_POST['influence']);
       $med_ki_val->setTagval($_POST['tagval']);
       $med_ki_val->save();
+      $this->redirect('users/error?message=ki added!&title=success&type=message');
 
 
 /*    $this->forward404Unless($request->isMethod(sfRequest::POST));
@@ -80,8 +81,8 @@ class kiActions extends sfActions
 
     $this->forward404Unless($med_ki_val = Doctrine_Core::getTable('medKiVal')->find(array($request->getParameter('med_ki_val_id'))), sprintf('Object med_ki_val does not exist (%s).', $request->getParameter('med_ki_val_id')));
     $med_ki_val->delete();
-
-    $this->redirect('ki/index');
+        $this->redirect('users/error?message=ki deleted!&title=success&type=message');
+//    $this->redirect('ki/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
