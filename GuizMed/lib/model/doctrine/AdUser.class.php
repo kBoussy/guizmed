@@ -22,6 +22,16 @@ class AdUser extends BaseAdUser
            return "Failed";
        }
     }
+    function adminInlog($uName,$pWord)
+    {
+       $users = Doctrine_Query::create()->from('AdUser au')->where('au.uname = ?', $uName)->execute();
+       if($users[0]->getPassw()==$pWord && $users[0]->getAdRole()->getName()=='Administrator'){
+            $this->setUserId($users[0]->getUserId());
+            return $this->createToken($users[0]->getUserId());
+       }else{
+           return "Failed";
+       }
+    }
     function checkUnlock($uName)
     {
        $users = Doctrine_Query::create()->from('AdUser au')->where('au.uname = ?', $uName)->execute();

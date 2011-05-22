@@ -62,11 +62,10 @@ class notificationsActions extends sfActions
 
       if($notification->getAccepted()==true){
       $ad_user_patient = Doctrine_Query::create()->from('AdUserPatient aup')->where('aup.patient_id= ?',$notification->getPrevUserId())->andWhere('aup.user_id = ?', $notification->getNewUser())->execute();
-      $ad_user_patient->setUserId($notification->getNewUserId());
-      $ad_user_patient->save();
+      $ad_user_patient[0]->setUserId($notification->getNewUserId());
+      $ad_user_patient[0]->save();
       }
-
-	  $this->redirect('show_notification',array('user_id'=>$_POST['user_id']));
+        $this->redirect('users/error?message=notification accepted!&title=success&type=message');
   }
 
   public function executeCreate(sfWebRequest $request)

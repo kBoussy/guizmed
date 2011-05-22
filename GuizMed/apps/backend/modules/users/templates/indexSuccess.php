@@ -2,7 +2,7 @@
 "users" :[
 <?php $bol= true; ?>
     <?php foreach ($ad_users as $ad_user): ?>
-<?php if($postUser==$ad_user->getAdUserId()):?>
+<?php if($postUser!=$ad_user->getUserId()):?>
 <?php if($bol){
     $bol=false;
 }else{

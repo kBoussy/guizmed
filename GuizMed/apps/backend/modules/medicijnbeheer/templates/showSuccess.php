@@ -31,25 +31,42 @@
             "T_max_h":"<?php echo $med_form->getTMaxH() ?>",
             "Hlf":"<?php echo $med_form->getHlf() ?>",
             "Ddd":"<?php echo $med_form->getDdd() ?>",
-            "metabolism" : [
-            <?php $comma = true; ?>
-    <?php foreach ($med_form->getAllMetabolism() as $metabolism): ?>
-        <?php echo /*'"'.$metabolism->getInteractionType().'" : ['*/''; ?>
-            
-            <?php #echo '"'.$metabolism->getIntEnzym().'"'; ?>
-            <?php foreach ($metabolism->getDrugs() as $drug): ?>
-            <?php if($comma == true){
-                $comma = false;
+            "metabolism":[
+            <?php $start = true; ?>
+                <?php $i=0; foreach($metabolisms as $met): ?>
+            <?php if($start == true){
+                $start = false;
             }else{
                 echo ',';
-            } ?>
-                <?php echo '"'.$drug->getName().'"'; ?>
+            }?>
+                    "<?php echo $met; ?>"
+                    <?php $i++; ?>
             <?php endforeach; ?>
-       
-    <?php endforeach; ?>
+            ],
+            "inhibitor":[
+            <?php $start = true; $i=0; ?>
+                <?php foreach($inhibitor as $met): ?>
+            <?php if($start == true){
+                $start = false;
+            }else{
+                echo ',';
+            }?>
+                    "<?php echo $met; ?>"
+                    <?php $i++; ?>
+            <?php endforeach; ?>
+            ],
+            "inducer":[
+            <?php $start = true; ?>
+                <?php $i=0; foreach($inducer as $met): ?>
+            <?php if($start == true){
+                $start = false;
+            }else{
+                echo ',';
+            }?>
+                    "<?php echo $met; ?>"
+                    <?php $i++; ?>
+            <?php endforeach; ?>
             ]
-            
-            
         }
     <?php endforeach; ?>
         ]

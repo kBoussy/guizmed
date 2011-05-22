@@ -98,7 +98,7 @@ EOF"
         $user->setEmail($_POST['eMail']);
         $user->setAdRoleId('2');
         $user->setAdFunctionId('2');
-        $user->setUname($user->getFname().$user->getLname());
+        $user->setUname(strtolower($user->getFname().'.'.$user->getLname()));
         $user->setPassw($this->generatePassword());
         $user->setPhone($_POST['phone']);
         $user->save();
