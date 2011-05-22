@@ -1,0 +1,22 @@
+# data/fixtures/ad_non_psycho.yml
+AdNonPsycho:
+  ad_non_psycho1:
+    ad_non_psycho_id: 1
+    name: Shark tongue
+    comment: Lowers the bloodpressure
+  ad_non_psycho2:
+    ad_non_psycho_id: 2
+    name: seahorse
+    comment: rises the bloodpressure
+  ad_non_psycho3:
+    ad_non_psycho_id: 3
+    name: Snake Blood
+    comment: The natural LSD
+  ad_non_psycho4:
+    ad_non_psycho_id: 4
+    name: St John's wort
+    comment: Depression treatment
+  ad_non_psycho5:
+    ad_non_psycho_id: 5
+    name: Sea cucumber
+    comment: Anticoagulant
