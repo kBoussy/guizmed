@@ -13,7 +13,7 @@ class medicijnbeheerActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
 	$user = new AdUser();
-	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
+//	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$this->med_forms = Doctrine_Core::getTable('medForm')
 		  ->createQuery('a')
 		  ->execute();
@@ -22,10 +22,10 @@ class medicijnbeheerActions extends sfActions
 			$log->setAdUserId($_POST['user_id']);
 			$log->setDate(date('y-m-d H:m:s'));
 			$log->save();
-		$this->medicaties = Doctrine_Core::getTable('medBaseId')->createQuery('a')->execute();
-	}else{
-		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
-	}
+		$this->medicaties = Doctrine_Core::getTable('medBaseId')->createQuery('a')->orderBy('speciality')->execute();
+//	}else{
+//		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
+//	}
   }
   public function executeIndexAdmin(sfWebRequest $request)
   {
@@ -33,7 +33,7 @@ class medicijnbeheerActions extends sfActions
       ->createQuery('a')
       ->execute();
 
-    $this->medicaties = Doctrine_Core::getTable('medBaseId')->createQuery('a')->execute();
+    $this->medicaties = Doctrine_Core::getTable('medBaseId')->createQuery('a')->orderBy('speciality')->execute();
   }
   public function executeGetmedname(sfWebRequest $request)
   {
@@ -97,30 +97,53 @@ class medicijnbeheerActions extends sfActions
 		  $med_form->save();
 		  $i = 0;
 		  foreach($_POST['chem_bonding_id'] as $chemBonding){
-			  $med_form_bonding = new medFormBonding();
-			  $med_form_bonding->setMedFormBondingId($med_form->getMedFormId());
+			  $med_form_bonding = new MedFormBonding();
+			  $med_form_bonding->setMedFormId($med_form->getMedFormId());
 			  $med_form_bonding->setMedChemBondingId($_POST['chem_bonding_id'][$i]);
 			  $med_form_bonding->setMedKiValId($_POST['med_ki_val_id'][$i]);
+                          $med_form_bonding->save();
 			  $i++;
 		  }
-
-		  $med_bnf_medicine=new MedBnfMedicine();
+                  $i=0;
+            foreach($_POST['bnf_percentage_id'] as $bnfPercentage){
+               $med_bnf_medicine = new MedBnfMedicine();
+               $med_bnf_medicine->setBnfPercentageId($_POST['bnf_percentage_id'][$i]);
+               $med_bnf_medicine->setValue($_POST['bnf_value'][$i]);
+               $med_bnf_medicine->setMedFormId($med_form->getMedFormId());
+               $med_bnf_medicine->save();
+               $i++;
+            }
+/*		  $med_bnf_medicine=new MedBnfMedicine();
 		  $med_bnf_percentage = Doctrine_Query::create()->from('med_bnf_percentage mbp')->where('mbp.percentage = ?',$_POST['bnf_percentage'])->execute();
 		  $med_bnf_medicine->setBnfPercentageId($med_bnf_percentage[0]->getBnfPercentageId());
 		  $med_bnf_medicine->setValue($_POST['bnf_value']);
 		  $med_bnf_medicine->setMedFormId($med_form->getMedFormId());
 		  $med_bnf_medicine->save();
+*/
+$int_metabolism = new IntMetabolism();
+$int_metabolism->setEnzymGroupId($_POST['metabolisatie']);
+$int_metabolism->setInteractionType('metabolism');
+$int_metabolism->setMedFormId($med_form->getMedFormId());
+$int_metabolism->save();
 
-		  $int_metabolism = new IntMetabolism();
-		  $int_metabolism->setEnzymGroupId($_POST['enzym_name']);
-		  $int_metabolism->setMedFormId($med_form->getMedFormId());
-		  $int_metabolism->save();
-		  
+$int_metabolism = new IntMetabolism();
+$int_metabolism->setEnzymGroupId($_POST['activator']);
+$int_metabolism->setInteractionType('activator');
+$int_metabolism->setMedFormId($med_form->getMedFormId());
+$int_metabolism->save();
+
+$int_metabolism = new IntMetabolism();
+$int_metabolism->setEnzymGroupId($_POST['inhibitor']);
+$int_metabolism->setInteractionType('inhibitor');
+$int_metabolism->setMedFormId($med_form->getMedFormId());
+$int_metabolism->save();
+ 
 		  $log = new AdLog();
 		  $log->setAction('Een nieuw medicijn is toegevoegd: ' . $med_base_id->getSpeciality());
 		  $log->setAdUserId($_POST['user_id']);
 		  $log->setDate(date('y-m-d H:m:s'));
 		  $log->save();
+        $this->redirect('users/error?message=medicin added!&title=success&type=message');
 	  }
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
@@ -157,8 +180,9 @@ class medicijnbeheerActions extends sfActions
 
     $this->forward404Unless($med_form = Doctrine_Core::getTable('medForm')->find(array($request->getParameter('med_form_id'))), sprintf('Object med_form does not exist (%s).', $request->getParameter('med_form_id')));
     $med_form->delete();
+        $this->redirect('users/error?message=medicine deleted!&title=success&type=message');
 
-    $this->redirect('medicijnbeheer/index');
+//    $this->redirect('medicijnbeheer/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)

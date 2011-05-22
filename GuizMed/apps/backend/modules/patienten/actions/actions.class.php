@@ -88,7 +88,6 @@ class patientenActions extends sfActions
   {
 	$user = new AdUser();
 	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
-      if(isset($_POST['fName'])){
         $patient = new AdPatient();
         $patient->setFname($_POST['fName']);
         $patient->setLname($_POST['lName']);
@@ -101,10 +100,9 @@ class patientenActions extends sfActions
 		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
-        $this->redirect('show_patient',array('patient_id'=>$patient->getPatientId()));
-      }else{
-         $this->forward404('er is een fout gebeurd bij het invullen van de gegevens');
-      }
+        $this->redirect('users/error?message=user created!&title=success&type=message');
+
+//        $this->redirect('show_patient',array('patient_id'=>$patient->getPatientId()));
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}

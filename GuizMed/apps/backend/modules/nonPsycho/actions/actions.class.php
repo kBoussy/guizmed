@@ -38,7 +38,7 @@ class nonPsychoActions extends sfActions
 	$user = new AdUser();
 	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
 		$adNonPsychoPat = new AdNonPsychoPat();
-		$adNonPsychoPat->setPatientId($_POST['patientId']);
+		$adNonPsychoPat->setAdPatientId($_POST['patientId']);
 		$adNonPsychoPat->setNonPsychoId($_POST['nonPsychoId']);
 		$adNonPsychoPat->setStartDate($_POST['startDate']);
 		$adNonPsychoPat->save();  
@@ -52,6 +52,7 @@ class nonPsychoActions extends sfActions
 		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
+                $this->redirect('users/error?message=nonPsycho created!&title=success&type=message');
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}

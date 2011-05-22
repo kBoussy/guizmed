@@ -33,7 +33,7 @@ class voorschriftenActions extends sfActions
 		$ad_prescription->stop("No reason was given.");
       }
 	  $ad_user_patient = Doctrine_Core::getTable('adUserPatient')->find(array($ad_prescription->getUserPatientId()));
-	  $ad_patient = Doctrine_Core::getTable('adPatient')->find(array($ad_user_patient->getPatientId()))
+	  $ad_patient = Doctrine_Core::getTable('adPatient')->find(array($ad_user_patient->getPatientId()));
 		$log = new AdLog();
 		$log->setAction('De gebruiker heeft een voorschrift stopgezet voor patient' . $ad_patient->getFname() . ' ' . $ad_patient->getLname());
 		$log->setAdUserId($_POST['user_id']);
@@ -58,7 +58,6 @@ class voorschriftenActions extends sfActions
   {
 	$user = new AdUser();
 	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
-      if(isset($_POST['startDate'])){
         $prescription = new AdPrescription();
         $prescription->setStartDate($_POST['startDate']);
         $prescription->setPrescDate(date('y-m-d H:m:s'));
@@ -69,10 +68,6 @@ class voorschriftenActions extends sfActions
         $prescription->setUserPatientId($userPatients[0]->getUserPatientId());
         $prescription->setComment($_POST['comment']);
         $prescription->save();
-        $this->redirect('show_prescription',array('ad_presc_id'=>$prescription->getAdPrescId()));
-      }else{
-         $this->forward404('ge moet startDate invullen dumbo');
-      }
 		$ad_patient = Doctrine_Core::getTable('adPatient')->find(array($_POST['patientId']));
 
 		$log = new AdLog();
@@ -80,6 +75,7 @@ class voorschriftenActions extends sfActions
 		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
+        $this->redirect('users/error?message=prescription created!&title=success&type=message');
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}

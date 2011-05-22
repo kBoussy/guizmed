@@ -2,6 +2,7 @@
 "users" :[
 <?php $bol= true; ?>
     <?php foreach ($ad_users as $ad_user): ?>
+<?php if($postUser==$ad_user->getAdUserId()):?>
 <?php if($bol){
     $bol=false;
 }else{
@@ -15,6 +16,7 @@
                         "phone":"<?php echo $ad_user->getPhone(); ?>",
                         "email":"<?php echo $ad_user->getEmail(); ?>"
 }
+<?php endif; ?>
     <?php endforeach; ?>
 			]
 }

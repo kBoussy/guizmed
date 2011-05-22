@@ -80,8 +80,9 @@ class notificationsActions extends sfActions
 		$not->setReason($_POST['reason']);
 		$not->setDate(date('y-m-d H:m:s'));
 		$not->save();
+                $this->redirect('users/error?message=notification created!&title=success&type=message');
 
-		$this->redirect('show_notification',array('user_id'=>$_POST['user_id']));
+//		$this->redirect('show_notification',array('user_id'=>$_POST['user_id']));
 	/*    $this->forward404Unless($request->isMethod(sfRequest::POST));
 
 		$this->form = new AdNotificationForm();
