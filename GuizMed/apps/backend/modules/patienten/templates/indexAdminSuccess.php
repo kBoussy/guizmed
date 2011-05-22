@@ -24,9 +24,9 @@
 				echo ',';
 			} ?>
 				{
-					"id": "<?php $adUserPatient->getAdUser()->getUserId(); ?>",
-					"lName": "<?php $adUserPatient->getAdUser()->getLname(); ?>",
-					"fName": "<?php $adUserPatient->getAdUser()->getFname(); ?>"
+					"id": "<?php echo $adUserPatient->getAdUser()->getUserId(); ?>",
+					"lName": "<?php echo $adUserPatient->getAdUser()->getLname(); ?>",
+					"fName": "<?php echo $adUserPatient->getAdUser()->getFname(); ?>"
 				}
 			<?php endforeach; ?>
 			]
