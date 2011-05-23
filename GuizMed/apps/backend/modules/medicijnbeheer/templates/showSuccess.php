@@ -22,7 +22,7 @@
             "med_magister_form":"<?php echo $med_form->getMetMagisterName($med_form->getMedMagisterFormId()) ?>",
             <?php 
             foreach ($med_form->getMedFormBonding() as $medFormBonding){
-                echo "\"".preg_replace('/ /','_',$medFormBonding->getMedChemBonding())."\" : \"".$medFormBonding->getMedKiVal()."\",";
+                echo "\"".preg_replace('/ /','_',$medFormBonding->getMedChemBonding())."\" : \"".$medFormBonding->getMedKiVal()->getValue().' ('.$medFormBonding->getMedKiVal()->getTagval().')'."\",";
             }?>
 
             "Dose":"<?php echo $med_form->getDose() ?>",

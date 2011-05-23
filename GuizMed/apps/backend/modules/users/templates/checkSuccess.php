@@ -1,1 +1,5 @@
-<?php echo $allowed;?>
+{
+"message" : {
+		"allowed": "<?php echo $allowed;?>"
+            }
+}

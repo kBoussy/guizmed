@@ -61,11 +61,25 @@ class notificationsActions extends sfActions
       $notification->save();
 
       if($notification->getAccepted()==true){
-      $ad_user_patient = Doctrine_Query::create()->from('AdUserPatient aup')->where('aup.patient_id= ?',$notification->getPrevUserId())->andWhere('aup.user_id = ?', $notification->getNewUser())->execute();
+
+      $where = 'aup.patient_id = '.$notification->getPatientId();//.' AND aup.user_id = '.$notification->getNewUserId().' AND aup.active = 1';
+      $ad_user_patient = Doctrine_Query::create()->from('AdUserPatient aup')->where($where)->andWhere('aup.user_id = ?', $notification->getPrevUserId())->andWhere('aup.active = ?', '1')->execute();//'aup.patient_id= '.$notification->getPrevUserId().' AND aup.user_id = ?'.$notification->getNewUser().'aup.active = 1')->execute();
+//      $test = Doctrine_Core::getTable('AdUserPatient')->find(array($ad_user_patient[0]->getUserPatientId()));
+//      $ad_user_patient[0]->save();
       $ad_user_patient[0]->setUserId($notification->getNewUserId());
+      $ad_user_patient[0]->setPrevUserId($notification->getPrevUserId());
+/*      $test = new AdUserPatient();
+      $test->setNew(false);
+      $test->setActive(false);
+      $test->setUserPatientId($ad_user_patient[0]->getUserPatientId());
+      $test->setUserId($notification->getNewUserId());
+      $test->setPrevUserId($notification->getPrevUserId());
+      $test->setDenied(false);
+      $test->setPatientId($notification->getPatientId());
+      $test->save();*/
       $ad_user_patient[0]->save();
       }
-        $this->redirect('users/error?message=notification accepted!&title=success&type=message');
+        $this->redirect('users/error?message=notification accepted!'.'&title=success&type=message');
   }
 
   public function executeCreate(sfWebRequest $request)

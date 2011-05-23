@@ -95,8 +95,15 @@ class patientenActions extends sfActions
         $patient->setSex($_POST['sex']);
         $patient->setPatientSince(date('y-m-d H:m:s'));
         $patient->save();
+
+        $adUserPatient = new AdUserPatient();
+        $adUserPatient->setPatientId($patient->getPatientId());
+        $adUserPatient->setUserId($_POST['user_id']);
+        $adUserPatient->setActive(true);
+        $adUserPatient->setDenied(false);
+        $adUserPatient->save();
 		$log = new AdLog();
-		$log->setAction('Een nieuwe patient is toegevoegd: ' . $patient->getFname . ' ' . $patient->getLname);
+		$log->setAction('Een nieuwe patient is toegevoegd: ' . $patient->getFname() . ' ' . $patient->getLname());
 		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();

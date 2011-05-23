@@ -182,7 +182,8 @@ $int_metabolism->save();
 		  $log->setAdUserId($_POST['user_id']);
 		  $log->setDate(date('y-m-d H:m:s'));
 		  $log->save();
-        $this->redirect('users/error?message=medicine added!&title=success&type=message');
+                
+                  $this->redirect('users/error?message=medicine added!&title=success&type=message');
 	  
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
