@@ -75,7 +75,17 @@ class voorschriftenActions extends sfActions
 		$log->setAdUserId($_POST['user_id']);
 		$log->setDate(date('y-m-d H:m:s'));
 		$log->save();
-        $this->redirect('users/error?message=prescription created!&title=success&type=message');
+                $this->pId= $prescription->getAdPrescId();
+                $this->BNF=$ad_patient->berekenBNF($ad_patient->getPatientId());
+                if($ad_patient->berekenBNF($ad_patient->getPatientId())>=100){
+                    $this->message = 'Opgelet u overschreid de maximum BNF waarde!';
+                    $this->bnfBoolean = 'true';
+                }else{
+                    $this->message = 'Het voorschrift is toegevoegd.';
+                    $this->bnfBoolean = 'false';
+
+                }
+//        $this->redirect('users/error?message=prescription created!&title=success&type=message');
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}
@@ -108,12 +118,13 @@ class voorschriftenActions extends sfActions
 
   public function executeDelete(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
+//    $request->checkCSRFProtection();
 
     $this->forward404Unless($ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id'))), sprintf('Object ad_prescription does not exist (%s).', $request->getParameter('ad_presc_id')));
     $ad_prescription->delete();
+        $this->redirect('users/error?message=prescription deleted!&title=success&type=message');
 
-    $this->redirect('voorschriften/index');
+//    $this->redirect('voorschriften/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)

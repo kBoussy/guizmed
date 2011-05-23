@@ -60,7 +60,7 @@ class notificationsActions extends sfActions
 //      $_POST['notif_id']=1;
 
       $notification = Doctrine_Core::getTable('AdNotification')->find(array($_POST['notif_id']));
-      $notification->setAccepted($_POST['accepted']);
+      $notification->setAccepted(($_POST['accepted'] == "true")?true:false);
       $notification->setChecked(true);
       $notification->save();
       if($notification->getAccepted()==true){
