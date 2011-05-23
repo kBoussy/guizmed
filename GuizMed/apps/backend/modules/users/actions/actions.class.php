@@ -99,7 +99,8 @@ EOF"
         $user->setAdRoleId('2');
         $user->setAdFunctionId('2');
         $user->setUname(strtolower($user->getFname().'.'.$user->getLname()));
-        $user->setPassw($this->generatePassword());
+        $pass = $this->generatePassword();
+        $user->setPassw(hash('ripemd160',$this->generatePassword()));
         $user->setPhone($_POST['phone']);
         $user->save();
 
@@ -111,7 +112,7 @@ Hello,
 
 Your account has been created.
 Username: {$user->getUname()}
-Password: {$user->getPassw()}
+Password: {$pass}
 
 hope to see you soon doctor.
 

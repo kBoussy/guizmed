@@ -15,7 +15,7 @@ class AdUser extends BaseAdUser
     function inlog($uName,$pWord)
     {
        $users = Doctrine_Query::create()->from('AdUser au')->where('au.uname = ?', $uName)->execute();
-       if($users[0]->getPassw()==$pWord){
+       if($users[0]->getPassw()==hash('ripemd160',$pWord)){
             $this->setUserId($users[0]->getUserId());
             return $this->createToken($users[0]->getUserId());
        }else{
@@ -25,7 +25,7 @@ class AdUser extends BaseAdUser
     function adminInlog($uName,$pWord)
     {
        $users = Doctrine_Query::create()->from('AdUser au')->where('au.uname = ?', $uName)->execute();
-       if($users[0]->getPassw()==$pWord && $users[0]->getAdRole()->getName()=='Administrator'){
+       if($users[0]->getPassw()==hash('ripemd160',$pWord) && $users[0]->getAdRole()->getName()=='Administrator'){
             $this->setUserId($users[0]->getUserId());
             return $this->createToken($users[0]->getUserId());
        }else{
@@ -53,8 +53,8 @@ class AdUser extends BaseAdUser
     function firstLogin($uName,$old,$new,$unlock)
     {
        $users = Doctrine_Query::create()->from('AdUser au')->where('au.uName = ?', $uName)->execute();
-       if($users[0]->getUnlockCode()==$unlock && $users[0]->getPassw()==$old){
-           $users[0]->setPassw($new);
+       if($users[0]->getUnlockCode()==$unlock && $users[0]->getPassw()==hash('ripemd160',$old)){
+           $users[0]->setPassw(hash('ripemd160',$new));
            $users[0]->save();
            return 'true';
        }else{
