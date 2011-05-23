@@ -12,7 +12,6 @@ class basisActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-      echo hash('ripemd160','guizmed');
     $this->med_base_ids = Doctrine_Core::getTable('medBaseId')
       ->createQuery('a')
       ->execute();
