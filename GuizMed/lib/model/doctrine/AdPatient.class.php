@@ -12,16 +12,17 @@
  */
 class AdPatient extends BaseAdPatient
 {
-public function berekenBNF($patient_id)
+public function berekenBNF()
         {
-
+        $patient_id = $this->getPatientId();
          $bnfWaarde = 0;
         /** $patient_id = 1;**/
         /** selectie van alle voorschriften per patient met patient_id * */
-
+        $allAdUsers = Doctrine_Query::create()->from('adUserPatient aup')->where('aup.patient_id = ?',$patient_id)->execute();
+        foreach($allAdUsers as $adUserken){
         $p = Doctrine_Query::create()
         ->from('AdPrescription a')
-        ->where('a.user_patient_id = ?', $patient_id)
+        ->where('a.user_patient_id = ?', $adUserken->getUserPatientId())
         ->execute();
 
         foreach($p as $prec): /**elk voorschrift overlopen per patient**/
@@ -185,7 +186,7 @@ public function berekenBNF($patient_id)
                            endforeach;
 
                     endforeach;
-
+        }
         return $bnfWaarde;
 
     }

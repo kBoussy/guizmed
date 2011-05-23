@@ -7,7 +7,7 @@
                 "bDate": "<?php echo $ad_patient->getBdate() ?>",
                 "since": "<?php echo $ad_patient->getPatientSince() ?>",
                 "sex": "<?php echo $ad_patient->getSex() ?>",
-                "bnf": "<?php echo $ad_patient->berekenBNF(0); ?>"
+                "bnf": "<?php echo $ad_patient->berekenBNF($ad_patient->getPatientId()); ?>"
             },
             "prescriptions" : [
 

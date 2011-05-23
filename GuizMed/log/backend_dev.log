@@ -23931,3 +23931,78 @@ May 23 13:31:45 symfony [info] {Doctrine_Connection_Statement} execute : INSERT 
 May 23 13:31:45 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user_patient`, CONSTRAINT `ad_user_patient_ibfk_4` FOREIGN KEY (`patient_id`) REFERENCES `ad_patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
 May 23 13:31:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
 May 23 13:31:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 14:57:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/delete/ad_presc_id/1 with parameters array (  'module' => 'notifications',  'action' => 'delete',  'ad_presc_id' => '1',)
+May 23 14:57:22 symfony [info] {myUser} Automatic user logout due to timeout
+May 23 14:57:22 symfony [info] {myUser} User is not authenticated
+May 23 14:57:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 14:57:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 14:57:22 symfony [info] {notificationsActions} Call "notificationsActions->executeDelete()"
+May 23 14:57:23 symfony [err] {sfValidatorErrorSchema} _csrf_token [Required.]
+May 23 14:57:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 14:57:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 14:57:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /voorschriften/delete/ad_presc_id/1 with parameters array (  'module' => 'voorschriften',  'action' => 'delete',  'ad_presc_id' => '1',)
+May 23 14:57:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 14:57:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 14:57:47 symfony [info] {voorschriftenActions} Call "voorschriftenActions->executeDelete()"
+May 23 14:57:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 14:57:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.ad_presc_id AS a__ad_presc_id, a.start_date AS a__start_date, a.end_date AS a__end_date, a.presc_date AS a__presc_date, a.dose AS a__dose, a.frequency AS a__frequency, a.user_patient_id AS a__user_patient_id, a.med_form_id AS a__med_form_id, a.comment AS a__comment, a.stop_date AS a__stop_date, a.stop_reason AS a__stop_reason FROM ad_prescription a WHERE (a.ad_presc_id = ?) LIMIT 1 - (1)
+May 23 14:57:47 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM ad_prescription WHERE ad_presc_id = ? - (1)
+May 23 14:57:47 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/prescription+deleted%21/type/message"
+May 23 14:57:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 23 14:57:47 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/prescription+deleted%21/type/message"
+May 23 14:57:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 14:57:47 symfony [info] {sfWebResponse} Send content (190 o)
+May 23 14:57:47 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/success/message/prescription+deleted!/type/message with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'success',  'message' => 'prescription deleted!',  'type' => 'message',)
+May 23 14:57:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 14:57:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 14:57:47 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 23 14:57:47 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 23 14:57:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 14:57:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 14:57:47 symfony [info] {sfWebResponse} Send content (107 o)
+May 23 14:58:37 symfony [info] {sfPatternRouting} Match route "show_patient" (/patienten/show/patient_id/:patient_id) for /patienten/show/patient_id/1 with parameters array (  'module' => 'patienten',  'action' => 'show',  'patient_id' => '1',)
+May 23 14:58:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 14:58:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 14:58:37 symfony [info] {patientenActions} Call "patientenActions->executeShow()"
+May 23 14:58:37 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 14:58:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.patient_id AS a__patient_id, a.fname AS a__fname, a.lname AS a__lname, a.bdate AS a__bdate, a.patient_since AS a__patient_since, a.sex AS a__sex FROM ad_patient a WHERE (a.patient_id = ?) LIMIT 1 - (1)
+May 23 14:58:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.ad_presc_id AS a__ad_presc_id, a.start_date AS a__start_date, a.end_date AS a__end_date, a.presc_date AS a__presc_date, a.dose AS a__dose, a.frequency AS a__frequency, a.user_patient_id AS a__user_patient_id, a.med_form_id AS a__med_form_id, a.comment AS a__comment, a.stop_date AS a__stop_date, a.stop_reason AS a__stop_reason FROM ad_prescription a WHERE (a.user_patient_id = ?) - (1)
+May 23 14:58:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.non_psycho_pat_id AS a__non_psycho_pat_id, a.ad_patient_id AS a__ad_patient_id, a.non_psycho_id AS a__non_psycho_id, a.start_date AS a__start_date, a.stop_date AS a__stop_date FROM ad_non_psycho_pat a WHERE (a.ad_patient_id = ?) - (1)
+May 23 14:58:37 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, date) VALUES (?, ?) - (Er is gekeken naar patient: Olivier Jansens, 11-05-23 14:05:37)
+May 23 14:58:37 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 14:58:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 14:58:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 14:58:44 symfony [info] {sfPatternRouting} Match route "show_patient" (/patienten/show/patient_id/:patient_id) for /patienten/show/patient_id/2 with parameters array (  'module' => 'patienten',  'action' => 'show',  'patient_id' => '2',)
+May 23 14:58:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 14:58:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 14:58:44 symfony [info] {patientenActions} Call "patientenActions->executeShow()"
+May 23 14:58:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 14:58:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.patient_id AS a__patient_id, a.fname AS a__fname, a.lname AS a__lname, a.bdate AS a__bdate, a.patient_since AS a__patient_since, a.sex AS a__sex FROM ad_patient a WHERE (a.patient_id = ?) LIMIT 1 - (2)
+May 23 14:58:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.ad_presc_id AS a__ad_presc_id, a.start_date AS a__start_date, a.end_date AS a__end_date, a.presc_date AS a__presc_date, a.dose AS a__dose, a.frequency AS a__frequency, a.user_patient_id AS a__user_patient_id, a.med_form_id AS a__med_form_id, a.comment AS a__comment, a.stop_date AS a__stop_date, a.stop_reason AS a__stop_reason FROM ad_prescription a WHERE (a.user_patient_id = ?) - (2)
+May 23 14:58:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.non_psycho_pat_id AS a__non_psycho_pat_id, a.ad_patient_id AS a__ad_patient_id, a.non_psycho_id AS a__non_psycho_id, a.start_date AS a__start_date, a.stop_date AS a__stop_date FROM ad_non_psycho_pat a WHERE (a.ad_patient_id = ?) - (2)
+May 23 14:58:45 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, date) VALUES (?, ?) - (Er is gekeken naar patient: Henry Houdmont, 11-05-23 14:05:44)
+May 23 14:58:45 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_log`, CONSTRAINT `ad_log_ad_user_id_ad_user_user_id` FOREIGN KEY (`ad_user_id`) REFERENCES `ad_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 14:58:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 14:58:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 14:58:58 symfony [info] {sfPatternRouting} Match route "show_patient" (/patienten/show/patient_id/:patient_id) for /patienten/show/patient_id/2 with parameters array (  'module' => 'patienten',  'action' => 'show',  'patient_id' => '2',)
+May 23 14:58:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 14:58:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 14:58:58 symfony [info] {patientenActions} Call "patientenActions->executeShow()"
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.patient_id AS a__patient_id, a.fname AS a__fname, a.lname AS a__lname, a.bdate AS a__bdate, a.patient_since AS a__patient_since, a.sex AS a__sex FROM ad_patient a WHERE (a.patient_id = ?) LIMIT 1 - (2)
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.ad_presc_id AS a__ad_presc_id, a.start_date AS a__start_date, a.end_date AS a__end_date, a.presc_date AS a__presc_date, a.dose AS a__dose, a.frequency AS a__frequency, a.user_patient_id AS a__user_patient_id, a.med_form_id AS a__med_form_id, a.comment AS a__comment, a.stop_date AS a__stop_date, a.stop_reason AS a__stop_reason FROM ad_prescription a WHERE (a.user_patient_id = ?) - (2)
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.non_psycho_pat_id AS a__non_psycho_pat_id, a.ad_patient_id AS a__ad_patient_id, a.non_psycho_id AS a__non_psycho_id, a.start_date AS a__start_date, a.stop_date AS a__stop_date FROM ad_non_psycho_pat a WHERE (a.ad_patient_id = ?) - (2)
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_log (action, ad_user_id, date) VALUES (?, ?, ?) - (Er is gekeken naar patient: Henry Houdmont, 1, 11-05-23 14:05:58)
+May 23 14:58:58 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/patienten/templates/showSuccess.php"
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = ?) - (2)
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.ad_presc_id AS a__ad_presc_id, a.start_date AS a__start_date, a.end_date AS a__end_date, a.presc_date AS a__presc_date, a.dose AS a__dose, a.frequency AS a__frequency, a.user_patient_id AS a__user_patient_id, a.med_form_id AS a__med_form_id, a.comment AS a__comment, a.stop_date AS a__stop_date, a.stop_reason AS a__stop_reason FROM ad_prescription a WHERE (a.user_patient_id = ?) - (2)
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m WHERE (m.med_form_id = ?) - (20)
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_bnf_medicine_id AS m__med_bnf_medicine_id, m.bnf_percentage_id AS m__bnf_percentage_id, m.med_form_id AS m__med_form_id, m.value AS m__value FROM med_bnf_medicine m WHERE (m.med_form_id = ?) - (20)
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.bnf_percentage_id AS m__bnf_percentage_id, m.percentage AS m__percentage FROM med_bnf_percentage m WHERE (m.bnf_percentage_id = ?) - (10)
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.bnf_percentage_id AS m__bnf_percentage_id, m.percentage AS m__percentage FROM med_bnf_percentage m WHERE (m.bnf_percentage_id = ?) - (15)
+May 23 14:58:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.bnf_percentage_id AS m__bnf_percentage_id, m.percentage AS m__percentage FROM med_bnf_percentage m WHERE (m.bnf_percentage_id = ?) - (18)
+May 23 14:58:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.bnf_percentage_id AS m__bnf_percentage_id, m.percentage AS m__percentage FROM med_bnf_percentage m WHERE (m.bnf_percentage_id = ?) - (29)
+May 23 14:58:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (10)
+May 23 14:58:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 14:58:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 14:58:59 symfony [info] {sfWebResponse} Send content (751 o)
