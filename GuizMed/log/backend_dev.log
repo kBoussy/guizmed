@@ -24006,3 +24006,15 @@ May 23 14:58:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT 
 May 23 14:58:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
 May 23 14:58:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 May 23 14:58:59 symfony [info] {sfWebResponse} Send content (751 o)
+May 23 17:49:18 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /nonPsycho/createNonPsycho with parameters array (  'module' => 'nonPsycho',  'action' => 'createNonPsycho',)
+May 23 17:49:18 symfony [info] {myUser} Automatic user logout due to timeout
+May 23 17:49:18 symfony [info] {myUser} User is not authenticated
+May 23 17:49:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 17:49:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 17:49:18 symfony [info] {nonPsychoActions} Call "nonPsychoActions->executeCreateNonPsycho()"
+May 23 17:49:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 17:49:19 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_non_psycho (name) VALUES (?) - (viagra)
+May 23 17:49:19 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/nonPsycho/templates/createNonPsychoSuccess.php"
+May 23 17:49:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 17:49:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 17:49:19 symfony [info] {sfWebResponse} Send content (113 o)

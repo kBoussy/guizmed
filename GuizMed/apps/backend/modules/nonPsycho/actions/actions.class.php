@@ -33,6 +33,12 @@ class nonPsychoActions extends sfActions
       $adNonPsychoPat = Doctrine_Query::create()->from('adNonPsychoPat anp')->where('anp.non_psycho_pat_id = ?', $_POST['nonPsychoPatId'])->execute();
       $adNonPsychoPat[0]->stop();
   }
+  public function executeCreateNonPsycho(sfWebRequest $request)
+  {
+    $non = new AdNonPsycho();
+    $non->setName($_POST['name']);
+    $non->save();
+  }
   public function executeCreate(sfWebRequest $request)
   {
 	$user = new AdUser();
