@@ -23697,3 +23697,237 @@ May 23 12:46:19 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\a
 May 23 12:46:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
 May 23 12:46:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 May 23 12:46:19 symfony [info] {sfWebResponse} Send content (7215 o)
+May 23 13:26:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:26:59 symfony [info] {myUser} Automatic user logout due to timeout
+May 23 13:26:59 symfony [info] {myUser} User is not authenticated
+May 23 13:26:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:26:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:26:59 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:26:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:26:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:26:59 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:27:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:27:00 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied) VALUES (?, ?) - (, 0)
+May 23 13:27:00 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user_patient`, CONSTRAINT `ad_user_patient_ibfk_4` FOREIGN KEY (`patient_id`) REFERENCES `ad_patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 13:27:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 13:27:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:27:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:27:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:27:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:27:16 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:27:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:27:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:27:17 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:27:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:27:17 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied) VALUES (?, ?) - (, 0)
+May 23 13:27:17 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user_patient`, CONSTRAINT `ad_user_patient_ibfk_4` FOREIGN KEY (`patient_id`) REFERENCES `ad_patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 13:27:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 13:27:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:27:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:27:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:27:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:27:19 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:27:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:27:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:27:19 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:27:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:27:19 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied) VALUES (?, ?) - (, 0)
+May 23 13:27:19 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user_patient`, CONSTRAINT `ad_user_patient_ibfk_4` FOREIGN KEY (`patient_id`) REFERENCES `ad_patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 13:27:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 13:27:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:27:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:27:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:27:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:27:31 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:27:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:27:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:27:31 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:27:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:27:32 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied, user_id, prev_user_id, patient_id) VALUES (?, ?, ?, ?, ?) - (1, , 6, 1, 1)
+May 23 13:27:32 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied) VALUES (?, ?) - (, 0)
+May 23 13:27:32 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user_patient`, CONSTRAINT `ad_user_patient_ibfk_4` FOREIGN KEY (`patient_id`) REFERENCES `ad_patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 13:27:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 13:27:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:27:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:27:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:27:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:27:39 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:27:39 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:27:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:27:40 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:27:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:27:40 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied) VALUES (?, ?) - (, 0)
+May 23 13:27:40 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user_patient`, CONSTRAINT `ad_user_patient_ibfk_4` FOREIGN KEY (`patient_id`) REFERENCES `ad_patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 13:27:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 13:27:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:27:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:27:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:27:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:27:52 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:27:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:27:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:27:52 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:27:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:27:53 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/notification+accepted%21/type/message"
+May 23 13:27:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 23 13:27:53 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/notification+accepted%21/type/message"
+May 23 13:27:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:27:53 symfony [info] {sfWebResponse} Send content (191 o)
+May 23 13:27:53 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/success/message/notification+accepted!/type/message with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'success',  'message' => 'notification accepted!',  'type' => 'message',)
+May 23 13:27:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:27:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:27:53 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 23 13:27:53 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 23 13:27:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 13:27:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:27:53 symfony [info] {sfWebResponse} Send content (108 o)
+May 23 13:28:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:28:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:28:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:28:00 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:28:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:28:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:28:00 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:28:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:28:00 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied, user_id, prev_user_id, patient_id) VALUES (?, ?, ?, ?, ?) - (1, , 6, 1, 1)
+May 23 13:28:01 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/notification+accepted%21/type/message"
+May 23 13:28:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 23 13:28:01 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/notification+accepted%21/type/message"
+May 23 13:28:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:28:01 symfony [info] {sfWebResponse} Send content (191 o)
+May 23 13:28:01 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/success/message/notification+accepted!/type/message with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'success',  'message' => 'notification accepted!',  'type' => 'message',)
+May 23 13:28:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:28:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:28:01 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 23 13:28:01 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 23 13:28:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 13:28:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:28:01 symfony [info] {sfWebResponse} Send content (108 o)
+May 23 13:28:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:28:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:28:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:28:43 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:28:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:28:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:28:43 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:28:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:28:43 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied, user_id, prev_user_id, patient_id) VALUES (?, ?, ?, ?, ?) - (1, , 6, 1, 1)
+May 23 13:28:43 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied) VALUES (?, ?) - (, 0)
+May 23 13:28:43 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user_patient`, CONSTRAINT `ad_user_patient_ibfk_4` FOREIGN KEY (`patient_id`) REFERENCES `ad_patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 13:28:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 13:28:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:29:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:29:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:29:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:29:43 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:29:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:29:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:29:43 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:29:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:29:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied, user_id, prev_user_id, patient_id) VALUES (?, ?, ?, ?, ?) - (1, , 6, 1, 1)
+May 23 13:29:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied) VALUES (?, ?) - (, 0)
+May 23 13:29:44 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user_patient`, CONSTRAINT `ad_user_patient_ibfk_4` FOREIGN KEY (`patient_id`) REFERENCES `ad_patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 13:29:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 13:29:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:29:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:29:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:29:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:29:49 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:29:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:29:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:29:50 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:29:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:29:50 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied, user_id, prev_user_id, patient_id) VALUES (?, ?, ?, ?, ?) - (1, , 6, 1, 1)
+May 23 13:29:50 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/1%3D%3Enotification+accepted%21/type/message"
+May 23 13:29:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 23 13:29:50 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/1%3D%3Enotification+accepted%21/type/message"
+May 23 13:29:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:29:50 symfony [info] {sfWebResponse} Send content (198 o)
+May 23 13:29:50 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/success/message/1=>notification+accepted!/type/message with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'success',  'message' => '1=>notification accepted!',  'type' => 'message',)
+May 23 13:29:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:29:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:29:50 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 23 13:29:50 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 23 13:29:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 13:29:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:29:50 symfony [info] {sfWebResponse} Send content (114 o)
+May 23 13:31:28 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:31:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:31:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:31:28 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:31:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:31:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:31:28 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:31:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:31:28 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied, user_id, prev_user_id, patient_id) VALUES (?, ?, ?, ?, ?) - (1, , 6, 1, 1)
+May 23 13:31:28 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/1%3D%3E1notification+accepted%21/type/message"
+May 23 13:31:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 23 13:31:28 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/1%3D%3E1notification+accepted%21/type/message"
+May 23 13:31:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:31:28 symfony [info] {sfWebResponse} Send content (199 o)
+May 23 13:31:29 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/success/message/1=>1notification+accepted!/type/message with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'success',  'message' => '1=>1notification accepted!',  'type' => 'message',)
+May 23 13:31:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:31:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:31:29 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 23 13:31:29 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 23 13:31:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 13:31:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:31:29 symfony [info] {sfWebResponse} Send content (115 o)
+May 23 13:31:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:31:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:31:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:31:32 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:31:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:31:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:31:32 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:31:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:31:32 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied, user_id, prev_user_id, patient_id) VALUES (?, ?, ?, ?, ?) - (1, , 6, 1, 1)
+May 23 13:31:32 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/1%3D%3E1notification+accepted%21/type/message"
+May 23 13:31:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 23 13:31:32 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/1%3D%3E1notification+accepted%21/type/message"
+May 23 13:31:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:31:32 symfony [info] {sfWebResponse} Send content (199 o)
+May 23 13:31:32 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/success/message/1=>1notification+accepted!/type/message with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'success',  'message' => '1=>1notification accepted!',  'type' => 'message',)
+May 23 13:31:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:31:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:31:32 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 23 13:31:32 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 23 13:31:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 13:31:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:31:32 symfony [info] {sfWebResponse} Send content (115 o)
+May 23 13:31:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:31:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:31:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:31:42 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:31:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:31:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:31:42 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:31:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:31:42 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied, user_id, prev_user_id, patient_id) VALUES (?, ?, ?, ?, ?) - (1, , 6, 1, 1)
+May 23 13:31:42 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_user_patient SET active = ? WHERE user_patient_id = ? - (, 1)
+May 23 13:31:42 symfony [info] {sfFrontWebController} Redirect to "http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/1%3D%3E1notification+accepted%21/type/message"
+May 23 13:31:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 23 13:31:42 symfony [info] {sfWebResponse} Send header "Location: http://www.guizmed.com.localhost/backend_dev.php/users/error/title/success/message/1%3D%3E1notification+accepted%21/type/message"
+May 23 13:31:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:31:42 symfony [info] {sfWebResponse} Send content (199 o)
+May 23 13:31:42 symfony [info] {sfPatternRouting} Match route "error" (/users/error/title/:title/message/:message/type/:type) for /users/error/title/success/message/1=>1notification+accepted!/type/message with parameters array (  'module' => 'users',  'action' => 'error',  'title' => 'success',  'message' => '1=>1notification accepted!',  'type' => 'message',)
+May 23 13:31:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:31:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:31:42 symfony [info] {usersActions} Call "usersActions->executeError()"
+May 23 13:31:42 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/users/templates/errorSuccess.php"
+May 23 13:31:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 13:31:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 13:31:42 symfony [info] {sfWebResponse} Send content (115 o)
+May 23 13:31:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /notifications/accept with parameters array (  'module' => 'notifications',  'action' => 'accept',)
+May 23 13:31:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 13:31:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 13:31:45 symfony [info] {notificationsActions} Call "notificationsActions->executeAccept()"
+May 23 13:31:45 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 13:31:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.notification_id AS a__notification_id, a.prev_user_id AS a__prev_user_id, a.new_user_id AS a__new_user_id, a.patient_id AS a__patient_id, a.reason AS a__reason, a.accepted AS a__accepted, a.checked AS a__checked, a.date AS a__date FROM ad_notification a WHERE (a.notification_id = ?) LIMIT 1 - (1)
+May 23 13:31:45 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE ad_notification SET accepted = ? WHERE notification_id = ? - (1, 1)
+May 23 13:31:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.user_patient_id AS a__user_patient_id, a.patient_id AS a__patient_id, a.user_id AS a__user_id, a.prev_user_id AS a__prev_user_id, a.active AS a__active, a.denied AS a__denied FROM ad_user_patient a WHERE (a.patient_id = 1 AND a.user_id = ? AND a.active = ?) - (1, 1)
+May 23 13:31:45 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied, user_id, prev_user_id, patient_id) VALUES (?, ?, ?, ?, ?) - (1, , 6, 1, 1)
+May 23 13:31:45 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO ad_user_patient (active, denied) VALUES (?, ?) - (, 0)
+May 23 13:31:45 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`guizmed`.`ad_user_patient`, CONSTRAINT `ad_user_patient_ibfk_4` FOREIGN KEY (`patient_id`) REFERENCES `ad_patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+May 23 13:31:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 23 13:31:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"

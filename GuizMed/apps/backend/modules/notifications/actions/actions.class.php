@@ -25,8 +25,8 @@ class notificationsActions extends sfActions
   {
     $user = new AdUser();
 	if($user->isAllowed($_POST['token'], $_POST['user_id'])){
-		$this->incommings = Doctrine_Query::create()->from('AdNotification an')->where('an.new_user_id = ?',$request->getParameter('uId'))->execute();
-		$this->outcommings = Doctrine_Query::create()->from('AdNotification an')->where('an.prev_user_id = ?',$request->getParameter('uId'))->execute();
+		$this->outcommings = Doctrine_Query::create()->from('AdNotification an')->where('an.new_user_id = ?',$request->getParameter('uId'))->execute();
+		$this->incommings = Doctrine_Query::create()->from('AdNotification an')->where('an.prev_user_id = ?',$request->getParameter('uId'))->execute();
 	}else{
 		$this->redirect('users/error?message=Not logged in!&title=Error&type=error');
 	}
@@ -56,30 +56,30 @@ class notificationsActions extends sfActions
   }
   public function executeAccept(sfWebRequest $request)
   {
+//      $_POST['accepted']=true;
+//      $_POST['notif_id']=1;
+
       $notification = Doctrine_Core::getTable('AdNotification')->find(array($_POST['notif_id']));
       $notification->setAccepted($_POST['accepted']);
+      $notification->setChecked(true);
       $notification->save();
-
       if($notification->getAccepted()==true){
 
       $where = 'aup.patient_id = '.$notification->getPatientId();//.' AND aup.user_id = '.$notification->getNewUserId().' AND aup.active = 1';
       $ad_user_patient = Doctrine_Query::create()->from('AdUserPatient aup')->where($where)->andWhere('aup.user_id = ?', $notification->getPrevUserId())->andWhere('aup.active = ?', '1')->execute();//'aup.patient_id= '.$notification->getPrevUserId().' AND aup.user_id = ?'.$notification->getNewUser().'aup.active = 1')->execute();
-//      $test = Doctrine_Core::getTable('AdUserPatient')->find(array($ad_user_patient[0]->getUserPatientId()));
-//      $ad_user_patient[0]->save();
-      $ad_user_patient[0]->setUserId($notification->getNewUserId());
-      $ad_user_patient[0]->setPrevUserId($notification->getPrevUserId());
-/*      $test = new AdUserPatient();
-      $test->setNew(false);
-      $test->setActive(false);
-      $test->setUserPatientId($ad_user_patient[0]->getUserPatientId());
-      $test->setUserId($notification->getNewUserId());
-      $test->setPrevUserId($notification->getPrevUserId());
-      $test->setDenied(false);
-      $test->setPatientId($notification->getPatientId());
-      $test->save();*/
+      $newAdUser = new AdUserPatient();
+
+      $ad_user_patient[0]->setActive(false);
+
+      $newAdUser->setUserId($notification->getNewUserId());
+      $newAdUser->setPrevUserId($notification->getPrevUserId());
+      $newAdUser->setPatientId($notification->getPatientId());
+      $newAdUser->setActive(true);
+      $newAdUser->setDenied(false);
+      $newAdUser->save();
       $ad_user_patient[0]->save();
       }
-        $this->redirect('users/error?message=notification accepted!'.'&title=success&type=message');
+        $this->redirect('users/error?message='.$ad_user_patient->count().'=>'.$ad_user_patient[0]->getUserPatientId().'notification accepted!'.'&title=success&type=message');
   }
 
   public function executeCreate(sfWebRequest $request)
