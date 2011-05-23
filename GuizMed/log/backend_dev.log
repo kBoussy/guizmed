@@ -24018,3 +24018,65 @@ May 23 17:49:19 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\a
 May 23 17:49:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
 May 23 17:49:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 May 23 17:49:19 symfony [info] {sfWebResponse} Send content (113 o)
+May 23 20:30:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /medicijnbeheer/getmedbaseid with parameters array (  'module' => 'medicijnbeheer',  'action' => 'getmedbaseid',)
+May 23 20:30:20 symfony [info] {myUser} Automatic user logout due to timeout
+May 23 20:30:20 symfony [info] {myUser} User is not authenticated
+May 23 20:30:20 symfony [info] {sfFrontWebController} Action "medicijnbeheer/getmedbaseid" does not exist
+May 23 20:30:20 symfony [err] {sfError404Exception} Action "medicijnbeheer/getmedbaseid" does not exist.
+May 23 20:30:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+May 23 20:30:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 20:30:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /medicijnbeheer/getmedbaseid with parameters array (  'module' => 'medicijnbeheer',  'action' => 'getmedbaseid',)
+May 23 20:30:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 20:30:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 20:30:47 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeGetmedbaseid()"
+May 23 20:30:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 20:30:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m WHERE (m.med_form_id = ?) LIMIT 1 - (1)
+May 23 20:30:48 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/medicijnbeheer/templates/getmedbaseidSuccess.php"
+May 23 20:30:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (1)
+May 23 20:30:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 20:30:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 20:30:48 symfony [info] {sfWebResponse} Send content (37 o)
+May 23 20:30:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /medicijnbeheer/getmedbaseid with parameters array (  'module' => 'medicijnbeheer',  'action' => 'getmedbaseid',)
+May 23 20:30:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 20:30:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 20:30:56 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeGetmedbaseid()"
+May 23 20:30:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 20:30:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m WHERE (m.med_form_id = ?) LIMIT 1 - (2)
+May 23 20:30:56 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/medicijnbeheer/templates/getmedbaseidSuccess.php"
+May 23 20:30:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (2)
+May 23 20:30:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 20:30:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 20:30:56 symfony [info] {sfWebResponse} Send content (37 o)
+May 23 20:31:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /medicijnbeheer/getmedbaseid with parameters array (  'module' => 'medicijnbeheer',  'action' => 'getmedbaseid',)
+May 23 20:31:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 20:31:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 20:31:02 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeGetmedbaseid()"
+May 23 20:31:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 20:31:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m WHERE (m.med_form_id = ?) LIMIT 1 - (3)
+May 23 20:31:02 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/medicijnbeheer/templates/getmedbaseidSuccess.php"
+May 23 20:31:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (3)
+May 23 20:31:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 20:31:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 20:31:02 symfony [info] {sfWebResponse} Send content (37 o)
+May 23 20:31:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /medicijnbeheer/getmedbaseid with parameters array (  'module' => 'medicijnbeheer',  'action' => 'getmedbaseid',)
+May 23 20:31:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 20:31:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 20:31:05 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeGetmedbaseid()"
+May 23 20:31:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 20:31:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m WHERE (m.med_form_id = ?) LIMIT 1 - (5)
+May 23 20:31:05 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/medicijnbeheer/templates/getmedbaseidSuccess.php"
+May 23 20:31:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (3)
+May 23 20:31:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 20:31:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 20:31:05 symfony [info] {sfWebResponse} Send content (37 o)
+May 23 20:31:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /medicijnbeheer/getmedbaseid with parameters array (  'module' => 'medicijnbeheer',  'action' => 'getmedbaseid',)
+May 23 20:31:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 20:31:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 20:31:10 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeGetmedbaseid()"
+May 23 20:31:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 20:31:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m WHERE (m.med_form_id = ?) LIMIT 1 - (6)
+May 23 20:31:10 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/medicijnbeheer/templates/getmedbaseidSuccess.php"
+May 23 20:31:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (2)
+May 23 20:31:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 20:31:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 20:31:10 symfony [info] {sfWebResponse} Send content (37 o)

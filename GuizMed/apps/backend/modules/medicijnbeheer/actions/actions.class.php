@@ -10,6 +10,10 @@
  */
 class medicijnbeheerActions extends sfActions
 {
+  public function executeGetmedbaseid(sfWebRequest $request)
+  {
+      $this->medForm = Doctrine_Core::getTable('medForm')->find(array($_POST['med_form_id']));
+  }
   public function executeIndex(sfWebRequest $request)
   {
 	$user = new AdUser();
