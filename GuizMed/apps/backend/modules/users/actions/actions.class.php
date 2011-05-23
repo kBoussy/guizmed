@@ -40,23 +40,6 @@ class usersActions extends sfActions
   }
   public function executeShow(sfWebRequest $request)
   {
-//      $headers = "From: ".'Kim Boussy'."<the_chosen_dragon@hotmail.com>\r\n";
-//      mail('kim.boussy@howest.be','hallo','yu',$headers);
-    // send an email to the affiliate
-/*    $message = $this->getMailer()->compose(
-      array('henry@zaagt.turk' => 'Info'),
-      'kim.boussy@howest.be',
-      'Belangrijke info',
-      "<<<EOF
-OLE OLE!
-
-Ge word gestalkt jong
-
-greetings. Kim's evil backend.
-EOF"
-    );
-    $this->getMailer()->send($message);*/
-//    $this->redirect('jobeet_affiliate');
     $this->ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id')));
     $this->forward404Unless($this->ad_user);
   }
