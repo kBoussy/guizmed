@@ -23637,3 +23637,63 @@ May 23 12:17:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT 
 May 23 12:17:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
 May 23 12:17:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 May 23 12:17:35 symfony [info] {sfWebResponse} Send content (44421 o)
+May 23 12:43:40 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /basis with parameters array (  'module' => 'basis',  'action' => 'index',)
+May 23 12:43:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 12:43:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 12:43:40 symfony [info] {basisActions} Call "basisActions->executeIndex()"
+May 23 12:43:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 12:43:41 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m - ()
+May 23 12:43:41 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/basis/templates/indexSuccess.php"
+May 23 12:43:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 12:43:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 12:43:42 symfony [info] {sfWebResponse} Send content (7215 o)
+May 23 12:44:40 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /basis with parameters array (  'module' => 'basis',  'action' => 'index',)
+May 23 12:44:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 12:44:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 12:44:40 symfony [info] {basisActions} Call "basisActions->executeIndex()"
+May 23 12:44:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 12:44:40 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m - ()
+May 23 12:44:40 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/basis/templates/indexSuccess.php"
+May 23 12:44:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 12:44:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 12:44:40 symfony [info] {sfWebResponse} Send content (7215 o)
+May 23 12:46:16 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /basis with parameters array (  'module' => 'basis',  'action' => 'index',)
+May 23 12:46:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 12:46:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 12:46:16 symfony [info] {basisActions} Call "basisActions->executeIndex()"
+May 23 12:46:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 12:46:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m - ()
+May 23 12:46:16 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/basis/templates/indexSuccess.php"
+May 23 12:46:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 12:46:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 12:46:16 symfony [info] {sfWebResponse} Send content (7215 o)
+May 23 12:46:17 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /basis with parameters array (  'module' => 'basis',  'action' => 'index',)
+May 23 12:46:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 12:46:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 12:46:17 symfony [info] {basisActions} Call "basisActions->executeIndex()"
+May 23 12:46:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 12:46:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m - ()
+May 23 12:46:17 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/basis/templates/indexSuccess.php"
+May 23 12:46:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 12:46:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 12:46:17 symfony [info] {sfWebResponse} Send content (7215 o)
+May 23 12:46:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /basis with parameters array (  'module' => 'basis',  'action' => 'index',)
+May 23 12:46:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 12:46:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 12:46:18 symfony [info] {basisActions} Call "basisActions->executeIndex()"
+May 23 12:46:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 12:46:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m - ()
+May 23 12:46:18 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/basis/templates/indexSuccess.php"
+May 23 12:46:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 12:46:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 12:46:18 symfony [info] {sfWebResponse} Send content (7215 o)
+May 23 12:46:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /basis with parameters array (  'module' => 'basis',  'action' => 'index',)
+May 23 12:46:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 12:46:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 12:46:19 symfony [info] {basisActions} Call "basisActions->executeIndex()"
+May 23 12:46:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 23 12:46:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m - ()
+May 23 12:46:19 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/basis/templates/indexSuccess.php"
+May 23 12:46:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 23 12:46:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 12:46:19 symfony [info] {sfWebResponse} Send content (7215 o)

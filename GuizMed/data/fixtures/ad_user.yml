@@ -6,7 +6,7 @@ AdUser:
      lname: Janssens
      email: willem.janssens@howest.be
      uname: willem.janssens
-     passw: s2@#dfdz
+     passw: 74ec786c1c2760901e4fde5de291326dba3a567d
      phone: 0474865035
      ad_role_id: 0002
      ad_function_id: 0002
@@ -17,7 +17,7 @@ AdUser:
      lname: Boussy
      email: Kim.Boussy@howest.be
      uname: Kim.Boussy
-     passw: s2@#dfdz
+     passw: 74ec786c1c2760901e4fde5de291326dba3a567d
      phone: 0474865035
      ad_role_id: 0002
      ad_function_id: 0002
@@ -28,7 +28,7 @@ AdUser:
      lname: Vermeersch
      email: Dieter.Vermeersch@howest.be
      uname: Dieter.Vermeersch
-     passw: s2@#dfdz
+     passw: 74ec786c1c2760901e4fde5de291326dba3a567d
      phone: 0474865035
      ad_role_id: 0001
      ad_function_id: 0001
